@@ -10,7 +10,7 @@ $tmp_name = $_FILES["media"]["tmp_name"];
 
 
 
-$name = $_SESSION['id'].basename($_FILES["media"]["name"]);
+$name = time().$_SESSION['id'].basename($_FILES["media"]["name"]);
 $imagepath = "post/$name";
 move_uploaded_file($tmp_name, $imagepath);
 
