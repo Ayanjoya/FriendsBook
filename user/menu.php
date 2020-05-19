@@ -25,7 +25,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="<?=$url?>/user/post.php?"style = "color: #F2F2F2;">Posthfgdhf</a>
+        <a class="nav-link" href="<?=$url?>/user/post.php?"style = "color: #F2F2F2;">Post</a>
       </li>
 
       <li class="nav-item dropdown">
