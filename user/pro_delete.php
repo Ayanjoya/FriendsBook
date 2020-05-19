@@ -3,7 +3,7 @@
 
 
 session_start();
-$conn = mysqli_connect("localhost", "root", "12345", "my_fb");
+include 'conn.php';
 
 $sql1 = "DELETE FROM `userdata` WHERE id = '".$_SESSION['id']."'";
 $a = mysqli_query($conn, $sql1);

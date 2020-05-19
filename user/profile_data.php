@@ -10,7 +10,7 @@
 
 session_start();
 
-$conn = mysqli_connect("localhost", "root", "12345", "my_fb");
+include 'conn.php';
 
 $sql1 = "SELECT `id`,`user_id`, `name`, `email`, `gender`, `dob`, `address`, `img`  FROM `profile` WHERE user_id = '".$_SESSION['id']."'";
 $a = mysqli_query($conn, $sql1);

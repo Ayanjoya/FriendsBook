@@ -37,7 +37,7 @@
 <?php
 
 
-$conn = mysqli_connect("localhost", "root", "12345", "my_fb");
+include 'conn.php';
 
 $sql1 = "SELECT count(*) as counter  FROM `userdata` WHERE email = '".$_POST['email']."'";
 $a = mysqli_query($conn, $sql1);

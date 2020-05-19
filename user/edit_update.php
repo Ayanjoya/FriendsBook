@@ -18,7 +18,7 @@ $imagepath1 = "backimages/$name1";
 move_uploaded_file($tmp_name1, $imagepath1);
 
 
-$conn = mysqli_connect("localhost", "root", "12345", "my_fb");
+include 'conn.php';
 
 $sql1 = "UPDATE `profile` SET`img` = '".$imagepath."' , `back_cover` = '".$imagepath1."' WHERE id = '".$_SESSION['id']."'";
 

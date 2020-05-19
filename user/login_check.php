@@ -44,7 +44,7 @@
 
 session_start();
 
-$conn = mysqli_connect("localhost", "root", "12345", "my_fb");
+include 'conn.php';
 
 $sql = "SELECT `id`, `name`, `email`, `password`, `phone`, `time`, `active`, `banned`  FROM `userdata` WHERE email = '".$_POST['email']."' and password = '".$_POST['password']."'";
 

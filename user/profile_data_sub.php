@@ -2,7 +2,7 @@
 
 session_start();
 
-$conn = mysqli_connect("localhost", "root", "12345", "my_fb");
+include 'conn.php';
 
 $sql1 = "INSERT INTO `profile`(`user_id`, `name`, `email`, `gender`, `dob`, `address`) VALUES ('".$_SESSION['id']."','".$_SESSION['name']."','".$_SESSION['email']."','".$_POST['gender']."','".$_POST['dob']."','".$_POST['address']."')";
 $a = mysqli_query($conn, $sql1);

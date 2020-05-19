@@ -15,7 +15,7 @@ $imagepath = "post/$name";
 move_uploaded_file($tmp_name, $imagepath);
 
 
-$conn = mysqli_connect("localhost", "root", "12345", "my_fb");
+include 'conn.php';
 
 
 

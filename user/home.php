@@ -20,8 +20,8 @@ include 'menu.php';
 
 
 <?php
-$conn = mysqli_connect("localhost", "root", "12345", "my_fb");
 
+include 'conn.php';
 $sql1 = "SELECT `id`, `name`, `email`, `password`, `phone`, `time`, `active`, `banned` FROM `userdata` WHERE id = '".$_SESSION['id']."'";
 $a = mysqli_query($conn, $sql1);
 $row = mysqli_fetch_assoc($a);
