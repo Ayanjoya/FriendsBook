@@ -65,7 +65,7 @@ if($a){
 
 
 		mysqli_query($conn, $sql);
-		header('Location: login.php');
+		header('Location: http://205.147.99.187/FriendsBook/user/login.php');
 	}
 }
 ?>

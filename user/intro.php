@@ -22,7 +22,7 @@ $a = mysqli_query($conn, $sql1);
 $row = mysqli_fetch_assoc($a);
 
 if($_SESSION['id']>0 and $row['banned'] == "no"){
-	header('Location: http://localhost:8080/my_fb/user/home.php?');
+	header('Location: http://205.147.99.187/FriendsBook/user/home.php?');
 
 }
 

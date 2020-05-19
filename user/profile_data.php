@@ -18,7 +18,7 @@ $row = mysqli_fetch_assoc($a);
 
 if($row['id'])
 {
-	header('Location: profile.php');
+	header('Location: http://205.147.99.187/FriendsBook/user/profile.php');
 }
 
 ?>

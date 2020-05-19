@@ -64,7 +64,7 @@ if($row['id']>0 and $row['banned'] == "no"){
 
 
 	$a = mysqli_query($conn, $sql);
-	header('Location: home.php');
+	header('Location: http://205.147.99.187/FriendsBook/user/home.php');
 }
 
 

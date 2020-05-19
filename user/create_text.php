@@ -17,7 +17,7 @@ $sql = "INSERT INTO `user_post`(`user_id`, `name`, `email`, `description`, `colo
 $a = mysqli_query($conn, $sql);
 
 
-header("Location: http://localhost:8080/my_fb/user/home.php");
+header("Location:http://205.147.99.187/FriendsBook/user/home.php");
 
 
 
