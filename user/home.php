@@ -29,7 +29,14 @@ $row = mysqli_fetch_assoc($a);
 
 
 if($_SESSION['id']==0 or $row['banned'] == "yes"){
-	header('Location: http://205.147.99.187/FriendsBook/user/intro.php?');
+
+
+  echo '<script type="text/javascript">';
+
+echo 'window.location.href = "http://205.147.99.187/FriendsBook/user/intro.php?"';
+
+
+echo '</script>';
 
 
 }
@@ -42,8 +49,6 @@ if($_SESSION['id']==0 or $row['banned'] == "yes"){
 </div>
 
 <body style="overflow: hidden; font-family: roboto;">
-
-
 
 
 <div class="row row-cols-0 row-cols-md-3">
@@ -67,11 +72,11 @@ if ($row1['color'] != ''){
 
 
 <div style="padding-left: 20%;">
-<div class="card" style="width: 18rem;height: 28rem;">
+<div class="card" style="width: 18rem;height: 28rem;overflow: auto;background-color: <?php echo $row1['background'];?>;color: <?php echo $row1['color'];?>;border: solid 0.1px lightgray;">
 
-  <div class="card-body" style="background-color: <?php echo $row1['background'];?>;color: <?php echo $row1['color'];?>;">
+  <div class="card-body">
         <h5 class="card-title" style=""><a href="post.php"><?php echo "@".$row1['name'];?></a></h5>
-    <p class="card-text" ><h2><?php echo substr($row1['description'] , 0 , 18).'...';?></h2></p>
+    <p class="card-text" ><h2><?php echo $row1['description'];?></h2></p>
 
     <a href="http://localhost:8080/my_fb/user/veiw.php?creator_id='<?=$row1['id']?>'" class="btn btn-outline-danger btn-block a1">Go somewhere</a>
   </div>
@@ -95,7 +100,7 @@ elseif ($row1['color'] == '' and $row1['media2'] == '' and $row1['url'] == ''){
 
 <div style="padding-left: 20%;">
 <div class="card" style="width: 18rem;">
-  <img src="<?php echo $row1['media'];?>" class="card-img-top" style = "height: 17rem;object-fit: cover;background-color: <?php echo $row1['background'];?>;" alt = "">
+  <img src="<?php echo $row1['media'];?>" class="card-img-top" style = "height: 17rem;object-fit: cover;background-color: <?php echo $row1['background'];?>;" alt = "" >
   <div class="card-body" style="background-color: <?php echo $row1['background'];?>;">
     <h5 class="card-title"><a href="post.php"><?php echo "@".$row1['name'];?></a></h5>
     <p class="card-text"><?php echo substr($row1['description'] , 0 , 18).'...';?></p>
@@ -264,7 +269,6 @@ elseif ($row1['url'] != '') {
 
 </body>
 </html>
-
 
 
 

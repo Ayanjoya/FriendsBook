@@ -1,5 +1,7 @@
 
 <?php
+session_start();
+
 include 'menu.php';
 include 'conn.php';
 
@@ -15,7 +17,6 @@ include 'conn.php';
 
 
 <?php
-session_start();
 	$sql11 = "SELECT * FROM `notify` WHERE creator_id = '".$_SESSION['id']."' order by id desc";
 	$a1 = mysqli_query($conn, $sql11);
 while (	$row1 = mysqli_fetch_assoc($a1)){

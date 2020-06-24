@@ -6,10 +6,10 @@
 <body style="overflow-x: hidden;visibility: hidden;">
 
 <?php
+ session_start();
 
 include 'menu.php';
 include 'conn.php';
- session_start();
 
 $sql1 = "SELECT `id`, `user_id`, `name`, `email`, `description`, `media`, `media2`, `media3`, `media4`, `color`, `background`, `time`, `friend` FROM `user_post` WHERE id = ".$_GET['creator_id']."";
 $a = mysqli_query($conn, $sql1);

@@ -1,3 +1,6 @@
+<?php session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +23,6 @@
 
 
 
-session_start();
 include 'conn.php';
 
 	$sql1 = "SELECT `id`, `user_id`, `name`, `email`, `gender`, `dob`, `bio` ,`address`, `img` ,`back_cover`FROM `profile` WHERE user_id = '".$_SESSION['id']."'";
@@ -40,7 +42,7 @@ include 'conn.php';
 <?php
 
 
-echo '@'.$row['name'];
+echo $row['name'];
 
 
 ?>
@@ -122,7 +124,7 @@ echo $row['email'];
       <h5 class="text-white h4"><a style = "color: white;"href="post.php">Media</a></h5><br>
       <h5 class="text-white h4"><a style = "color: white;"href="text_post.php">Text</a></h5><br>
       <h5 class="text-white h4"><a style = "color: white;"href="post_slide.php">Slide</a></h5>
-      <h5 class="text-white h4" style="padding-top: 2%;"><a style = "color: white;"href="post_slide.php">Url</a></h5>    
+      <h5 class="text-white h4" style="padding-top: 2%;"><a style = "color: white;"href="post_url.php">Url</a></h5>   
     </div>
   </div>
   <nav class="navbar navbar-dark bg-dark">

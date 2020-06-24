@@ -5,6 +5,7 @@
 </head>
 <body>
 <?php
+session_start();
 
 include 'menu.php';
 ?>
@@ -16,7 +17,6 @@ include 'menu.php';
 
 
 
-session_start();
 include 'conn.php';
 
 	$sql1 = "SELECT `id`, `user_id`, `name`, `email`, `gender`, `dob`, `bio` ,`address`, `img` ,`back_cover`FROM `profile` WHERE user_id = '".$_GET['id']."'";
@@ -120,9 +120,9 @@ echo $row['email'];
 
 
 
-<div style="background-image: url('<?php echo $row['back_cover'];?>');padding-top: 25%;width:80%;position: absolute;left:20%;bottom:49.1%;background-size: cover;"></div>
+<div style="background-image: url('<?php echo $row['back_cover'];?>');padding-top: 25%;width:80%;position: absolute;left:20%;bottom:48.7%;background-size: cover;"></div>
 
-<div  style="background-image: url('<?php echo $row['img'];?>');padding-top: 18%;width:19%;position: absolute;left:21%;bottom:34%;background-size:100%;border-radius: 100%;object-fit: cover;border:solid white 8px;"></div>
+<div  style="background-image: url('<?php echo $row['img'];?>');padding-top: 18%;width:19%;position: absolute;left:21%;bottom:34%;background-size:100%;border-radius: 100%; background-position: center; border:solid white 8px;"></div>
 
 
 

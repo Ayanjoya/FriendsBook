@@ -55,7 +55,7 @@ if($a){
 	}
 
 	elseif ($row2 > 0) {
-		$text = "This usernae is already taken by someone please select new name.";	
+		$text = "This username is already taken by someone please select new name.";	
 	}
 
 

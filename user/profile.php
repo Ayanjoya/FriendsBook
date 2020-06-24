@@ -4,93 +4,149 @@
 <head>
 	<title></title>
 </head>
-<body style="background-color: #FEFEFE;overflow: hidden;">
+<body>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
 
 <?php
+			session_start();
 
 include 'menu.php';
 
 
-			session_start();
 include 'conn.php';
 
 	$sql1 = "SELECT `id`, `user_id`, `name`, `email`, `gender`, `dob`, `bio` ,`address`, `img` ,`back_cover`FROM `profile` WHERE user_id = '".$_SESSION['id']."'";
 	$a = mysqli_query($conn, $sql1);
 	$row = mysqli_fetch_assoc($a);
 
+
+
 ?>
 
 
-<div style="border:solid 0.1px gray;box-shadow: 0px 3px 5px;padding:1%;width: 80%;height: 35rem;position: relative;left:10%; top:6.5rem;background-color: white;	font-family: roboto;
-	color:#303030;
+<div style="border: solid 1.5px;background-color: white;height: 75%;width: 55%;position: relative;left:23%;top:5%;border-bottom: 0px;
+
 ">
 	
 
-<div id = "top-img" style="padding:1%;height: 42%;position: relative;right:1%;bottom:2.5%;
-max-width:	102%;width: 102%;">
+<img src = "<?php echo $row['back_cover'];?>"style="width:100%;height: 50%;object-fit: cover;">
 
 
 
-<img src="<?php echo $row['back_cover'];?>"  style = "position: relative;right:1.2%;bottom:0.7rem;width: 102.5%;max-width: 120%;
-  max-height: 120%;">
 
+<?php
 
-	<img src="<?php  echo $row['img']?>"style = "border-radius: 80%;border: solid white 0.1rem;position: relative;top:-8rem; height: 100%; border-bottom-right-radius: 80%;width: 18.5%;border-width: 0.3rem;object-fit: cover;">
-
-	<h3 style="position: relative;top:-65%;padding-top: 0.4%;">
-		<?php  
+if ($row['user_id'] == $_SESSION['id']){
 
 
 
-	echo $row['name'];
-
-		?>
-	</h3>
-
-	<h5 style="position: relative;top:-71%;color: #5D5C5C;">
-		<?php  
-			echo $row['email'];
+?>
 
 
-		?>
-	</h5>
-
-	<h5 style="position: relative;top:-100%;color: #5D5C5C;text-align: right;">
-		<?php  
-			echo "Gender : ".$row['gender'];
 
 
-		?>
-	</h5>
-
-	<h5 style="position: relative;top:-105%;color: #5D5C5C;text-align: right;">
-		<?php  
-			echo "DOB: ".$row['dob'];
+<h5 style="position: relative;bottom: 5%;text-align: right;right:1%;"><a href="edit.php">Edit</a></h5>
 
 
-		?>
-	</h5>
+
+
+<?php }?>
+
+<img src="<?php echo $row['img'];?>" style = "width:23%;height: 175px;border-radius: 80%;object-fit: cover;border: solid white 5px;position: relative;position:absolute;bottom:38%;left:1%;">
+
+<h3 style="position: relative;top:8%;left:1%;"><?= $row['name']?></h3>
+<h5 style="position: relative;top:6%;left:1%;color: #565656;"><?= $row['email']?></h5>
+
+
+
+
+
+
+
+
+<h5 style="position: relative;top:-3%; text-align: right; color: #565656;"><?= 'Gender: '.$row['gender']?></h5>
+
+<h5 style="position: relative;top:-4%; text-align: right; color: #565656;"><?= 'D.O.B: '.$row['dob']?></h5>
+
+<hr style="border: solid gray 2px;position: relative;top:-35px;">
+
+
+
+
+
+
+
+
+<h5 style="padding-left:1%;position: relative; bottom:40px;" class="text-dark"><?= $row['bio']?></h5>
 
 
 	
 
-	<hr style=" position :relative; top:-105%; border-top: 3px solid gray;">
-	<div id = "bio" style="position: relative;bottom: 110%;">
-		
-
-<h5 style="font-family:">
-	
-<?php  echo $row['bio'];?>
+</div>
 
 
-<img>
+<div style="background-color: white;height: 7%;border: solid 1.5px;width: 55%;position: relative;left:23%;top:5%;">
 
 
-</h5>
 
 
-	</div>
+
+<?php
+
+
+
+	$sql1 = "SELECT count(*) as counter FROM `follow` WHERE creator_id = '".$_SESSION['id']."'";
+	$a = mysqli_query($conn, $sql1);
+	$row = mysqli_fetch_assoc($a);
+
+
+
+?>
+
+
+
+<h5 style="position: relative;top:15px; left:1%;text-align: left;"><?= $row['counter'].' Followers'?></h5>
+
+
+
+
+
+
+<?php
+
+
+
+	$sql1 = "SELECT count(*) as counter FROM `follow` WHERE user_id = '".$_SESSION['id']."'";
+	$a = mysqli_query($conn, $sql1);
+	$row = mysqli_fetch_assoc($a);
+
+
+
+?>
+
+
+
+
+<h5 style="position: relative;top:-15px;text-align: center;"><?= $row['counter'].' Following'?></h5>
+
+
+
+
+<?php
+
+
+
+	$sql1 = "SELECT count(*) as counter FROM `user_likes` WHERE creator_id = '".$_SESSION['id']."'";
+	$a = mysqli_query($conn, $sql1);
+	$row = mysqli_fetch_assoc($a);
+
+
+
+?>
+
+<h5 style="position: relative;top:-47px;text-align: right;padding-right: 1%;"><?= $row['counter'].' Likes'?></h5>
+
 
 
 </div>
@@ -100,7 +156,26 @@ max-width:	102%;width: 102%;">
 
 
 
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
+<style type="text/css">
+	
+
+html, body {
+  height: 100%;
+}
+
+</style>

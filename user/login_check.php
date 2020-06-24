@@ -36,7 +36,7 @@
 
 	<h1 style="text-align: center;padding-bottom:10%;">Welcome to FriendsBook</h1>
 
-<h6 style="visibility: hidden;">
+<h6 style="visibility: hidden; display: none;">
 <?php
 
 
@@ -55,7 +55,7 @@ $a = mysqli_query($conn, $sql);
 
 $row = mysqli_fetch_assoc($a);
 
-if($row['id']>0 and $row['banned'] == "no"){
+if($row['id'] and $row['banned'] == "no"){
 	$_SESSION['name'] = $row['name'];
 	$_SESSION['email'] = $row['email'];
 	$_SESSION['password'] = $row['password'];
@@ -67,7 +67,13 @@ if($row['id']>0 and $row['banned'] == "no"){
 
 	$a = mysqli_query($conn, $sql);
 	header('Location: http://205.147.99.187/FriendsBook/user/home.php');
+
+
+
+
 }
+
+else{
 
 
 
@@ -84,7 +90,7 @@ if($row['id']>0 and $row['banned'] == "no"){
 
 $txt = "Sorry sir but could not found your email or password please check and try Thank You";
 
-
+}
 ?>
 </h6>
 

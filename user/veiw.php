@@ -3,15 +3,15 @@
 <head>
 	<title></title>
 </head>
-<body style="overflow-x: hidden;">
+<body style="overflow: hidden;">
 
 <?php
+ session_start();
 
 include 'menu.php';
 include 'conn.php';
- session_start();
 
-$sql1 = "SELECT `id`, `user_id`, `name`, `email`, `description`, `media`, `media2`, `media3`, `media4`, `color`, `background`, `time`, `friend` FROM `user_post` WHERE id = ".$_GET['creator_id']."";
+$sql1 = "SELECT `id`, `user_id`, `name`, `email`, `description`, `media`, `media2`, `media3`, `media4`, `color`, `background`, `time`, `friend` , `url`FROM `user_post` WHERE id = ".$_GET['creator_id']."";
 $a = mysqli_query($conn, $sql1);
 $row = mysqli_fetch_assoc($a);
 
@@ -19,7 +19,12 @@ $row = mysqli_fetch_assoc($a);
 
 ?>
 
+<?php
 
+
+if($row['color'] == '' and $row['url'] == '' and $row['media2'] == ''){
+
+?>
 
 <div>
 	
@@ -27,7 +32,7 @@ $row = mysqli_fetch_assoc($a);
 
 
 
-<div style="background-image: url('<?php echo $row['media']?>');padding-top:100%;background-size: cover;object-fit: cover;width: 50%;padding-top: 53.1%">
+<div style="background-image: url('<?php echo $row['media']?>');padding-top:100%;background-size: cover;width: 50%;padding-top: 53.1%;background-position: center;">
 
 
 
@@ -123,7 +128,7 @@ else{
 </div>
 
 
-<div style="position: absolute;bottom:0%;left:50%;font-family: Comic Sans MS;width: 50%;height: 93.2%;overflow: scroll;overflow-x: hidden;">
+<div style="position: absolute;bottom:0%;left:50%;font-family: roboto;width: 50%;height: 93.2%;overflow: scroll;overflow-x: hidden;">
 	
 <h2 style="padding-top: 2%;padding-left: 3%;">Creator Name: <a style="color: black;" href = 'veiw_profile.php?id=<?= $row['user_id']?>'><?= '@'.$row['name']?></a></h2>
 
@@ -160,7 +165,7 @@ else{
 <h2 style="padding-top: 4%;padding-left: 3%;">Description:</h2>
 
 
-<div style="border:solid 1px; border-left: hidden; border-right: hidden; overflow: scroll;height: 30%;overflow-x: hidden;background-color: #F7F7F7">
+<div style="border:solid 1px; border-left: hidden; border-right: hidden; overflow: scroll;height: 30%;overflow-x: hidden;background-color: white">
 
 <h2 style="padding-top: 2%;padding-left: 3%;"><?= $row['description']?></h2>
 
@@ -293,6 +298,10 @@ $data = mysqli_fetch_assoc($run);
 
 
 </div>
+
+
+
+<?php }?>
 
 
 

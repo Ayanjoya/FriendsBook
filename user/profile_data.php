@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php  include 'menu.php';
+	<?php  
+session_start();
+
+
+  include 'menu.php';
 ?>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<h6 style="color: white; visibility: hidden;">
+<h6 style="color: white; visibility: ;">
 <?php
 
 
-session_start();
 
 include 'conn.php';
 
@@ -17,10 +20,19 @@ $sql1 = "SELECT `id`,`user_id`, `name`, `email`, `gender`, `dob`, `address`, `im
 $a = mysqli_query($conn, $sql1);
 $row = mysqli_fetch_assoc($a);
 
-if($row['id'])
+if($row['user_id'] > 0)
 {
-	header('Location: http://205.147.99.187/FriendsBook/user/profile.php');
+
+echo '<script type="text/javascript">';
+
+echo 'window.location.href = "http://205.147.99.187/FriendsBook/user/home.php";';
+
+echo '</script>';
+
+
 }
+
+
 
 ?>
 </h6>
@@ -49,7 +61,7 @@ if($row['id'])
 </head>
 <body style = "overflow: hidden;background-size: cover;background-image: url('gif.jpg');">
 
-<div style="border:solid 0.1px gray;box-shadow: 0px 3px 5px;padding:1%;width: 80%;height: 35rem;position: relative;left:10%; top:3rem;background-color: #FEFEFE;	color:#414141; 
+<div style="border:solid 0.1px gray;box-shadow: 0px 3px 5px;padding:1%;width: 80%;height: 35rem;position: relative;left:10%; top:-4rem;background-color: #FEFEFE;	color:#414141; 
 background-size: cover;background-image: url('gif.jpg');">
 
 <img src="avatar.png" style="border-radius: 100%; height:40%;position: relative;left:40%;">
