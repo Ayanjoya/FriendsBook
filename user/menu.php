@@ -16,7 +16,7 @@
 
 <nav class="navbar navbar-expand-lg navbar navbar-dark bg-success border-bottom shadow-sm border-dark" style="background-color: #eec0c6;
 background-image: linear-gradient(320deg, #eec0c6 30%, #7ee8fa 74%);
-
+    
 
 
 
@@ -32,16 +32,16 @@ background-image: linear-gradient(320deg, #eec0c6 30%, #7ee8fa 74%);
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="profile_data.php?"style = "color: #000000;">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?=$url;?>profile_data.php?"style = "color: #000000;">Home <span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="post.php?"style = "color: #000000;">Post</a>
+        <a class="nav-link" href="<?=$url;?>post.php?"style = "color: #000000;">Post</a>
       </li>
 
       <li class="nav-item dropdown">
 
-        <a class="nav-link" href="profile.php?"style = "color: #000000;">Profile</a>
+        <a class="nav-link" href="<?=$url;?>profile.php?"style = "color: #000000;">Profile</a>
 </li>
 
 
@@ -51,10 +51,10 @@ background-image: linear-gradient(320deg, #eec0c6 30%, #7ee8fa 74%);
           Friends
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item"href="veiw_friends.php?">Your Friends</a>
-          <a class="dropdown-item"href="enrol_friends.php?">Enroll Friends</a>
+          <a class="dropdown-item"href="<?=$url;?>veiw_friends.php?">Your Friends</a>
+          <a class="dropdown-item"href="<?=$url;?>enrol_friends.php?">Enroll Friends</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="settings.php?">More...</a>
+          <a class="dropdown-item" href="<?=$url;?>settings.php?">More...</a>
 
 
         </div>
@@ -68,11 +68,11 @@ background-image: linear-gradient(320deg, #eec0c6 30%, #7ee8fa 74%);
           Account
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item"href="signin.php?">Register</a>
-          <a class="dropdown-item"href="login.php?">LogIn</a>
-          <a class="dropdown-item" href="logout.php?">Logout</a>
+          <a class="dropdown-item"href="<?=$url;?>signin.php?">Register</a>
+          <a class="dropdown-item"href="<?=$url;?>login.php?">LogIn</a>
+          <a class="dropdown-item" href="<?=$url;?>logout.php?">Logout</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="settings.php?">More...</a>
+          <a class="dropdown-item" href="<?=$url;?>settings.php?">More...</a>
 
 
         </div>
@@ -84,7 +84,7 @@ background-image: linear-gradient(320deg, #eec0c6 30%, #7ee8fa 74%);
 
 
       <li class="nav-item">
-        <a class="nav-link" href="inbox.php?"style = "color: #000000;">Inbox</a>
+        <a class="nav-link" href="<?=$url;?>inbox.php?"style = "color: #000000;">Inbox</a>
       </li>
         </div>
       </li>

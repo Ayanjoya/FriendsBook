@@ -57,7 +57,7 @@ if($data1){
 
 
 ?>
-<form method="post" action="http://localhost:8080/my_fb/user/unlike.php?creator_id=<?= $_GET['creator_id']?>">
+<form method="post" action="http://205.147.99.187/FriendsBook/user/unlike.php?creator_id=<?= $_GET['creator_id']?>">
 		<button style="background-image: url(already_liked.png);background-size: cover;padding: 3.5%;border-radius: 80%;" name = "like"></button>
 
 
@@ -67,7 +67,7 @@ else{
 
 ?>
 
-<form method="post" action="http://localhost:8080/my_fb/user/create_like.php?creator_id=<?= $_GET['creator_id']?>">
+<form method="post" action="http://205.147.99.187/FriendsBook/user/create_like.php?creator_id=<?= $_GET['creator_id']?>">
 		<button style="background-image: url(like_button.png);background-size: cover;padding: 3.5%;border-radius: 80%;" name = "like"></button>
 
 
@@ -93,7 +93,7 @@ if ($data1){
 
 ?>
 
-		<a style="background-image: url(already_follow.png);background-size: cover;padding: 3.5%;border-radius: 80%;position: absolute;left:40%;;border:solid 2px black;"name = "follow" href="http://localhost:8080/my_fb/user/unfollow.php?creator_id=<?= $_GET['creator_id']?>"></a>
+		<a style="background-image: url(already_follow.png);background-size: cover;padding: 3.5%;border-radius: 80%;position: absolute;left:40%;;border:solid 2px black;"name = "follow" href="http://205.147.99.187/FriendsBook/user/unfollow.php?creator_id=<?= $_GET['creator_id']?>"></a>
 <?php
 
 
@@ -103,7 +103,7 @@ else{
 
 
 ?>
-		<a style="background-image: url(folloe_but.png);background-size: cover;padding: 3.5%;border-radius: 80%;position: absolute;left:40%;;border:solid 2px black;"name = "follow" href="http://localhost:8080/my_fb/user/follow.php?creator_id=<?= $_GET['creator_id']?>"></a>
+		<a style="background-image: url(folloe_but.png);background-size: cover;padding: 3.5%;border-radius: 80%;position: absolute;left:40%;;border:solid 2px black;"name = "follow" href="http://205.147.99.187/FriendsBook/user/follow.php?creator_id=<?= $_GET['creator_id']?>"></a>
 
 <?php }?>
 
@@ -275,7 +275,7 @@ $data = mysqli_fetch_assoc($run);
 
 
 	echo'<script type="text/javascript">';
-	echo'window.location.href = "http://localhost:8080/my_fb/user/veiw.php?creator_id='.$_GET['creator_id'].'";';
+	echo'window.location.href = "http://205.147.99.187/FriendsBook/user/veiw.php?creator_id='.$_GET['creator_id'].'";';
 
 	echo'</script>';
 
