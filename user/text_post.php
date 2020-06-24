@@ -6,6 +6,8 @@
 <?php  include'menu.php';?>
 
 </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <body  style="overflow: hidden;">
 
 
@@ -119,7 +121,8 @@ echo $row['email'];
     <div class="bg-dark p-4">
       <h5 class="text-white h4"><a style = "color: white;"href="post.php">Media</a></h5><br>
       <h5 class="text-white h4"><a style = "color: white;"href="text_post.php">Text</a></h5><br>
-      <h5 class="text-white h4"><a style = "color: white;"href="post.php">Vote</a></h5>
+      <h5 class="text-white h4"><a style = "color: white;"href="post_slide.php">Slide</a></h5>
+      <h5 class="text-white h4" style="padding-top: 2%;"><a style = "color: white;"href="post_url.php">Url</a></h5>
 
     </div>
   </div>

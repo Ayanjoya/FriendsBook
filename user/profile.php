@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 </head>
 <body style="background-color: #FEFEFE;overflow: hidden;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <?php
 

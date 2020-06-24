@@ -25,5 +25,4 @@ $a = mysqli_query($conn, $sql);
 
 header("Location: http://205.147.99.187/FriendsBook/user/home.php");
 
-
 ?>

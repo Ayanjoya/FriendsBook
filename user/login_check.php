@@ -5,6 +5,7 @@
 </head>
 <body>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 <style type="text/css">
@@ -60,6 +61,7 @@ if($row['id']>0 and $row['banned'] == "no"){
 	$_SESSION['password'] = $row['password'];
 	$_SESSION['phone'] = $row['phone'];
 	$_SESSION['id'] = $row['id'];
+	$_SESSION['my_id'] = $row['id'];
 	$sql = "UPDATE `userdata` SET `active` = 'yes' WHERE id = '".$_SESSION['id']."'";
 
 

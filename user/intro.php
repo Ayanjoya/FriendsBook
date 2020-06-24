@@ -33,6 +33,8 @@ if($_SESSION['id']>0 and $row['banned'] == "no"){
 </h6>
 	<title></title>
 </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <body style="background-image: url('intro.gif');background-size: cover;">
 
 

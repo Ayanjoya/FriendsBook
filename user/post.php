@@ -6,6 +6,8 @@
 <?php  include'menu.php';?>
 
 </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <body  style="overflow: hidden;">
 
 
@@ -38,7 +40,7 @@ include 'conn.php';
 <?php
 
 
-echo $row['name'];
+echo '@'.$row['name'];
 
 
 ?>
@@ -119,8 +121,8 @@ echo $row['email'];
     <div class="bg-dark p-4">
       <h5 class="text-white h4"><a style = "color: white;"href="post.php">Media</a></h5><br>
       <h5 class="text-white h4"><a style = "color: white;"href="text_post.php">Text</a></h5><br>
-      <h5 class="text-white h4"><a style = "color: white;"href="post.php">Vote</a></h5>
-
+      <h5 class="text-white h4"><a style = "color: white;"href="post_slide.php">Slide</a></h5>
+      <h5 class="text-white h4" style="padding-top: 2%;"><a style = "color: white;"href="post_slide.php">Url</a></h5>    
     </div>
   </div>
   <nav class="navbar navbar-dark bg-dark">
@@ -146,15 +148,11 @@ echo $row['email'];
       <input type="text" name = "tag"class="form-control" id="inputPassword4" placeholder="Friend Name">
     </div></div>
   </div>
-  <div class="form-group">
-    <label for="inputAddress">Publish Type</label>
-    <input type="choose" name = "publish"class="form-control disabled" id="inputAddress" value="Public" style = "background: white;"disabled>
-  </div>
+
   <div class="form-group">
     <label for="inputAddress2">Description</label>
     <textarea type="text" name=  "desc"class="form-control" id="inputAddress2" rows="7" placeholder="Description"></textarea>
   </div>
-
 
   <div class="form-row" style="padding-left: 0.5%;">
 

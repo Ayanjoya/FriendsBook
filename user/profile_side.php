@@ -1,3 +1,5 @@
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <div style="border:solid black 3px; width: 20%;height: 47.8rem;background-color: #FEFEFE;overflow: scroll;">
 
 
