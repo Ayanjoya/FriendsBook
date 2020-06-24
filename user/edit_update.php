@@ -1,7 +1,7 @@
 <?php
+session_start();
 
 if ($_POST['bio'] == ""or $_POST['phone'] == "" or $_POST['address'] == ""){
-session_start();
 
 
 $tmp_name = $_FILES["img"]["tmp_name"];
@@ -30,7 +30,6 @@ $a = mysqli_query($conn, $sql1);
 
 else{
 
-session_start();
 
 
 $tmp_name = $_FILES["img"]["tmp_name"];
