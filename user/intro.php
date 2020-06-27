@@ -29,68 +29,7 @@ if($_SESSION['id']>0 and $row['banned'] == "no"){
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
 
-
-
-/*body{
-
-
-	background-image: url('index_image5.jpeg');
-    object-fit: cover;
-    background-size: cover;
-    backdrop-filter: blur(0px);
-    background-position: center;
-
-}
-*/
-
-/* Style the video: 100% width and height to cover the entire window */
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-        backdrop-filter: blur(0px);
-
-}
-
-
-
-
-img{	position:relative;position: absolute;top:20%;
-}
-
-.btn1{
-    position: fixed;
-    left:32%;
-    top:450px;
-
-
-
-    
-
-
-}
-
-
-
-
-
-
-
-.btn2{
-    position: fixed;
-
-    left:52.5%;
-    top:450px;
-    background: none;
-
-
-}
-
-</style>
 
 
 
@@ -110,25 +49,31 @@ img{	position:relative;position: absolute;top:20%;
 </head>
 <body>
 
-<video autoplay muted loop id="myVideo">
-  <source src="index.mp4" type="video/mp4">
-</video>
-
-
-
-<img src="full2.png" class= "img2"style="width: 43%;left:26%;">
-
-<a class = "btn1 btn btn-outline-dark btn-lg" href = "signin.php">Create A New Account</a>
-<a class = "btn2 btn btn-dark btn-lg" href = "login.php">Already Have Account</a>
 
 
 
 
 
 
+<h1 style="position: relative;top:30%;text-align: center;color:white;font-size: 400%;">SoclPie</h1>
+
+<h3 style="position: relative;top:30%;text-align: center;color:white;font-size: 200%;">The Social Network</h3>
 
 
+<a class="btn btn-primary btn-block" href="login.php" style="position: relative;top:40%;">SignIn</a>
+<a class="btn btn-success btn-block" href="signin.php"  style="position: relative;top:40%;">SignUp</a>
 
 
+<style type="text/css">
+	body{
+		background-image: url(index_image3.jpg);
+		background-position: center;
+		background-size: cover;
+		backdrop-filter:blur(15px);
+	}
+	html,body{
+		height: 100%;
+	}
+</style>
 </body>
 </html>

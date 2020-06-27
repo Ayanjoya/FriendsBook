@@ -4,6 +4,7 @@ session_start();
 
 
 ?>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!DOCTYPE html>
 <html>
@@ -15,12 +16,11 @@ session_start();
 </head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<body  style="overflow: hidden;">
+<body  style="overflow: ;">
 
 
 
 
-<div style="border:solid black 3px; width: 20%;height: 47.8rem;background-color: #FEFEFE;overflow: scroll;">
 
 
 <?php
@@ -37,76 +37,6 @@ include 'conn.php';
 
 
 	
-<img src="<?php  echo $row['img']?>"style = "border-radius: 80%;border: solid white;position: relative;top:1rem; height: 35%; border-bottom-right-radius: 80%;width: 100%;border-width: 0.3rem;object-fit: cover;">
-
-
-<h2 style="padding-top: 3%;padding-left: 3%;text-align: left;">
-	
-
-<?php
-
-
-echo $row['name'];
-
-
-?>
-
-
-
-</h2>
-
-<h6 style="position:relative; bottom: 1%; padding-left: 3%;font-size: 110%;color: #5D5C5C;text-align: left;">
-	
-
-<?php
-
-echo $row['email'];
-
-	$sql11 = "SELECT `phone` , `time`FROM `userdata` WHERE id = '".$_SESSION['id']."'";
-	$a1 = mysqli_query($conn, $sql11);
-	$row1 = mysqli_fetch_assoc($a1);
-
-?>
-
-
-
-</h6>
-
-  <ul class="list-group list-group-flush" style="padding-bottom: 5%;padding-top: 5%">
-    <li class="list-group-item">Gender: <?php echo $row['gender']?></li>
-    <li class="list-group-item">D.O.B: <?php echo $row['dob']?></li>
-    <li class="list-group-item">Phone no: <?php echo $row1['phone']?></li>
-    <li class="list-group-item">Address: <?php echo $row['address']?></li>
-    <li class="list-group-item">Joined on: <?php echo $row1['time']?></li>
-
-
-</ul>
-	<hr style=" position :relative; top:-2%; border-top: 3px solid gray;">
-	<h5 style="padding-left: 3%;">
-		
-		<?php
-
-
-
-
-		echo $row['bio'];
-
-
-		?>
-
-	</h5>
-
-
-
-	<hr style="border-top: 3px solid gray;">
-
-
-<a class="btn btn-outline-secondary btn-lg btn-block blckk" href="edit.php">Edit</a>
-
-
-<a class="btn btn-outline-secondary btn-lg btn-block blckk1" href="pro_delete.php">Delete</a>
-
-</div>
 
 
 
@@ -115,11 +45,7 @@ echo $row['email'];
 
 
 
-
-
-
-
-<div style="border:solid;position: relative;left:20%;bottom: 48rem;width: 80%;height: 48rem;border-left: 0px;">
+<div style="width: 100%;">
 
 
 <div>

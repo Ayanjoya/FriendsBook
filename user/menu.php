@@ -23,7 +23,7 @@ background-image: linear-gradient(320deg, #eec0c6 30%, #7ee8fa 74%);
 ">
 
 
-<img src="single.png" style="width: 4%;border-radius: 80%; height: auto;">
+<img src="single.png" style="width: 60px;border-radius: 80%; height: auto;">
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -97,10 +97,6 @@ background-image: linear-gradient(320deg, #eec0c6 30%, #7ee8fa 74%);
 
 
 
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-danger my-2 my-sm-0 sea" type="submit">Search</button>
-    </form>
 
 <style type="text/css">
   

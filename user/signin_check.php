@@ -10,30 +10,12 @@
 <style type="text/css">
 	
 	body{
-	background-image: url('signin.gif');
-	background-size: cover;
+
 	font-family: roboto;
 	color:#303030;
 	}
-	div{
-		background-color: #DEDEDE;
-		width: 70rem;
-		height:45rem;
-		position: relative;
-		top:2.5rem;
-		left:10rem;
-
-	}
-
-	@keyframes ex{
-		0%{position: relative;left:100%;}
-	}
-	@keyframes exs{
-		0%{transform: rotateX(300deg)rotateY(300deg)rotateZ(300deg);}
-	}
 
 </style>
-<div style = "animation-name: ex;animation-duration: 1s"><h1 style="text-align: center;">Welcome to FriendsBook</h1>
 
 <?php
 
@@ -70,15 +52,29 @@ if($a){
 	}
 }
 ?>
-<br><br><br>
-<h1 style="color: red;text-align: center;">Email or Name Already Exist</h1>
-<h1 style="text-align: center;"><?php  echo $text;?></h1>
-<br>
 
-<form action="signin.php">
-	<button style="font-size: 700%; background-color:#00FEB1;color: white;position: relative;left:21rem;top:5rem; animation-name: exs;animation-duration: 2.5s">Go Back</button>
-</form>
 
+
+<?php
+echo '
+
+<script type="text/javascript">
+	
+
+alert("Sorry sir but could not found your email or password please check and try Thank You");
+
+
+window.location.href = "signin.php";
+
+// Simulate an HTTP redirect:
+window.location.replace("signin.php");
+
+</script>
+
+
+';
+
+?>
 
 </div>
 

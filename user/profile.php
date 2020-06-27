@@ -4,7 +4,7 @@
 <head>
 	<title></title>
 </head>
-<body>
+<body style="overflow-x: hidden;">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
 
@@ -25,12 +25,12 @@ include 'conn.php';
 ?>
 
 
-<div style="border: solid 1.5px;background-color: white;height: 75%;width: 55%;position: relative;left:23%;top:5%;border-bottom: 0px;
+<div style="border: solid 0px;background-color: white;height: 60%;width: 100%;position: relative;left:0;top:0%;
 
 ">
 	
 
-<img src = "<?php echo $row['back_cover'];?>"style="width:100%;height: 50%;object-fit: cover;">
+<img src = "<?php echo $row['back_cover'];?>"style="width:100%;height: 70%;object-fit: cover;">
 
 
 
@@ -46,14 +46,14 @@ if ($row['user_id'] == $_SESSION['id']){
 
 
 
-<h5 style="position: relative;bottom: 5%;text-align: right;right:1%;"><a href="edit.php">Edit</a></h5>
+<h5 style="position: relative;bottom: 8%;text-align: right;right:1%;"><a href="edit.php">Edit</a></h5>
 
 
 
 
 <?php }?>
 
-<img src="<?php echo $row['img'];?>" style = "width:23%;height: 175px;border-radius: 80%;object-fit: cover;border: solid white 5px;position: relative;position:absolute;bottom:38%;left:1%;">
+<img src="<?php echo $row['img'];?>" style = "width:170px;height: 170px;border-radius: 80%;object-fit: cover;border: solid white 5px;position: relative;position:absolute;bottom:17%;left:1%;">
 
 <h3 style="position: relative;top:8%;left:1%;"><?= $row['name']?></h3>
 <h5 style="position: relative;top:6%;left:1%;color: #565656;"><?= $row['email']?></h5>
@@ -74,19 +74,19 @@ if ($row['user_id'] == $_SESSION['id']){
 
 
 
+<div style="height:40.4%;overflow: auto;position: relative;bottom: 50px;background-color: white;">
 
 
 
+<h5 style="padding-left:1%;padding-top:1%;" class="text-dark"><?= $row['bio']?></h5>
 
-<h5 style="padding-left:1%;position: relative; bottom:40px;" class="text-dark"><?= $row['bio']?></h5>
-
-
+</div>
 	
 
 </div>
 
 
-<div style="background-color: white;height: 7%;border: solid 1.5px;width: 55%;position: relative;left:23%;top:5%;">
+<div style="background-color: white;height: 7%;border: solid 1.5px;width: 100%;position: relative;left:0%;top:24.5%;border-right: 0px;border-left: 0px;">
 
 
 
@@ -128,7 +128,7 @@ if ($row['user_id'] == $_SESSION['id']){
 
 
 
-<h5 style="position: relative;top:-15px;text-align: center;"><?= $row['counter'].' Following'?></h5>
+<h5 style="position: relative;top:-15px; left:1%;text-align: center;"><?= $row['counter'].' Following'?></h5>
 
 
 

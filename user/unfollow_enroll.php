@@ -3,6 +3,8 @@
 <head>
 	<title></title>
 </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <body style="overflow-x: hidden;visibility: hidden;">
 
 <?php

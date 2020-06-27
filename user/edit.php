@@ -38,17 +38,7 @@ $row2 = mysqli_fetch_assoc($a1);
 
 
 
-
-
-<img src="profileimages/1avatar.png" style="border-radius: 80%;height: 30%;position:relative;position: absolute;left:40%;top:100px;">
-
-
-
-
-<h3 style="border-radius: 80%;height: 30%;position:relative;position: absolute;left:43.5%;top:350px;">Edit Profile</h3>
-
-
-<form style="padding-top: 20%" method="post" action="edit_update.php" enctype="multipart/form-data">
+<form method="post" action="edit_update.php" enctype="multipart/form-data">
 
 
 
