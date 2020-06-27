@@ -14,7 +14,7 @@ $a = mysqli_query($conn, $sql1);
 
 
 
-header("Location: http://205.147.99.187/FriendsBook/user/intro.php");
+header("Location: http://soclpie.com/intro.php");
 
 
 

@@ -49,7 +49,7 @@ if($row['id'] and $row['banned'] == "no"){
 
 
 	$a = mysqli_query($conn, $sql);
-	header('Location: http://205.147.99.187/FriendsBook/user/profile_data.php');
+	header('Location: http://soclpie.com/profile_data.php');
 
 
 
@@ -73,10 +73,10 @@ echo '
 alert("Sorry sir but could not found your email or password please check and try Thank You");
 
 
-window.location.href = "login.php";
+window.location.href = "http://soclpie.com/login.php";
 
 // Simulate an HTTP redirect:
-window.location.replace("login.php");
+window.location.replace("http://soclpie.com/login.php");
 
 </script>
 

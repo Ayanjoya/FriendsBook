@@ -48,7 +48,7 @@ if($a){
 
 
 		mysqli_query($conn, $sql);
-		header('Location: http://205.147.99.187/FriendsBook/user/login.php');
+		header('Location: http://soclpie.com/login.php');
 	}
 }
 ?>
@@ -64,10 +64,10 @@ echo '
 alert("Sorry sir but could not found your email or password please check and try Thank You");
 
 
-window.location.href = "signin.php";
+window.location.href = "http://soclpie.com/signin.php";
 
 // Simulate an HTTP redirect:
-window.location.replace("signin.php");
+window.location.replace("http://soclpie.com/signin.php");
 
 </script>
 

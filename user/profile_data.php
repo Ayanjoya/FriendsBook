@@ -32,7 +32,7 @@ if($row['user_id'] > 0)
 
 echo '<script type="text/javascript">';
 
-echo 'window.location.href = "http://205.147.99.187/FriendsBook/user/home.php";';
+echo 'window.location.href = "http://soclpie.com/home.php";';
 
 echo '</script>';
 

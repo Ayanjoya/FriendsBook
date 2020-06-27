@@ -34,7 +34,7 @@ $data = mysqli_fetch_assoc($run);
 
 echo '<script type="text/javascript">';
 
-echo 'window.location.href = "http://localhost:8080/my_fb/user/veiw_friends.php"';
+echo 'window.location.href = "http://soclpie.com/veiw_friends.php"';
 
 
 echo '</script>';

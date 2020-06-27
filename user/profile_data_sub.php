@@ -12,6 +12,6 @@ $_SESSION['dob'] = $_POST['dob'];
 $_SESSION['address'] = $_POST['address'];
 
 
-header('Location: http://205.147.99.187/FriendsBook/user/profile.php');
+header('Location: http://soclpie.com/profile.php');
 
 ?>

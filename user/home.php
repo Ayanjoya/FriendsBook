@@ -33,7 +33,7 @@ if($_SESSION['id']==0 or $row['banned'] == "yes"){
 
   echo '<script type="text/javascript">';
 
-echo 'window.location.href = "http://205.147.99.187/FriendsBook/user/intro.php?"';
+echo 'window.location.href = "http://soclpie.com/intro.php?"';
 
 
 echo '</script>';
@@ -51,7 +51,7 @@ echo '</script>';
 <body style="overflow: hidden; font-family: roboto;">
 
 
-<div class="row row-cols-0 row-cols-md-3">
+<div class="row row-cols-0 row-cols-md-3" style="padding-top: 5%;">
 
 
 <?php
@@ -78,7 +78,7 @@ if ($row1['color'] != ''){
         <h5 class="card-title" style=""><a href="post.php"><?php echo "@".$row1['name'];?></a></h5>
     <p class="card-text" ><h2><?php echo $row1['description'];?></h2></p>
 
-    <a href="http://205.147.99.187/FriendsBook/user/veiw.php?creator_id='<?=$row1['id']?>'" class="btn btn-outline-danger btn-block a1">Go somewhere</a>
+    <a href="http://soclpie.com/veiw.php?creator_id='<?=$row1['id']?>'" class="btn btn-outline-danger btn-block a1">Go somewhere</a>
   </div>
 </div></div>	
 
@@ -104,7 +104,7 @@ elseif ($row1['color'] == '' and $row1['media2'] == '' and $row1['url'] == ''){
   <div class="card-body" style="background-color: <?php echo $row1['background'];?>;">
     <h5 class="card-title"><a href="post.php"><?php echo "@".$row1['name'];?></a></h5>
     <p class="card-text"><?php echo substr($row1['description'] , 0 , 18).'...';?></p>
-    <a href="http://205.147.99.187/FriendsBook/user/veiw.php?creator_id=<?php echo $row1['id']?>" class="btn btn-outline-danger btn-block a1">Go somewhere</a>
+    <a href="http://soclpie.com/veiw.php?creator_id=<?php echo $row1['id']?>" class="btn btn-outline-danger btn-block a1">Go somewhere</a>
   </div>
 </div></div>	
 
@@ -196,7 +196,7 @@ elseif ($row1['media2'] != ''  and $row1['media3'] != ''  and $row1['media4'] !=
   <div class="card-body" style="background-color: <?php echo $row1['background'];?>;">
     <h5 class="card-title"><a href="post.php"><?php echo "@".$row1['name'];?></a></h5>
     <p class="card-text"><?php echo substr($row1['description'] , 0 , 18).'...';?></p>
-    <a href="http://205.147.99.187/FriendsBook/user/veiw.php?creator_id='<?=$row1['id']?>'" class="btn btn-outline-danger btn-block a1">Go somewhere</a>
+    <a href="http://soclpie.com/veiw.php?creator_id='<?=$row1['id']?>'" class="btn btn-outline-danger btn-block a1">Go somewhere</a>
   </div>
 </div></div>  
 
@@ -229,7 +229,7 @@ elseif ($row1['url'] != '') {
   <div class="card-body" style="background-color: <?php echo $row1['background'];?>;">
     <h5 class="card-title"><a href="post.php"><?php echo "@".$row1['name'];?></a></h5>
     <p class="card-text"><?php echo substr($row1['description'] , 0 , 18).'...';?></p>
-    <a href="<?php echo 'http://205.147.99.187/FriendsBook/user/vidio.php?vidio_url='.$row1['url']?>/&creator_id=<?=$row1['id']?>" class="btn btn-outline-danger btn-block a1">Go somewhere</a>
+    <a href="<?php echo 'http://soclpie.com/vidio.php?vidio_url='.$row1['url']?>/&creator_id=<?=$row1['id']?>" class="btn btn-outline-danger btn-block a1">Go somewhere</a>
   </div>
 </div></div>  
 

@@ -24,7 +24,7 @@ $sql1 = "UPDATE `profile` SET`img` = '".$imagepath."' , `back_cover` = '".$image
 
 
 $a = mysqli_query($conn, $sql1);
-	header('Location: http://205.147.99.187/FriendsBook/user/profile.php');
+	header('Location: http://soclpie.com/profile.php');
 
 }
 
@@ -67,7 +67,7 @@ $b = mysqli_query($conn, $sql);
 
 
 
-header('Location: http://205.147.99.187/FriendsBook/user/profile.php');
+header('Location: http://soclpie.com/profile.php');
 
 }
 ?>

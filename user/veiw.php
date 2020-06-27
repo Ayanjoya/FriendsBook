@@ -107,7 +107,7 @@ if($data1){
 ?>
 
 
-<form method="post" action='action="http://205.147.99.187/FriendsBook/user/unlike.php?creator_id=<?= $_GET['creator_id']?>'>
+<form method="post" action='http://soclpie.com/unlike.php?creator_id=<?= $_GET['creator_id']?>'>
 	
 
 <button class = "btn"style="background-image: url(already_liked.png);padding: 3%;background-size: cover;border-radius: 80%;position: absolute;bottom: -55px;"></button>
@@ -116,7 +116,7 @@ if($data1){
 </form>
 <?php } else{?>
 
-<form method="post" action='action="http://205.147.99.187/FriendsBook/user/unlike.php?creator_id=<?= $_GET['creator_id']?>'>
+<form method="post" action='http://soclpie.com/unlike.php?creator_id=<?= $_GET['creator_id']?>'>
 	
 
 <button style="background-image: url(like_button.png);padding: 3%;background-size: cover;border-radius: 80%;position: absolute;bottom: -55px;"></button>
@@ -173,7 +173,7 @@ else{
 
 
 
-<form method="post" action="http://205.147.99.187/FriendsBook/user/follow.php?creator_id=<?= $_GET['creator_id']?>">
+<form method="post" action="http://soclpie.com/follow.php?creator_id=<?= $_GET['creator_id']?>">
 	
 <button style="background-image: url(folloe_but.png);padding: 3%;background-size: cover;border-radius: 80%;position: absolute;bottom: -55px; left:10%;"></button>
 
@@ -201,7 +201,7 @@ $row = mysqli_fetch_assoc($a);?>
 <div class="pt-4 pl-3">
 
 
-<a style = "color:black;"href = 'veiw_profile.php?id=<?= $row['user_id']?>'><h3><?= '@'.$row['name']?></h3></a>
+<a style = "color:black;"href = 'http://soclpie.com/veiw_profile.php?id=<?= $row['user_id']?>'><h3><?= '@'.$row['name']?></h3></a>
 
 <div class="pt-4">
 
@@ -323,7 +323,7 @@ $data = mysqli_fetch_assoc($run);
 
 
 	echo'<script type="text/javascript">';
-	echo'window.location.href = "http://205.147.99.187/FriendsBook/user/veiw.php?creator_id='.$_GET['creator_id'].'";';
+	echo'window.location.href = "http://soclpie.com/veiw.php?creator_id='.$_GET['creator_id'].'";';
 
 	echo'</script>';
 
