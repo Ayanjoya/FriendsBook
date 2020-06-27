@@ -1,12 +1,19 @@
+  <?php  
+session_start();
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
-	<?php  
-session_start();
+
+<?php
 
 
   include 'menu.php';
 ?>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <h6 style="color: white; visibility: ;">
@@ -47,26 +54,11 @@ echo '</script>';
 
 
 
-
-
-
-<style type="text/css">
-	
-	@keyframes exs{
-		0%{transform: rotateY(300deg);}
-	}
-
-</style>
-
 </head>
-<body style = "overflow: hidden;background-size: cover;background-image: url('gif.jpg');">
+<body class="alert-info">
 
-<div style="border:solid 0.1px gray;box-shadow: 0px 3px 5px;padding:1%;width: 80%;height: 35rem;position: relative;left:10%; top:-4rem;background-color: #FEFEFE;	color:#414141; 
-background-size: cover;background-image: url('gif.jpg');">
 
-<img src="avatar.png" style="border-radius: 100%; height:40%;position: relative;left:40%;">
-<h1 style="	text-align: center;	padding-bottom: 0rem;
-">Profile</h1>
+
 
 
 <form style="padding-bottom:1%;" action="profile_data_sub.php" method="post">
