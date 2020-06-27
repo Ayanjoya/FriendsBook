@@ -245,7 +245,7 @@ echo $row['friend'];
 
 <input type="text" name="com" placeholder = "Add A Public Comment"style="font-size: 180%; width:100%;border-left:0px;border-right:0px;border-top:0px;border-bottom-width: 3px;padding:1%;">
 
-	<button class="btn btn-outline-primary btn-lg" style="position: relative;left:1300px;top:10px;"id="buttt">Submit</button>
+	<button class="btn btn-outline-primary btn-lg" style="position: relative;left:70%;top:10px;"id="buttt">Submit</button>
 </form>
 
 
