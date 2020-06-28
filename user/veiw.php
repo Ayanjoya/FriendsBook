@@ -272,7 +272,7 @@ echo $row['friend'];
 while (	$row1 = mysqli_fetch_assoc($a1)){
 
 
-	$sql111 = "SELECT * FROM `profile` WHERE id = '".$row1['user_id']."'";
+	$sql111 = "SELECT * FROM `profile` WHERE user_id = '".$row1['user_id']."'";
 	$a11 = mysqli_query($conn, $sql111);	
 	$row11 = mysqli_fetch_assoc($a11)
 ?>
