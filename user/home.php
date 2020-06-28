@@ -51,7 +51,7 @@ echo '</script>';
 <body style="overflow: hidden; font-family: roboto;">
 
 
-<div class="row row-cols-0 row-cols-md-3" style="padding-top: 5%;">
+<div class="row row-cols-0 row-cols-md-3" style="padding-top: 90px;">
 
 
 <?php
