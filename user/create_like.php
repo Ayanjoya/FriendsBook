@@ -42,14 +42,14 @@ $data = mysqli_fetch_assoc($run);
 
 
 
-// echo '<script type="text/javascript">';
+echo '<script type="text/javascript">';
 
-// echo 'window.location.href = "'. "http://soclpie.com/veiw.php?creator_id=".$_GET['creator_id']."".'";';
+echo 'window.location.href = "'. "http://soclpie.com/veiw.php?creator_id=".$_GET['creator_id']."".'";';
 
-// echo '</script>';
+echo '</script>';
 
 
-echo $like;
+// echo $like;
 
 ?>
 
