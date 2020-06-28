@@ -72,7 +72,7 @@ $row11 = mysqli_fetch_assoc($a11);
 
 
 <div class="media pt-5 pb-5 pl-1" style="border-bottom: solid 3px;">
-  <img src="<?= '/FriendsBook/user/'.$row11['img']?>" class="mr-3" alt="..." style = "width: 80px;border-radius: 80%;">
+  <img src="<?= '../'.$row11['img']?>" class="mr-3" alt="..." style = "width: 80px;border-radius: 80%;">
   <div class="media-body">
     <h5 class="mt-0"><?= $row11['name']?></h5>
     <?= $row11['name'].' liked the post of id no '.$_REQUEST['id1']?>        <a class="btn btn-outline-danger" href="delete_like.php?id=<?= $row1['id']?>">Delete</a>  

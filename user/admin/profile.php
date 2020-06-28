@@ -56,7 +56,7 @@ $row1 = mysqli_fetch_assoc($a);
 
 
 <div class="card" style="width: 18rem;">
-  <img src="<?php echo '/FriendsBook/user/'.$row1['img'];?>" class="card-img-top" style = "height: 17rem;object-fit: cover;background-color: <?php echo $row1['background'];?>;" alt = "" >
+  <img src="<?php echo '../'.$row1['img'];?>" class="card-img-top" style = "height: 17rem;object-fit: cover;background-color: <?php echo $row1['background'];?>;" alt = "" >
   <div class="card-body">
     <h5 class="card-title"><?= $row1['name']?></h5>
     <p class="card-text"><?=$row1['bio']?></p>

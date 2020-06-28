@@ -72,7 +72,7 @@ $user = mysqli_fetch_assoc($a11);
 
 
 <div class="media pt-5 pb-5 pl-1" style="border-bottom: solid 3px;">
-  <img src="<?= '/FriendsBook/user/'.$user['img']?>" class="mr-3" alt="..." style = "width:60px; border-radius: 100%;">
+  <img src="<?= '../'.$user['img']?>" class="mr-3" alt="..." style = "width:60px; border-radius: 100%;">
   <div class="media-body">
     <h5 class="mt-0"><?= $user['name']?></h5>
       
