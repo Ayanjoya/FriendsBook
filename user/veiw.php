@@ -114,9 +114,13 @@ if($data1){
 
 
 </form>
-<?php } else{?>
+<?php 
 
-<form method="post" action='http://soclpie.com/unlike.php?creator_id=<?= $_GET['creator_id']?>'>
+} 
+
+else{?>
+
+<form method="post" action='http://soclpie.com/like.php?creator_id=<?= $_GET['creator_id']?>'>
 	
 
 <button style="background-image: url(like_button.png);padding: 3%;background-size: cover;border-radius: 80%;position: absolute;bottom: -55px;"></button>
