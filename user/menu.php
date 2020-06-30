@@ -3,6 +3,8 @@
 <?PHP
  include'config.php';
 ?>
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -15,12 +17,8 @@
 
 
 <nav class="navbar navbar-expand-lg navbar navbar-dark bg-success border-bottom shadow-sm border-dark" style="background-color: #eec0c6;
-background-image: linear-gradient(320deg, #eec0c6 30%, #7ee8fa 74%);
-    
-
-
-
-">
+background-image: linear-gradient(320deg, #eec0c6 30%, #7ee8fa 74%);" 
+>
 
 
 <img src="single.png" style="width: 60px;border-radius: 80%; height: auto;">
@@ -35,9 +33,7 @@ background-image: linear-gradient(320deg, #eec0c6 30%, #7ee8fa 74%);
         <a class="nav-link" href="<?=$url;?>profile_data.php?"style = "color: #000000;">Home <span class="sr-only">(current)</span></a>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="<?=$url;?>post.php?"style = "color: #000000;">Post</a>
-      </li>
+
 
       <li class="nav-item dropdown">
 
@@ -63,6 +59,22 @@ background-image: linear-gradient(320deg, #eec0c6 30%, #7ee8fa 74%);
 
 
       </li>
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="<?=$url?>/user/home.php?" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"style = "color: #000000;">
+          Students
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item"href="<?=$url;?>blog.php?">Blogs</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="<?=$url;?>note.php?">Notes</a>
+
+
+        </div>
+      </li>
+
+
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="<?=$url?>/user/home.php?" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"style = "color: #000000;">
           Account
@@ -89,10 +101,10 @@ background-image: linear-gradient(320deg, #eec0c6 30%, #7ee8fa 74%);
         </div>
       </li>
     </ul>
+        <a class="btn btn-outline-primary mobile pl-3 pr-3" href="<?=$url;?>post.php?" style = "font-size: 130%;">Post</a>
 
 
         </div>
-
 
 
 
@@ -117,6 +129,7 @@ a{
 
 
 
+        <a class="btn btn-dark mobileee fixed-bottom btn-lg ml-auto" href="<?=$url;?>post.php?" style = "font-size: 220%;width:70px;border-radius: 80%;">+</a>
 
 
 
@@ -254,3 +267,27 @@ section{
 }
 
 </style> -->
+
+
+<Style>
+
+  .mobileee{
+    display: none;
+
+  }
+
+
+
+@media only screen and (max-width: 990px) {
+  .mobile{
+    display: none;
+
+  }
+  .mobileee{
+    display:inline ;
+
+  }
+}
+
+
+</Style>

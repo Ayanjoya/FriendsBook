@@ -1,27 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -110,7 +86,7 @@ if($data1){
 <form method="post" action='http://soclpie.com/unlike.php?creator_id=<?= $_GET['creator_id']?>'>
 	
 
-<button class = "btn"style="background-image: url(already_liked.png);padding: 3%;background-size: cover;border-radius: 80%;position: absolute;bottom: -55px;"></button>
+<p style="font-size: 150%;"><a style="text-align: left; position: relative;bottom:40px;" href="http://soclpie.com/unlike.php?creator_id=<?= $_GET['creator_id']?>">UnLike</a><p>
 
 
 </form>
@@ -123,7 +99,7 @@ else{?>
 <form method="post" action='http://soclpie.com/create_like.php?creator_id=<?= $_GET['creator_id']?>'>
 	
 
-<button style="background-image: url(like_button.png);padding: 3%;background-size: cover;border-radius: 80%;position: absolute;bottom: -55px;"></button>
+<p style="text-align: left; position: relative;bottom:40px;"><a style="font-size: 150%;" href="http://soclpie.com/create_like.php?creator_id=<?= $_GET['creator_id']?>">Like</a>
 
 
 </form>
@@ -159,9 +135,9 @@ if ($data1){
 
 ?>
 
-<form method="post" action="http://205.147.99.187/FriendsBook/user/unfollow.php?creator_id=<?= $_GET['creator_id']?>">
+<form method="post" action="soclpie.com/unfollow.php?creator_id=<?= $_GET['creator_id']?>">
 	
-<button style="background-image: url(already_follow.png);padding: 3%;background-size: cover;border-radius: 80%;position: absolute;bottom: -55px; left:10%;"></button>
+<p style=" text-align: left; position: relative;bottom:60px;"><a style="font-size: 150%;" href="soclpie.com/unfollow.php?creator_id=<?= $_GET['creator_id']?>">UnFollow</a></p>
 
 </form>
 
@@ -177,9 +153,10 @@ else{
 
 
 
-<form method="post" action="http://soclpie.com/follow.php?creator_id=<?= $_GET['creator_id']?>">
+<form method="post" action="soclpie.com/follow.php?creator_id=<?= $_GET['creator_id']?>">
 	
-<button style="background-image: url(folloe_but.png);padding: 3%;background-size: cover;border-radius: 80%;position: absolute;bottom: -55px; left:10%;"></button>
+<a><p style="text-align: left; position: relative;bottom:60px;"><a style="font-size: 150%;" href="soclpie.com/follow.php?creator_id=<?= $_GET['creator_id']?>">Follow</a></p>
+</a>
 
 
 
@@ -187,10 +164,6 @@ else{
 
 <?php }?>
 
-<form method="post">
-	
-<a download href="<?= $row['media']?>" style="background-image: url(dowload_but.png);padding: 3%;background-size: cover;border-radius: 80%;position: absolute;bottom: -55px; left:20%;border: solid black 2px;"></a>
-</form>
 
 
 </div>

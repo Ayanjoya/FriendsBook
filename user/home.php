@@ -48,7 +48,7 @@ echo '</script>';
 ?>
 </div>
 
-<body style="overflow: hidden; font-family: roboto;">
+<body style="overflow: auto; font-family: roboto;">
 
 
 <div class="row row-cols-0 row-cols-md-3" style="padding-top: 90px;">
