@@ -67,7 +67,8 @@ if($row['color'] == '' and $row['url'] == '' and $row['media2'] == ''){
 
 
 
-<div class="h-100 w-100 img2" style="background-image: url(<?php echo $row['media']?>);background-size: cover;background-position: center;border-bottom: solid;">
+<div class=" img2" style="background-image: url(<?php echo $row['media']?>);background-size: cover;background-position: center;border-bottom: solid;height:100%;width:65%;position: relative;left:17.5%; border-bottom:solid 10px;">
+
 
 
 

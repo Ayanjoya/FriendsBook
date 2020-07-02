@@ -17,9 +17,6 @@ include 'menu.php';
 
 ?>
 
-
-
-
 <?php
 
 include 'conn.php';
@@ -81,8 +78,7 @@ while ($row1 = mysqli_fetch_assoc($a1)) {
 </div> 
 
 
-</div>
-
+</div></div>
 
 
 

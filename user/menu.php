@@ -15,54 +15,29 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
-
-<nav class="navbar navbar-expand-lg navbar navbar-dark bg-success border-bottom shadow-sm border-dark" style="background-color: #eec0c6;
-background-image: linear-gradient(320deg, #eec0c6 30%, #7ee8fa 74%);" 
->
-
-
-<img src="single.png" style="width: 60px;border-radius: 80%; height: auto;">
-
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <a class="navbar-brand text-white" href="#">SoclPie</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
+
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="<?=$url;?>profile_data.php?"style = "color: #000000;">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?=$url;?>profile_data.php?"style = "color: #ffffff;">Home <span class="sr-only">(current)</span></a>
       </li>
 
 
 
       <li class="nav-item dropdown">
 
-        <a class="nav-link" href="<?=$url;?>profile.php?"style = "color: #000000;">Profile</a>
+        <a class="nav-link" href="<?=$url;?>profile.php?"style = "color: #ffffff;">Profile</a>
 </li>
 
 
-
-<li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="home.php?" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"style = "color: #000000;">
-          Friends
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item"href="<?=$url;?>veiw_friends.php?">Your Friends</a>
-          <a class="dropdown-item"href="<?=$url;?>enrol_friends.php?">Enroll Friends</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="<?=$url;?>settings.php?">More...</a>
-
-
-        </div>
-      </li>
-
-
-
-      </li>
-
-
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="<?=$url?>/user/home.php?" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"style = "color: #000000;">
+        <a class="nav-link dropdown-toggle" href="<?=$url?>/user/home.php?" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"style = "color: #ffffff;">
           Students
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -76,7 +51,7 @@ background-image: linear-gradient(320deg, #eec0c6 30%, #7ee8fa 74%);"
 
 
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="<?=$url?>/user/home.php?" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"style = "color: #000000;">
+        <a class="nav-link dropdown-toggle" href="<?=$url?>/user/home.php?" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"style = "color: #ffffff;">
           Account
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -96,7 +71,7 @@ background-image: linear-gradient(320deg, #eec0c6 30%, #7ee8fa 74%);"
 
 
       <li class="nav-item">
-        <a class="nav-link" href="<?=$url;?>inbox.php?"style = "color: #000000;">Inbox</a>
+        <a class="nav-link" href="<?=$url;?>inbox.php?"style = "color: #ffffff;">Inbox</a>
       </li>
         </div>
       </li>

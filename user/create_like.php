@@ -1,15 +1,12 @@
-<?php
-
-session_start();
-?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 </head>
-<body style="overflow-x: hidden; visibility: ;">
+<body style="overflow-x: hidden; visibility: hidden;">
 
 <?php
+ session_start();
 
 include 'menu.php';
 include 'conn.php';
@@ -35,8 +32,8 @@ $data = mysqli_fetch_assoc($run);
 
 
 
-$like1 = "INSERT INTO `notify`(`user_id`, `creator_id`, `title`, `icon`, `text`) VALUES ('".$_SESSION['id']."' , '".$row['user_id']."' , 'Liked Your Post' , '".$row1['img']."' , '@".$row1['name']."')";
-$run = mysqli_query($conn, $like1);
+$like = "INSERT INTO `notify`(`user_id`, `creator_id`, `title`, `icon`, `text`) VALUES ('".$_SESSION['id']."' , '".$row['user_id']."' , 'Liked Your Post' , '".$row1['img']."' , '@".$row1['name']."')";
+$run = mysqli_query($conn, $like);
 $data = mysqli_fetch_assoc($run);
 
 
@@ -44,12 +41,9 @@ $data = mysqli_fetch_assoc($run);
 
 echo '<script type="text/javascript">';
 
-echo 'window.location.href = "'. "http://soclpie.com/veiw.php?creator_id=".$_GET['creator_id']."".'";';
+echo 'window.location.href = "'. "http://205.147.99.187/FriendsBook/user/veiw.php?creator_id=".$_GET['creator_id']."".'";';
 
 echo '</script>';
-
-
-// echo $like;
 
 ?>
 
