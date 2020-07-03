@@ -28,7 +28,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled text-light" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <a class="nav-link text-light" href="truncate.php" tabindex="-1" aria-disabled="true">Truncate</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

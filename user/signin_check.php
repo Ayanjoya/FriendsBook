@@ -47,8 +47,8 @@ if($a){
 
 
 
-		mysqli_query($conn, $sql);
-		header('Location: http://soclpie.com/login.php');
+		$data = mysqli_query($conn, $sql);
+		// header('Location: http://soclpie.com/login.php');
 	}
 }
 ?>
@@ -56,23 +56,25 @@ if($a){
 
 
 <?php
-echo '
+// echo '
 
-<script type="text/javascript">
+// <script type="text/javascript">
 	
 
-alert("Sorry sir but could not found your email or password please check and try Thank You");
+// alert("This username is already taken by someone please select new name.");
 
 
-window.location.href = "http://soclpie.com/signin.php";
+// window.location.href = "http://soclpie.com/signin.php";
 
-// Simulate an HTTP redirect:
-window.location.replace("http://soclpie.com/signin.php");
+// // Simulate an HTTP redirect:
+// window.location.replace("http://soclpie.com/signin.php");
 
-</script>
+// </script>
 
 
-';
+// ';
+
+echo $sql;
 
 ?>
 

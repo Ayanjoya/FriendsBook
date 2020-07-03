@@ -19,7 +19,16 @@ include 'menu.php';
 ?>
 
 
+<script type="text/javascript">
+  
+function trans() {
+  window.location = 'http://soclpie.com/veiw.php?creator_id='<?=$row1['id']?>'';
 
+  window.location.href = 'http://soclpie.com/veiw.php?creator_id='<?=$row1['id']?>'';
+
+}
+
+</script>
 
 <?php
 
@@ -73,13 +82,16 @@ if ($row1['color'] != ''){
 
 
 <div class="padd">
-<div class="card" style="height: 28rem;overflow: auto;background-color: <?php echo $row1['background'];?>;color: <?php echo $row1['color'];?>;border: solid 0.1px lightgray;">
+
+<div class="card text2" style="height: 28rem;overflow: auto;background-color: <?php echo $row1['background'];?>;color: <?php echo $row1['color'];?>;border: solid 0.1px lightgray;" >
 
   <div class="card-body">
         <h5 class="card-title" style=""><a href="post.php"><?php echo "@".$row1['name'];?></a></h5>
     <p class="card-text" ><h2><?php echo $row1['description'];?></h2></p>
 
     <a href="http://soclpie.com/veiw.php?creator_id='<?=$row1['id']?>'" class="btn btn-outline-danger btn a1">Veiw Details</a>
+  
+
   </div>
       <div style="background-color: white;">
 
@@ -243,7 +255,9 @@ elseif ($row1['color'] == '' and $row1['media2'] == '' and $row1['url'] == ''){
 
 <div class="padd">
 <div class="card">
+  <a href="http://soclpie.com/veiw.php?creator_id=<?php echo $row1['id']?>">
   <img src="<?php echo $row1['media'];?>" class="card-img-top" alt = "" >
+</a>
   <div class="card-body" style="background-color: <?php echo $row1['background'];?>;">
     <div style="background-color: white;">
 
@@ -386,8 +400,8 @@ else{
 
     <h5 class="card-title" ><a href="post.php"><?php echo "@".$row1['name'];?></a></h5>
     <p class="card-text"><?php echo $row1['description'];?></p>
-    <a href="http://soclpie.com/veiw.php?creator_id=<?php echo $row1['id']?>" class="btn btn-outline-danger btn a1">Veiw Details</a>
-  </div>
+<!--     <a href="http://soclpie.com/veiw.php?creator_id=<?php echo $row1['id']?>" class="btn btn-outline-danger btn a1">Veiw Details</a>
+ -->  </div>
 </div>
 
 
@@ -768,6 +782,8 @@ else{
   }
 
 
+
+
   .card-img-top{
     height: auto;object-fit: cover;background-color: <?php echo $row1['background'];?>;
   }
@@ -775,7 +791,9 @@ else{
   .padd{
     padding-left: 0%;
   }
-
+.text2{
+  width:auto;
+}
 
 }
 </style>

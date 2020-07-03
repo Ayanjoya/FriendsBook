@@ -44,7 +44,7 @@
 </style> -->
 
 
-<nav class="navbar navbar-expand-lg navbar-light shadow-sm border-bottom border-dark">
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm border-bottom border-dark bg-dark">
 <a class="navbar-brand text-dark" href="#" style="    font-family: Good Dog;
 font-size: 150%;">SoclPie</a>
 
