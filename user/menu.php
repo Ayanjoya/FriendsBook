@@ -4,9 +4,7 @@
  include'config.php';
 ?>
 
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 
@@ -15,7 +13,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #003049;">
   <a class="navbar-brand text-white" href="#">SoclPie</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -76,7 +74,7 @@
         </div>
       </li>
     </ul>
-        <a class="btn btn-outline-primary mobile pl-3 pr-3" href="<?=$url;?>post.php?" style = "font-size: 130%;">Post</a>
+        <a class="btn btn-success mobile pl-3 pr-3 btn-sm" href="<?=$url;?>post.php?" style = "font-size: 130%;border-radius:6%;">Post</a>
 
 
         </div>
@@ -91,6 +89,7 @@
   background-color: #00B1FF;
   border-color: #00B1FF;
   color:white;
+
 }
 
 a{

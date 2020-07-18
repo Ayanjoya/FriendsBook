@@ -24,7 +24,7 @@ $a = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($a);
 
 
-$sql = "INSERT INTO `blog`(`user_id`, `name`, `email`, `title`, `description`, `img`) VALUES ('".$row['id']."' , '".$row['name']."' , '".$row['email']."' , '".$_POST['title']."' , '".$_POST['desc']."' , '".$imagepath."')";
+$sql = "INSERT INTO `blog`(`user_id`, `name`, `email`, `title`, `description`, `img`) VALUES ('".$row['id']."' , '".$row['name']."' , '".$row['email']."' , '".$_POST['title']."' , '".addslashes($_POST['desc'])."' , '".$imagepath."')";
 
 $a = mysqli_query($conn, $sql);
 

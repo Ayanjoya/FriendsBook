@@ -16,7 +16,7 @@ $sql1 = "SELECT `id`, `name`, `email`, `password`, `phone`,`time`, `active`, `ba
 $a = mysqli_query($conn, $sql1);
 $row = mysqli_fetch_assoc($a);
 
-if($_SESSION['id']>0 and $row['banned'] == "no"){
+if(!empty($_SESSION['id'])){
 	header('Location: http://soclpie.com/home.php?');
 
 }

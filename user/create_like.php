@@ -41,7 +41,7 @@ $data = mysqli_fetch_assoc($run);
 
 echo '<script type="text/javascript">';
 
-echo 'window.location.href = "'. "http://205.147.99.187/FriendsBook/user/veiw.php?creator_id=".$_GET['creator_id']."".'";';
+echo 'window.location.href = "home.php"';
 
 echo '</script>';
 

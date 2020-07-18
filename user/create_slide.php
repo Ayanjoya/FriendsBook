@@ -53,7 +53,7 @@ include 'conn.php';
 
 
 
-$sql = "INSERT INTO `user_post`(`user_id`, `name`,`email`, `description` , `media` ,  `media2`, `media3`, `media4`, `friend`) VALUES ('".$_SESSION['id']."','".$_SESSION['name']."','".$_SESSION['email']."','".$_POST['desc']."' , '".$imagepath."' , '".$imagepath1."' ,  '".$imagepath2."' , '".$imagepath3."' ,'".$_POST['tag']."')";
+$sql = "INSERT INTO `user_post`(`user_id`, `name`,`email`, `description` , `media` ,  `media2`, `media3`, `media4`, `friend`) VALUES ('".$_SESSION['id']."','".$_SESSION['name']."','".$_SESSION['email']."', '".addslashes($_POST['desc'])."' , '".$imagepath."' , '".$imagepath1."' ,  '".$imagepath2."' , '".$imagepath3."' ,'".$_POST['tag']."')";
 
 $a = mysqli_query($conn, $sql);
 

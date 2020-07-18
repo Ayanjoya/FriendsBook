@@ -88,6 +88,8 @@ include 'conn.php';
     <label for="inputAddress2">Description</label>
     <textarea type="text" name=  "desc"class="form-control" id="inputAddress2" rows="7" placeholder="Description"></textarea>
   </div>
+
+  <div style="display: none;">
   <div class="form-group">
     <label for="inputAddress2">Background Color</label>
     <input type="color" name=  "back"class="form-control" id="inputAddress2" rows="7" placeholder="Description"></input>
@@ -97,7 +99,7 @@ include 'conn.php';
     <label for="inputAddress2">Font Color</label>
     <input type="color" name=  "font"class="form-control" id="inputAddress2" rows="7" placeholder="Description"></input>
   </div>
-
+  </div>
 
 <br><br>
 

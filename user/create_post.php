@@ -19,7 +19,7 @@ include 'conn.php';
 
 
 
-$sql = "INSERT INTO `user_post`(`user_id`, `name`,`email`, `description` , `media` , `friend`) VALUES ('".$_SESSION['id']."','".$_SESSION['name']."','".$_SESSION['email']."','".$_POST['desc']."' , '".$imagepath."' , '".$_POST['tag']."')";
+$sql = "INSERT INTO `user_post`(`user_id`, `name`,`email`, `description` , `media` , `friend`) VALUES ('".$_SESSION['id']."','".$_SESSION['name']."','".$_SESSION['email']."','".addslashes($_POST['desc'])."' , '".$imagepath."' , '".$_POST['tag']."')";
 
 $a = mysqli_query($conn, $sql);
 

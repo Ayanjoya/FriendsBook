@@ -1,62 +1,58 @@
-
 <!DOCTYPE html>
-<html style="overflow-x: scroll;overflow-x: hidden;">
+<html>
 <head>
   <title></title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+</head>
+<body>
 
-<div class="fixed-top">
-<?php
-session_start();
-
-include 'config.php';
-include 'menu.php';
-// include 'profile_side.php';
-
-
-?>
-
-
-
-
-<?php
-
-include 'conn.php';
-$sql1 = "SELECT `id`, `name`, `email`, `password`, `phone`, `time`, `active`, `banned` FROM `userdata` WHERE id = '".$_SESSION['id']."'";
-$a = mysqli_query($conn, $sql1);
-$row = mysqli_fetch_assoc($a);
-
-
-if($_SESSION['id']==0 or $row['banned'] == "yes"){
-
-
-  echo '<script type="text/javascript">';
-
-echo 'window.location.href = "http://soclpie.com/intro.php?"';
-
-
-echo '</script>';
-
-
-}
+<?php session_start();include'menu.php';include'conn.php';?>
 
 
 
 
 
-?>
+
+
+
+<div class="pt-0">
+<div class="w-100 bg-dark pt-3">
+  
+
+<form  method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+
+  <div class="form-group" style="display: inline-block;">
+
+<input type="" class="form-control ml-3" id="exampleInputEmail1" aria-describedby="emailHelp" style="width:20%;" placeholder="id" name = "id1">
+
+  </div>
+
+  <button type="submit" class="btn btn-primary" style="position: relative;left:-10%;">GO</button>
+</form>
+
+
 </div>
 
-<body style="overflow: auto; font-family: roboto; background-color: #EEEEEE;">
+
+</div>
+
+
+
+
+
+
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {?>
+
 
 
 <div class="row row-cols-0 row-cols-md-1 ml-auto" style="padding-top: 90px;">
 
 
 <?php
-$sql11 = "SELECT  `id`, `user_id`, `name`, `email`, `description`, `media`, `media2`, `media3`, `media4`, `color`, `background`, `time`, `friend`  , `url` FROM `user_post`order by id desc";
+$sql11 = "SELECT  `id`, `user_id`, `name`, `email`, `description`, `media`, `media2`, `media3`, `media4`, `color`, `background`, `time`, `friend`  , `url` FROM `user_post` WHERE id = '".$_REQUEST['id1']."'order by id desc";
 $a1 = mysqli_query($conn, $sql11);
 
 
@@ -73,13 +69,16 @@ if ($row1['color'] != ''){
 
 
 <div class="padd">
-<div class="card" style="overflow: auto;background-color: <?php echo $row1['background'];?>;color: <?php echo $row1['color'];?>;border: solid 0.1px lightgray;">
+
+<div class="card text2" style="height: 28rem;overflow: auto;background-color: <?php echo $row1['background'];?>;color: <?php echo $row1['color'];?>;border: solid 0.1px lightgray;" >
 
   <div class="card-body">
         <h5 class="card-title" style=""><a href="post.php"><?php echo "@".$row1['name'];?></a></h5>
     <p class="card-text" ><h2><?php echo $row1['description'];?></h2></p>
 
     <a href="http://soclpie.com/veiw.php?creator_id='<?=$row1['id']?>'" class="btn btn-outline-danger btn a1">Veiw Details</a>
+  
+
   </div>
       <div style="background-color: white;">
 
@@ -227,20 +226,6 @@ else{
 
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
 <?php
 }
@@ -257,7 +242,9 @@ elseif ($row1['color'] == '' and $row1['media2'] == '' and $row1['url'] == ''){
 
 <div class="padd">
 <div class="card">
+  <a href="http://soclpie.com/veiw.php?creator_id=<?php echo $row1['id']?>">
   <img src="<?php echo $row1['media'];?>" class="card-img-top" alt = "" >
+</a>
   <div class="card-body" style="background-color: <?php echo $row1['background'];?>;">
     <div style="background-color: white;">
 
@@ -400,8 +387,8 @@ else{
 
     <h5 class="card-title" ><a href="post.php"><?php echo "@".$row1['name'];?></a></h5>
     <p class="card-text"><?php echo $row1['description'];?></p>
-    <a href="http://soclpie.com/veiw.php?creator_id=<?php echo $row1['id']?>" class="btn btn-outline-danger btn a1">Veiw Details</a>
-  </div>
+<!--     <a href="http://soclpie.com/veiw.php?creator_id=<?php echo $row1['id']?>" class="btn btn-outline-danger btn a1">Veiw Details</a>
+ -->  </div>
 </div>
 
 
@@ -782,6 +769,8 @@ else{
   }
 
 
+
+
   .card-img-top{
     height: auto;object-fit: cover;background-color: <?php echo $row1['background'];?>;
   }
@@ -789,29 +778,26 @@ else{
   .padd{
     padding-left: 0%;
   }
-
+.text2{
+  width:auto;
+}
 
 }
 </style>
 
 
+<?php }?>
 
 
 
 
+<style type="text/css">
+  
+body,html{
+  height: 100%;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
+</style>
 </body>
 </html>
-

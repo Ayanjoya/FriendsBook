@@ -12,7 +12,7 @@ include 'conn.php';
 
 
 
-$sql = "INSERT INTO `user_post`(`user_id`, `name`, `email`, `description`, `color`, `background`,`friend`) VALUES ('".$_SESSION['id']."', '".$_SESSION['name']."','".$_SESSION['email']."' , '".$_POST['desc']."' , '".$_POST['font']."' , '".$_POST['back']."' , '".$_POST['friend']."')";
+$sql = "INSERT INTO `user_post`(`user_id`, `name`, `email`, `description`, `color`, `background`,`friend`) VALUES ('".$_SESSION['id']."', '".$_SESSION['name']."','".$_SESSION['email']."' , '".addslashes($_POST['desc'])."' , '".$_POST['font']."' , '".$_POST['back']."' , '".$_POST['friend']."')";
 
 $a = mysqli_query($conn, $sql);
 
