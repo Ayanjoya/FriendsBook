@@ -4,7 +4,7 @@
 <head>
 	<title></title>
 </head>
-<body style="overflow-x: hidden;">
+<body style="overflow-x: hidden;background:#E8E8E8;">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
 
@@ -53,33 +53,31 @@ if ($row['user_id'] == $_SESSION['id']){
 
 <?php }?>
 
-<img src="<?php echo $row['img'];?>" style = "width:170px;height: 170px;border-radius: 80%;object-fit: cover;border: solid white 5px;position: relative;position:absolute;bottom:17%;left:1%;">
+<img src="<?php echo $row['img'];?>" class="img">
 
-<h3 style="position: relative;top:8%;left:1%;"><?= $row['name']?></h3>
-<h5 style="position: relative;top:6%;left:1%;color: #565656;"><?= $row['email']?></h5>
+<h3 style="position: relative;top:5%;left:1%;"><?= $row['name']?></h3>
+<h5 style="position: relative;top:2.5%;left:1%;color: #565656;"><?= $row['email']?></h5>
 
-
-
-
+</div>
 
 
 
 
-<h5 style="position: relative;top:-3%; text-align: right; color: #565656;"><?= 'Gender: '.$row['gender']?></h5>
-
-<h5 style="position: relative;top:-4%; text-align: right; color: #565656;"><?= 'D.O.B: '.$row['dob']?></h5>
-
-<hr style="border: solid gray 2px;position: relative;top:-35px;">
 
 
 
 
-<div style="height:40.4%;overflow: auto;position: relative;bottom: 50px;background-color: white;">
 
 
 
-<h5 style="padding-left:1%;padding-top:1%;" class="text-dark"><?= $row['bio']?></h5>
 
+
+<div style="height:auto;padding-top:0.1%;padding-bottom:0.1%;position: relative;bottom: -10px;background-color: white; display:flex;">
+
+
+
+<h5 style="padding-left:1%;padding-top:1%;" class="text-dark">Do You Know <?PHP echo $row['name'].'?';?></h5>
+<a class="btn btn-danger" style="height:10%; margin-left:auto;margin-top:auto;margin-bottom:auto;" href="edit.php">Edit</a>
 </div>
 	
 
@@ -173,6 +171,16 @@ if ($row['user_id'] == $_SESSION['id']){
 </html>
 <style type="text/css">
 	
+
+.img{
+	width:170px;height: 170px;border-radius: 80%;object-fit: cover;border: solid white 5px;position: relative;position:absolute;bottom:17%;left:1%;
+}	
+
+@media only screen and (max-width: 492px) {
+	.img{
+	width:140px;height: 140px;border-radius: 80%;object-fit: cover;border: solid white 5px;position: relative;position:absolute;bottom:17%;left:1%;
+}
+}
 
 html, body {
   height: 100%;

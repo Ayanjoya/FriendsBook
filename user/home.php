@@ -27,7 +27,6 @@ if ($_SESSION['id'] == 0 or $row['banned'] == "yes") {
 
   <title>Welcome to the Soclpie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 
 <body style="overflow: auto; font-family: roboto; background-color: #EEEEEE;">
@@ -142,7 +141,7 @@ if ($_SESSION['id'] == 0 or $row['banned'] == "yes") {
 
 
 
-                    $follow = "SELECT `id`, `user_id`, `creator_id`, `post_id` ,`time` FROM `follow` WHERE user_id = '" . $_SESSION['id'] . "' AND creator_id = '" . $row['id'] . "'";
+                    $follow = "SELECT `id`, `user_id`, `creator_id`, `post_id` ,`time` FROM `follow` WHERE user_id = '" . $_SESSION['id'] . "' AND creator_id = '" . $row1['user_id'] . "'";
                     $run1 = mysqli_query($conn, $follow);
                     $data1 = mysqli_fetch_assoc($run1);
 
@@ -167,7 +166,7 @@ if ($_SESSION['id'] == 0 or $row['banned'] == "yes") {
 
 
 
-                      <button style="background-image: url('unfollow.webp');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float: left;"></button>
+                      <button style="background-image: url('unfollow.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float: left;"></button>
 
                     </form>
 
@@ -183,7 +182,7 @@ if ($_SESSION['id'] == 0 or $row['banned'] == "yes") {
 
 
 
-                      <button style="background-image: url('add.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float: left;"></button>
+                      <button style="background-image: url('add2.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float: left;"></button>
 
                     </form>
 
@@ -347,7 +346,7 @@ if ($_SESSION['id'] == 0 or $row['banned'] == "yes") {
 
 
 
-                      <button style="background-image: url('unfollow.webp');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float: left;"></button>
+                      <button style="background-image: url('unfollow.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float: left;"></button>
 
                     </form>
 
@@ -363,7 +362,7 @@ if ($_SESSION['id'] == 0 or $row['banned'] == "yes") {
 
 
 
-                      <button style="background-image: url('add.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%; float: left;"></button>
+                      <button style="background-image: url('add2.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%; float: left;"></button>
 
                     </form>
 
@@ -499,9 +498,6 @@ if ($_SESSION['id'] == 0 or $row['banned'] == "yes") {
 
 
 
-
-
-
               <div style="background-color: white; margin-top:5%; margin-left:13px;">
 
 
@@ -587,7 +583,7 @@ if ($_SESSION['id'] == 0 or $row['banned'] == "yes") {
 
 
 
-                    <button style="background-image: url('unfollow.webp');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float:left;"></button>
+                    <button style="background-image: url('unfollow.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float:left;"></button>
 
                   </form>
 
@@ -603,7 +599,7 @@ if ($_SESSION['id'] == 0 or $row['banned'] == "yes") {
 
 
 
-                    <button style="background-image: url('add.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float:left;"></button>
+                    <button style="background-image: url('add2.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float:left;"></button>
 
                   </form>
 
@@ -763,7 +759,7 @@ if ($_SESSION['id'] == 0 or $row['banned'] == "yes") {
 
 
 
-                    <button style="background-image: url('unfollow.webp');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float:left;"></button>
+                    <button style="background-image: url('unfollow.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float:left;"></button>
 
                   </form>
 
@@ -779,7 +775,7 @@ if ($_SESSION['id'] == 0 or $row['banned'] == "yes") {
 
 
 
-                    <button style="background-image: url('add.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float:left;"></button>
+                    <button style="background-image: url('add2.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float:left;"></button>
 
                   </form>
 
@@ -939,6 +935,7 @@ if ($_SESSION['id'] == 0 or $row['banned'] == "yes") {
 
       }
     </style>
+
 
 
 

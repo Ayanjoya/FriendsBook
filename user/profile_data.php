@@ -36,7 +36,13 @@ echo 'window.location.href = "http://soclpie.com/home.php";';
 
 echo '</script>';
 
+}
 
+
+elseif ($_SESSION['id'] == 0 or $row['banned'] == "yes") {
+  echo '<script type="text/javascript">';
+  echo 'window.location.href = "http://soclpie.com/intro.php?"';
+  echo '</script>';
 }
 
 
