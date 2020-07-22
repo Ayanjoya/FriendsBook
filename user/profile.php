@@ -247,7 +247,7 @@ if ($row['user_id'] == $_SESSION['id']){
 }
 
 .post{
-	height:1000px;padding-top:0.1%;padding-bottom:0.1%;position: relative;bottom: -40px;background-color: white; width:100%; height:auto; margin:; padding:1%;left:0%;
+	height:10%;padding-top:0.1%;padding-bottom:0.1%;position: relative;bottom: -40px;background-color: white; width:100%; height:auto; margin:; padding:1%;left:0%;
 }
 
 .tog{
