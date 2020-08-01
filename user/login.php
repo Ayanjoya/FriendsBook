@@ -178,15 +178,16 @@ input{
 
 
 
-<div class="alert-success w-100 h-100 pl-1 p-5 " >
+<div class="pl-1 p-5" style="border-radius: 10px;border:solid 1px lightgray;">
+<h4>Log In To Your Account</h4>
       <form method="post" action="login_check.php">
   <div class="form-group">
-    <label for="exampleInputEmail1" class="text-dark">Email address</label>
+    <label for="exampleInputEmail1" class="text-primary">Email address</label>
     <input type="email" class="form-control bg-dark text-white" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
     <small id="emailHelp" class="form-text text-dark">We'll never share your email with anyone else.</small>
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1" class="text-dark">Password</label>
+    <label for="exampleInputPassword1" class="text-primary">Password</label>
     <input type="password" class="form-control bg-dark text-white" id="exampleInputPassword1" name="password">
   </div>
   <div class="form-group form-check">
