@@ -87,19 +87,7 @@ $row2 = mysqli_fetch_assoc($a1);
   <button type="submit" class="btn btn-outline-success btn-lg btn-block a1">Submit</button>
 
 </form>
-  <form action="home.php" method="post">
 
-<script type="text/javascript">
-  
-function fun() {
-  alert("These changes will not save or press esc to save them");
-}
-
-</script>
-
-  <button type="submit" onclick = "fun()"class="btn btn-outline-secondary btn-lg btn-block a2">Cancel</button>
-</form>
-</form>
 
 
 

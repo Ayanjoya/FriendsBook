@@ -112,7 +112,7 @@ if (!isset($_SESSION['CREATED'])) {
             <div class="card text3" style="height: auto;border: solid 0.1px lightgray;">
 
               <div class="card-body">
-                <h5 class="card-title"><a href="post.php"><?php echo "@" . $row1['name']; ?></a></h5>
+                <h5 class="card-title"><a href="veiw_profile.php?id=<?=$row1['user_id']?>"><?php echo "@" . $row1['name']; ?></a></h5>
                 <p class="card-text">
                   <h6 style="font-family:sans-serif;"><?php echo $row1['description']; ?></h2>
                 </p>
@@ -155,7 +155,7 @@ if (!isset($_SESSION['CREATED'])) {
 
 
 
-                      <button style="background-image: url('heart.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;float: left;"></button>
+                      <button style="background-image: url('heart3.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;float: left;"></button>
 
                     </form>
 
@@ -221,7 +221,7 @@ if (!isset($_SESSION['CREATED'])) {
 
 
 
-                      <button style="background-image: url('add2.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float: left;"></button>
+                      <button style="background-image: url('add4.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float: left;"></button>
 
                     </form>
 
@@ -295,7 +295,7 @@ if (!isset($_SESSION['CREATED'])) {
 
           <div class="padd">
             <div class="card" style="">
-              <h5 class="card-title" style="padding-top:1.5%;padding-left: 2%;"><a href="post.php"><?php echo "@" . $row1['name']; ?></a></h5>
+                <h5 class="card-title"><a href="veiw_profile.php?id=<?=$row1['user_id']?>"><?php echo "@" . $row1['name']; ?></a></h5>
               <a href="http://soclpie.com/veiw.php?creator_id=<?php echo $row1['id'] ?>">
                 <img src="<?php echo $row1['media']; ?>" class="card-img-top img-fluid" style="border-radius: 2%;" alt="">
               </a>
@@ -335,7 +335,7 @@ if (!isset($_SESSION['CREATED'])) {
 
 
 
-                      <button style="background-image: url('heart.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;float: left;"></button>
+                      <button style="background-image: url('heart3.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;float: left;"></button>
 
                     </form>
 
@@ -360,7 +360,7 @@ if (!isset($_SESSION['CREATED'])) {
 
 
 
-                    $follow = "SELECT `id`, `user_id`, `creator_id`, `post_id` ,`time` FROM `follow` WHERE user_id = '" . $_SESSION['id'] . "' and creator_id = '" . $data11['id'] . "'";
+                    $follow = "SELECT `id`, `user_id`, `creator_id`, `post_id` ,`time` FROM `follow` WHERE user_id = '" . $_SESSION['id'] . "' and creator_id = '" . $data11['user_id'] . "'";
                     $run1 = mysqli_query($conn, $follow);
                     $data1 = mysqli_fetch_assoc($run1);
 
@@ -401,7 +401,7 @@ if (!isset($_SESSION['CREATED'])) {
 
 
 
-                      <button style="background-image: url('add2.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%; float: left;"></button>
+                      <button style="background-image: url('add4.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%; float: left;"></button>
 
                     </form>
 
@@ -492,7 +492,7 @@ if (!isset($_SESSION['CREATED'])) {
           <div class="padd">
             <div class="card" style="padding: 13px;">
 
-              <h5 class="card-title" style="padding-top: 1%; padding-left:1.5%;"><a href="post.php"><?php echo "@" . $row1['name']; ?></a></h5>
+                <h5 class="card-title"><a href="veiw_profile.php?id=<?=$row1['user_id']?>"><?php echo "@" . $row1['name']; ?></a></h5>
 
 
 
@@ -572,7 +572,7 @@ if (!isset($_SESSION['CREATED'])) {
 
 
 
-                    <button style="background-image: url('heart.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;float: left;"></button>
+                    <button style="background-image: url('heart3.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;float: left;"></button>
 
                   </form>
 
@@ -597,7 +597,7 @@ if (!isset($_SESSION['CREATED'])) {
 
 
 
-                  $follow = "SELECT `id`, `user_id`, `creator_id`, `post_id` ,`time` FROM `follow` WHERE user_id = '" . $_SESSION['id'] . "' and creator_id = '" . $data11['id'] . "'";
+                  $follow = "SELECT `id`, `user_id`, `creator_id`, `post_id` ,`time` FROM `follow` WHERE user_id = '" . $_SESSION['id'] . "' and creator_id = '" . $data11['user_id'] . "'";
                   $run1 = mysqli_query($conn, $follow);
                   $data1 = mysqli_fetch_assoc($run1);
 
@@ -638,7 +638,7 @@ if (!isset($_SESSION['CREATED'])) {
 
 
 
-                    <button style="background-image: url('add2.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float:left;"></button>
+                    <button style="background-image: url('add4.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float:left;"></button>
 
                   </form>
 
@@ -704,7 +704,7 @@ if (!isset($_SESSION['CREATED'])) {
 
           <div class="padd">
             <div class="card" style="">
-              <h5 class="card-title"><a href="post.php"><?php echo "@" . $row1['name']; ?></a></h5>
+                <h5 class="card-title"><a href="veiw_profile.php?id=<?=$row1['user_id']?>"><?php echo "@" . $row1['name']; ?></a></h5>
               <a href="<?php echo 'veiw.php?vidio_url=' . $row1['url'] ?>/&creator_id=<?= $row1['id'] ?>">
 
                 <img src="<?php echo $row1['media']; ?>" class="card-img-top vid" style="height: auto;object-fit: cover;background-color: <?php echo $row1['background']; ?>; " alt="">
@@ -748,7 +748,7 @@ if (!isset($_SESSION['CREATED'])) {
 
 
 
-                    <button style="background-image: url('heart.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;float: left;"></button>
+                    <button style="background-image: url('heart3.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;float: left;"></button>
 
                   </form>
 
@@ -773,7 +773,7 @@ if (!isset($_SESSION['CREATED'])) {
 
 
 
-                  $follow = "SELECT `id`, `user_id`, `creator_id`, `post_id` ,`time` FROM `follow` WHERE user_id = '" . $_SESSION['id'] . "' and creator_id = '" . $data11['id'] . "'";
+                  $follow = "SELECT `id`, `user_id`, `creator_id`, `post_id` ,`time` FROM `follow` WHERE user_id = '" . $_SESSION['id'] . "' and creator_id = '" . $data11['user_id'] . "'";
                   $run1 = mysqli_query($conn, $follow);
                   $data1 = mysqli_fetch_assoc($run1);
 
@@ -814,7 +814,7 @@ if (!isset($_SESSION['CREATED'])) {
 
 
 
-                    <button style="background-image: url('add2.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float:left;"></button>
+                    <button style="background-image: url('add4.png');background-size:100%; background-position: center;height: 30px;width: 30px;border:none;background-color: white;margin-left:2%;float:left;"></button>
 
                   </form>
 

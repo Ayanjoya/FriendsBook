@@ -44,26 +44,8 @@ include 'conn.php';
 
 
 
+<?php include 'post_menu.php';?>
 
-<div style="width: 100%;">
-
-
-<div>
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-      <h5 class="text-white h4"><a style = "color: white;"href="post.php">Media</a></h5><br>
-      <h5 class="text-white h4"><a style = "color: white;"href="text_post.php">Text</a></h5><br>
-      <h5 class="text-white h4"><a style = "color: white;"href="post_slide.php">Slide</a></h5>
-      <h5 class="text-white h4" style="padding-top: 2%;"><a style = "color: white;"href="post_url.php">Url</a></h5>
-
-    </div>
-  </div>
-  <nav class="navbar navbar-dark bg-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </nav>
-</div>
 
 
 
@@ -74,10 +56,10 @@ include 'conn.php';
 <form style="padding-left: 1%;" action="create_text.php" method="post" enctype="multipart/form-data">
   <div class="form-row">
     <div class="form-group col-md-12">
-      <label for="inputPassword4">Tag Friend</label>
+
         <div class="input-group-prepend">
     <span class="input-group-text">@</span>
-      <input type="text" name = "friend"class="form-control" id="inputPassword4" placeholder="Friend Name">
+      <input type="text" name = "friend"class="form-control" id="inputPassword4" placeholder="Tag Friends">
     </div></div>
   </div>
   <div class="form-group">

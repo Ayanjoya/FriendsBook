@@ -35,23 +35,28 @@ if($out_md['media'] != '' and $out_md['media2'] =='' and $out_md['url'] ==''){
     
 <div class="main">
 
+
+
 <div class="media">
-    
+
   <img src="<?php echo $out_pro['img']?>" class="mr-3" alt="..." style="height:50px;width:50px; object-fit:cover; border-radius:100%;">
+
   <div class="media-body">
     <h5 class="mt-0"><?= $out_pro['name']?></h5>
+
     <?php
     $fol = "SELECT count(*) as counter FROM `follow` WHERE user_id = '".$out_pro['user_id']."'";
     $fol_fun = mysqli_query($conn, $fol);
     $out_fol = mysqli_fetch_assoc($fol_fun);
     ?>
     <h6 style="font-size: 14px;"><?= $out_fol['counter'].' Followers'?></h6>
+
   </div>
 </div>
 
-<h6 style="font-size: 14px; padding-top:1%;"><?= $out_md['description']?></h6>
+            <a href="home.php"><img src="close.png" style="width:22px;position:absolute;top:15%;left:3%;"></a>
 
-<img src="<?= $out_md['media']?>" alt="" style="width:100%; margin-top:1%; max-height:75%; object-fit:cover;">
+<img src="<?= $out_md['media']?>" alt="" style="width:100%; margin-top:1%; height:86.5%; object-fit:cover;">
 
 
 </div>
@@ -98,9 +103,10 @@ elseif ($out_md['url']!=''){
   </div>
 </div>
 
-<h6 style="font-size: 14px; padding-top:1%;"><?= $out_md['description']?></h6>
+
 
 <!-- <img src="<?= $out_md['media']?>" alt="" style="width:100%; margin-top:1%; height:80%; object-fit:cover;"> -->
+            <a href="home.php"><img src="close.png" style="width:22px;position:absolute;top:15%;left:3%;"></a>
 
 <iframe style="width:100%; margin-top:1%; height:80%; object-fit:cover;" allowfullscreen src="<?= 'https://www.youtube.com/embed/'.substr($_GET['vidio_url'] , 32); ?>">
 </iframe>
@@ -133,7 +139,7 @@ elseif($out_md['media2'] != ''){
   </div>
 </div>
 
-<h6 style="font-size: 14px; padding-top:1%;"><?= $out_md['description']?></h6>
+
 
 
 
@@ -191,7 +197,8 @@ elseif($out_md['media2'] != ''){
 
 <div style="background:white;overflow:auto;border: solid 0.1px lightgray; height:auto;padding:1%;float:left; width:33%;height:96.5%;border-left:0px;position:fixed;left:66%;" class="comment">
 
-<h5 style="padding-bottom: 2%;">Comments on this post</h5>
+<h5 style="padding-bottom: 2%;padding-top:2%;"><?= $out_md['description']?>
+</h5>
 <hr>
 <?php
 
@@ -249,8 +256,9 @@ else{
 
 <input type="text" placeholder="Comment" style="position: fixed; top:90%; width:26%; font-size:150%; float:left; padding:0.2%;" name="comm">
 
-</form>
 <button class="btn btn-primary" style="position: fixed; top:90%;left:93.5%; height:5%;">></button>
+</form>
+
 </div>
 </div>
 
@@ -295,7 +303,6 @@ while($out_com = mysqli_fetch_assoc($com_fun)){
   <img src="images.png" style="background-color: none;width:25px;">
 
 
-    <?=$out_com['comment']?>
 
 <?php
 }

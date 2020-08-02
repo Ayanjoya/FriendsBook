@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'conn.php';
 
 if ($_POST['bio'] == ""or $_POST['phone'] == "" or $_POST['address'] == ""){
 
@@ -51,7 +52,6 @@ move_uploaded_file($tmp_name1, $imagepath1);
 
 
 
-$conn = mysqli_connect("localhost", "root", "12345", "my_fb");
 
 $sql1 = "UPDATE `profile` SET `bio` = '".$_POST['bio']."' , `address` = '".$_POST['address']."' , `img` = '".$imagepath."' ,`back_cover` = '".$imagepath1."' WHERE id = '".$_SESSION['id']."'";
 

@@ -1,54 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body style="overflow-x: hidden; visibility: hidden;">
-
+<div style="display: none;">
 <?php
- session_start();
-
-include 'menu.php';
+session_start();
 include 'conn.php';
 
-$sql1 = "SELECT `id`, `user_id`, `name`, `email`, `description`, `media`, `media2`, `media3`, `media4`, `color`, `background`, `time`, `friend` FROM `user_post` WHERE id = ".$_GET['creator_id']."";
-$a = mysqli_query($conn, $sql1);
-$row = mysqli_fetch_assoc($a);
+
+//for profile of follow
+$media = "SELECT `id`, `user_id`, `name`, `email`, `description`, `media`, `media2`, `media3`, `media4`, `url`, `color`, `background`, `time`, `friend` FROM `user_post` WHERE id = '".$_GET['creator_id']."'";
+$run1 = mysqli_query($conn, $media);
+$data1 = mysqli_fetch_assoc($run1);
+
+$pro = "SELECT `id`, `user_id`, `name`, `email`, `gender`, `bio`, `dob`, `address`, `img`, `back_cover` FROM `profile` WHERE user_id = '".$data1['user_id']."'";
+$run2 = mysqli_query($conn, $pro);
+$data2 = mysqli_fetch_assoc($run2);
 
 
-
-$like = "INSERT INTO `notify`(`user_id`, `creator_id`, `title`, `icon`, `text`) VALUES ('".$_SESSION['id']."' , '".$row['user_id']."' , 'Started Following You' , '".$row1['img']."' , '@".$row1['name']."')";
-$run = mysqli_query($conn, $like);
-$data = mysqli_fetch_assoc($run);
-
-
-$like = "INSERT INTO `follow`(`user_id`, `creator_id` , `post_id`) VALUES ('".$_SESSION['id']."' , '".$row['user_id']."' , '".$_GET['creator_id']."')";
-$run = mysqli_query($conn, $like);
-$data = mysqli_fetch_assoc($run);
+//for notify
+$not = "INSERT INTO `notify`(`user_id`, `creator_id`, `title`, `icon`, `text`) VALUES ('".$_SESSION['id']."' , '".$data2['user_id']."' , 'Started Following You' , '".$data2['img']."' , '".$_SESSION['name']."')";
+$run3 = mysqli_query($conn, $not);
+$data3 = mysqli_fetch_assoc($run3);
 
 
+//for follow
+$fol = "INSERT INTO `follow`(`user_id`, `creator_id`, `post_id`) VALUES ('".$_SESSION['id']."' , '".$data2['user_id']."','".$_GET['creator_id']."')";
+$run4 = mysqli_query($conn, $fol);
+$data4 = mysqli_fetch_assoc($run4);
 
+header('Location: home.php');
 
-
-
-
-echo '<script type="text/javascript">';
-
-echo 'window.location.href = "home.php"';
-
-echo '</script>';
 ?>
 
-
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
+</div>
