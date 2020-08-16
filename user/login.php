@@ -1,35 +1,35 @@
 <!-- <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+  <title></title>
 </head>
 <body>
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 <style type="text/css">
-	body{
-	background-image: url('signin.gif');
-	background-size: cover;
-	font-family: roboto;
-	color:#303030;
-	overflow: hidden;
+  body{
+  background-image: url('signin.gif');
+  background-size: cover;
+  font-family: roboto;
+  color:#303030;
+  overflow: hidden;
 }
 
 div{
 
-	background-color: #DEDEDE;
-	width: 70rem;
-	height:45rem;
-	position: relative;
-	top:2.5rem;
-	left:10rem;
+  background-color: #DEDEDE;
+  width: 70rem;
+  height:45rem;
+  position: relative;
+  top:2.5rem;
+  left:10rem;
 }
 input{
-	width:69.6rem;
-	font-size: 200%;
-	position: relative;
-	bottom: 1rem
+  width:69.6rem;
+  font-size: 200%;
+  position: relative;
+  bottom: 1rem
 }
 
 @keyframes ex{
@@ -45,20 +45,20 @@ input{
 </style>
 
 <div>
-	<h1 style="	text-align: center;	padding-bottom: 10%;
+  <h1 style=" text-align: center; padding-bottom: 10%;
 ">Welcome to Friends Book</h1>
-	<form action = "login_check.php" method = "post">
-	<h1 style="padding-left: 1%">Email</h1>
-	<input type="text" name="email">
-	<br>
-	<br>
-	<br>
-	<br>
+  <form action = "login_check.php" method = "post">
+  <h1 style="padding-left: 1%">Email</h1>
+  <input type="text" name="email">
+  <br>
+  <br>
+  <br>
+  <br>
 
-	<h1 style="padding-left: 1%">Password</h1>
-	<input type="password" name="password">
-	<button style="font-size: 5rem;font-family: roboto;background-color: #0087FF;color: white;
-		box-shadow:0 9px 5px black;position: relative;left:36%;top:3rem;animation-name: ex;animation-duration: 5s;">Submit</button>
+  <h1 style="padding-left: 1%">Password</h1>
+  <input type="password" name="password">
+  <button style="font-size: 5rem;font-family: roboto;background-color: #0087FF;color: white;
+    box-shadow:0 9px 5px black;position: relative;left:36%;top:3rem;animation-name: ex;animation-duration: 5s;">Submit</button>
 </form>
 </div>
 
@@ -75,8 +75,8 @@ input{
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
 </head>
@@ -164,50 +164,65 @@ input{
 <head>
   <title></title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-</head>
-<body>
-
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5GMFFWW');</script>
+<!-- End Google Tag Manager -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GMFFWW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <div class="row">
+<div class="m-auto">
 
 
+<img src="single.png">
 
-
-
-<div class="pl-1 p-5" style="border-radius: 10px;border:solid 1px lightgray;">
-<h4>Log In To Your Account</h4>
-      <form method="post" action="login_check.php">
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="text-primary">Email address</label>
-    <input type="email" class="form-control bg-dark text-white" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
-    <small id="emailHelp" class="form-text text-dark">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1" class="text-primary">Password</label>
-    <input type="password" class="form-control bg-dark text-white" id="exampleInputPassword1" name="password">
-  </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-labe text-dark" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-outline-dark">Submit</button>
-</form>
-
-    </div>
-    
-  </div>
-  
 </div>
 
 
+
+</div>
+
+<h3 style="text-align: center;">Welcome To The Social Network</h3>
+
+
+<form action="login_check.php" method = "post">
+   <div class="form-row ">
+
+ <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" name ="email">
+    </div>
+     <div class="form-group col-md-6">
+      <label for="inputEmail4">Password</label>
+      <input type="password" class="form-control" id="inputEmail4" name ="password">
+    </div>
+ 
+
+
+  </div>
+
+
+  <button type="submit" class="btn btn-primary">Sign in</button>
+
+</form>
+  
 <style type="text/css">
   
 html,body{
   height: 100%;
+  padding:2%;
 }
 
 </style>

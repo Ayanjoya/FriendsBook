@@ -12,7 +12,7 @@
   <a href="post.php"class="text-dark"><img src="camera.png" style="width:20px;margin-left:1%;"> media</a>
   <a href="post_url.php"class="text-dark"><img src="film.png" style="width:20px; margin-left:6%;"> Vidio</a>
   <a href="text_post.php"class="text-dark"><img src="text.png" style="width:20px;margin-left:6%;"> Text</a>
-  <a href="post_slide.php"class="text-dark"><img src="slideshow.png" style="width:20px;margin-left:6%;"> Slide</a>
+
 
 </div>
 </div>

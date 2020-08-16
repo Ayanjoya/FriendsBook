@@ -25,4 +25,7 @@ $a = mysqli_query($conn, $sql1);
 $row = mysqli_fetch_assoc($a);
 
 
+header('Location:profile.php');
+
+
 ?>

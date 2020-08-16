@@ -1,77 +1,82 @@
 <!-- <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+  <title></title>
 </head>
 <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style type="text/css">
-	
-
-body{
-	background-image: url('signin.gif');
-	background-size: cover;
-	font-family: roboto;
-	color:#303030;
-	overflow: hidden;
+  body{
+  background-image: url('signin.gif');
+  background-size: cover;
+  font-family: roboto;
+  color:#303030;
+  overflow: hidden;
 }
 
 div{
-	background-color: #DEDEDE;
-	width: 70rem;
-	height:45rem;
-	position: relative;
-	top:2.5rem;
-	left:10rem;
 
+  background-color: #DEDEDE;
+  width: 70rem;
+  height:45rem;
+  position: relative;
+  top:2.5rem;
+  left:10rem;
 }
-
 input{
-	width:69.6rem;
-	font-size: 200%;
-	position: relative;
-	bottom: 1rem
+  width:69.6rem;
+  font-size: 200%;
+  position: relative;
+  bottom: 1rem
 }
 
+@keyframes ex{
 
+0%{transform: rotateY(1000deg);}
 
+50%{position: relative;top: 100px;}
+
+100%{position: relative;bottom: -100px;}
+
+}
 
 </style>
 
-
 <div>
-	<h1 style="	text-align: center;">Welcome to Friends Book</h1>
-	<br>
-<form action = "signin_check.php" method = "post">
-	<h1 style="padding-left: 1%">Name</h1>
-	<input type="text" name="name">
-	<h1 style="padding-left: 1%">Phone No</h1>
-	<input type="number" name="phone">
-	<h1 style="padding-left: 1%">Email</h1>
-	<input type="email" name="email">
-	<h1 style="padding-left: 1%">Password</h1>
-	<input type="text" name="password">
-	<button style="font-size: 5rem;font-family: roboto;background-color: #0087FF;color: white;
-		box-shadow:0 9px 5px black;position: relative;left:75.3%;top:0rem;">Submit</button>
-	</form>
-	<form action = "login.php">
-	<button style="font-size: 5rem;font-family: roboto;background-color: #0087FF;color: white;box-shadow:0 9px 5px black;position: relative;top:-7rem;">LogIn</button>
-	</form>
-</div>
+  <h1 style=" text-align: center; padding-bottom: 10%;
+">Welcome to Friends Book</h1>
+  <form action = "login_check.php" method = "post">
+  <h1 style="padding-left: 1%">Email</h1>
+  <input type="text" name="email">
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <h1 style="padding-left: 1%">Password</h1>
+  <input type="password" name="password">
+  <button style="font-size: 5rem;font-family: roboto;background-color: #0087FF;color: white;
+    box-shadow:0 9px 5px black;position: relative;left:36%;top:3rem;animation-name: ex;animation-duration: 5s;">Submit</button>
 </form>
+</div>
+
 
 </body>
 </html> -->
 
 
 
-<!-- <!DOCTYPE html>
+<!-- 
+
+
+
+<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
 </head>
@@ -146,8 +151,9 @@ input{
   </form>
 <script type="text/javascript" src="script.js"></script>
 </body>
-</html> -->
+</html>
 
+ -->
 
 
 
@@ -159,92 +165,89 @@ input{
   <title></title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-</head>
-<body>
-
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
+</head>
+<body>
+  <div class="row">
+<div class="m-auto">
 
 
+<img src="single.png">
 
-
-
-<div class=" w-100 h-100 pl-1 p-5 alert-warning">
-      <form method="post" action="signin_check.php" class="w-100">
-
-  <div class="form-group">
-    <label for="exampleInputPassword1" class="text-dark">Name</label>
-    <input type="text" class="form-control bg-dark text-white" id="exampleInputPassword1" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="exampleInputPassword1" class="text-dark">Phone</label>
-    <input type="number" class="form-control bg-primary text-white" id="exampleInputPassword1" name="phone">
-  </div>
-
-
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="text-dark">Email address</label>
-    <input type="email" class="form-control bg-danger text-white" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1" class="text-dark">Password</label>
-    <input type="password" class="form-control text-white" id="exampleInputPassword1" name="password" style="background: #62FFA5;">
-  </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-labe text-dark" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-outline-dark">Submit</button>
-</form>
-
-    </div>
-    
-  </div>
-  
 </div>
 
 
 
+</div>
 
-<form>
+<h3 style="text-align: center;">Welcome To The Social Network</h3>
+
+
+<form action="signin_check.php" method = "post">
   <div class="form-row">
+  <div class="form-group col-md-12">
+    <label for="inputAddress">Name</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="User Name" name = "name">
+  </div>
+
     <div class="form-group col-md-6">
       <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4">
+      <input type="email" class="form-control" id="inputEmail4" name ="email">
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4">
+      <input type="password" class="form-control" id="inputPassword4"name ="password">
     </div>
   </div>
   <div class="form-group">
     <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <input type="text" class="form-control" id="inputAddress" placeholder="Address"name ="address">
   </div>
   <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <label for="inputAddress">School</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Name Of Your School" name = "school">
   </div>
+
   <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
+    <div class="form-group col-md-4">
+      <label for="inputCity">Phone No</label>
+      <input type="Number" class="form-control" id="inputCity" name="phone">
     </div>
     <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
+      <label for="inputState">Class</label>
+      <select id="inputState" class="form-control" name="class">
+        <option selected>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>12</option>
+        <option>other...</option>
+
       </select>
     </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
-    </div>
+    <div class="form-group col-md-4">
+      <label for="inputZip">Section</label>
+      <select id="inputState" class="form-control" name="section">
+        <option selected>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+        <option>E</option>
+        <option>F</option>
+        <option>Other...</option>
+
+      </select>    </div>
   </div>
   <div class="form-group">
     <div class="form-check">
@@ -254,15 +257,14 @@ input{
       </label>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary mb-3">Sign in</button>
 </form>
-
-
-
+  
 <style type="text/css">
   
 html,body{
   height: 100%;
+  padding:2%;
 }
 
 </style>

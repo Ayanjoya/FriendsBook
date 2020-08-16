@@ -73,13 +73,31 @@ if (!isset($_SESSION['CREATED'])) {
   <div class="fixed-top">
     <?PHP include 'menu.php'; ?>
   </div>
+  
+ <div>
 
-  <div class="row row-cols-0 row-cols-md-1 ml-auto" style="padding-top: 90px;">
+<div style="padding-top:90px;">
+<?php include'suggest.php';?>
+<?php include'profile_card.php';?>
+
+
+</div>
+
+<?php
+
+
+?>
+
+  <div class="row row-cols-0 row-cols-md-1 m-auto" style="padding-top: 00px;">
 
     <?php
     $sql11 = "SELECT  `id`, `user_id`, `name`, `email`, `description`, `media`, `media2`, `media3`, `media4`, `color`, `background`, `time`, `friend`  , `url` FROM `user_post`order by id desc";
     $a1 = mysqli_query($conn, $sql11);
-    while ($row1 = mysqli_fetch_assoc($a1)) {
+
+
+
+    while ($row1 = mysqli_fetch_assoc($a1)){
+    	?>
 
 
 
@@ -90,6 +108,7 @@ if (!isset($_SESSION['CREATED'])) {
 
 
 
+<?php
 
 
       if ($row1['color'] != '') {
@@ -112,7 +131,7 @@ if (!isset($_SESSION['CREATED'])) {
             <div class="card text3" style="height: auto;border: solid 0.1px lightgray;">
 
               <div class="card-body">
-                <h5 class="card-title"><a href="veiw_profile.php?id=<?=$row1['user_id']?>"><?php echo "@" . $row1['name']; ?></a></h5>
+                <h5 class="card-title"><a href="veiw_profile.php?id=<?=$row1['user_id']?>"><?php echo "@" . $row1['name']; ?></a><?php include'delete.php';?> </h5>
                 <p class="card-text">
                   <h6 style="font-family:sans-serif;"><?php echo $row1['description']; ?></h2>
                 </p>
@@ -290,12 +309,13 @@ if (!isset($_SESSION['CREATED'])) {
 
 
 
+
         <div style="padding-top: 1px;min-width:100%;">
 
 
           <div class="padd">
             <div class="card" style="">
-                <h5 class="card-title"><a href="veiw_profile.php?id=<?=$row1['user_id']?>"><?php echo "@" . $row1['name']; ?></a></h5>
+                <h5 class="card-title"><a href="veiw_profile.php?id=<?=$row1['user_id']?>"><?php echo "@" . $row1['name']; ?></a> <?php include'delete.php';?> </h5>
               <a href="http://soclpie.com/veiw.php?creator_id=<?php echo $row1['id'] ?>">
                 <img src="<?php echo $row1['media']; ?>" class="card-img-top img-fluid" style="border-radius: 2%;" alt="">
               </a>
@@ -485,14 +505,13 @@ if (!isset($_SESSION['CREATED'])) {
 
 
 
-
         <div style="padding-top: 1px;">
 
 
           <div class="padd">
             <div class="card" style="padding: 13px;">
 
-                <h5 class="card-title"><a href="veiw_profile.php?id=<?=$row1['user_id']?>"><?php echo "@" . $row1['name']; ?></a></h5>
+                <h5 class="card-title"><a href="veiw_profile.php?id=<?=$row1['user_id']?>"><?php echo "@" . $row1['name']; ?></a><?php include'delete.php';?> </h5>
 
 
 
@@ -704,7 +723,7 @@ if (!isset($_SESSION['CREATED'])) {
 
           <div class="padd">
             <div class="card" style="">
-                <h5 class="card-title"><a href="veiw_profile.php?id=<?=$row1['user_id']?>"><?php echo "@" . $row1['name']; ?></a></h5>
+                <h5 class="card-title"><a href="veiw_profile.php?id=<?=$row1['user_id']?>"><?php echo "@" . $row1['name']; ?></a><?php include'delete.php';?> </h5>
               <a href="<?php echo 'veiw.php?vidio_url=' . $row1['url'] ?>/&creator_id=<?= $row1['id'] ?>">
 
                 <img src="<?php echo $row1['media']; ?>" class="card-img-top vid" style="height: auto;object-fit: cover;background-color: <?php echo $row1['background']; ?>; " alt="">
@@ -863,7 +882,7 @@ if (!isset($_SESSION['CREATED'])) {
 
         </div>
 
-
+</div>
 
 
     <?php
@@ -943,22 +962,31 @@ if (!isset($_SESSION['CREATED'])) {
 
 
       @media only screen and (max-width: 990px) {
+      	   .sug,.sug2{
+        	display: none;
+        }
+      }
+
+       @media only screen and (max-width: 696px) {
+
+
+
+
         .card {
           width: 100%;
-          margin-left: auto;
-          margin-right: auto;
-          padding: 1%;
-          border-radius: 0px;
+
+          padding: 10px;
+
 
 
         }
 
         .card-title {
-          border-radius: 0px;
+          border-radius: 10px;
         }
 
         .vid {
-          border-radius: 0px;
+          border-radius: 10px;
         }
 
         .card-img-top {
@@ -970,6 +998,8 @@ if (!isset($_SESSION['CREATED'])) {
         .padd {
           padding-left: 0%;
         }
+
+     
 
 
       }

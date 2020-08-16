@@ -10,8 +10,13 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+
 </head>
 <body style="background-color: #f5f5f5;padding:1%;">
+<!-- Just an image -->
+
 
 <?php
 include 'conn.php';
@@ -54,7 +59,6 @@ if($out_md['media'] != '' and $out_md['media2'] =='' and $out_md['url'] ==''){
   </div>
 </div>
 
-            <a href="home.php"><img src="close.png" style="width:22px;position:absolute;top:15%;left:3%;"></a>
 
 <img src="<?= $out_md['media']?>" alt="" style="width:100%; margin-top:1%; height:86.5%; object-fit:cover;">
 
@@ -85,7 +89,7 @@ elseif ($out_md['url']!=''){
 
 
 
-<div style="border: solid 0.1px lightgray; height:100%; width:65%; padding:1%;float:left;background:white;">
+<div class = "main">
 
 <div class="media">
     
@@ -106,7 +110,7 @@ elseif ($out_md['url']!=''){
 
 
 <!-- <img src="<?= $out_md['media']?>" alt="" style="width:100%; margin-top:1%; height:80%; object-fit:cover;"> -->
-            <a href="home.php"><img src="close.png" style="width:22px;position:absolute;top:15%;left:3%;"></a>
+
 
 <iframe style="width:100%; margin-top:1%; height:80%; object-fit:cover;" allowfullscreen src="<?= 'https://www.youtube.com/embed/'.substr($_GET['vidio_url'] , 32); ?>">
 </iframe>
@@ -197,8 +201,11 @@ elseif($out_md['media2'] != ''){
 
 <div style="background:white;overflow:auto;border: solid 0.1px lightgray; height:auto;padding:1%;float:left; width:33%;height:96.5%;border-left:0px;position:fixed;left:66%;" class="comment">
 
-<h5 style="padding-bottom: 2%;padding-top:2%;"><?= $out_md['description']?>
+<h5 style="padding-bottom: 2%;padding-top:2%;"><?= $out_md['description']?><a href="home.php"><img src="close.png" style="width:26px;float: right;"></a>
+
 </h5>
+
+
 <hr>
 <?php
 
@@ -251,16 +258,16 @@ else{
 <hr>
 
 <?php }?>
-<div style="background-color: white; position: fixed; top:89%; width:30%; height:8%;">
+
 <form method="post" action="<?php echo $_SERVER['REQUEST_URI'];?>">
 
-<input type="text" placeholder="Comment" style="position: fixed; top:90%; width:26%; font-size:150%; float:left; padding:0.2%;" name="comm">
+<input type="text" placeholder="Comment" style="position: fixed; top:85%; width:30%; font-size:150%; float:left; padding:0.2%;" name="comm">
 
-<button class="btn btn-primary" style="position: fixed; top:90%;left:93.5%; height:5%;">></button>
+<button class="btn btn-primary btn-block" style="position: fixed; top:92%; height:auto;width:30%;">comment</button>
 </form>
 
 </div>
-</div>
+
 
 
 
@@ -271,7 +278,8 @@ else{
 
 <div style="background:white;overflow:auto;border: solid 0.1px lightgray; height:auto;padding:1%;float:left; width:100%;height:70%;border-left:0px;position:relative;top:auto;" class="commen2">
 
-<h5 style="padding-bottom: 2%;">Comments on this post</h5>
+<h5 style="padding-bottom: 2%;padding-top:2%;"><?= $out_md['description']?><a href="home.php"><img src="close.png" style="width:26px;float: right;"></a>
+</h5>
 <hr>
 <?php
 
@@ -301,6 +309,7 @@ while($out_com = mysqli_fetch_assoc($com_fun)){
 </h5>
 
   <img src="images.png" style="background-color: none;width:25px;">
+    <?=$out_com['comment']?>
 
 
 
@@ -326,10 +335,10 @@ else{
 <div style="background-color: white; position: fixed; top:89%; width:30%; height:8%;">
 <form method="post" action="<?php echo $_SERVER['REQUEST_URI'];?>">
 
-<input type="text" placeholder="Comment" style="position: fixed; top:90%; width:26%; font-size:150%; float:left; padding:0.2%;" name="comm">
+<input type="text" placeholder="Comment" style="position: fixed; top:85%; width:97%; font-size:150%; float:left; padding:0.2%;" name="comm">
 
 
-<button class="btn btn-primary" style="position: fixed; top:90%;left:93.5%; height:5%;">></button>
+<button class="btn btn-primary btn-block" style="position: fixed; top:92%; height:auto;">comment</button>
 </div>
 </div>
 
@@ -442,9 +451,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <style>
 
-.main{
-  border: solid 0.1px lightgray; height:100%; width:65%; padding:1%;float:left;background:white;
+.comm{
+  position: fixed; top:90%; width:26%; font-size:150%; float:left; padding:0.2%;
 }
+.main{
+  border: solid 0.1px lightgray; height:100%; width:64%; padding:1%;float:left;background:white;}
 
 .commen2{
   display: none;
@@ -463,6 +474,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 .main{
   width: 100%;
+
+}
+
+.comm{
+  width: 80%;
 }
 
 }

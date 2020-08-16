@@ -3,7 +3,13 @@
 <head>
 <?php session_start();
 	?>
-
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5GMFFWW');</script>
+<!-- End Google Tag Manager -->
 	<h6 style="visibility: hidden;display: none;">
 		<?php
 
@@ -39,25 +45,59 @@
 	<title>Document</title>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GMFFWW"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<?php include'intro_menu.php';?>
+<img src="images/image1.jpeg" style = "width:100%; height:75%; background-position: center; filter: blur(3px);">
 	
-
-
-
-<div class="w-50 h-100" style="background-color: #00AEFF;">
-
-
-<img src="full2.png">
-
+<div class="bg-text">
+	
+  <h2>Welcome</h2>
+  <h1 style="font-size:50px">To Soclpie</h1>
+  <p>The Social Network</p>
 </div>
 
 
 
 
-<style>
+</div>
 
+
+<style>
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 500px;
+  padding: 20px;
+   text-align: center;
+
+
+}
 html,body{
+	  font-family: Arial, Helvetica, sans-serif;
+
 	height:100%;
 }
+
+@media only screen and (max-width: 600px) {
+  .bg-text {
+      width: 280px;
+
+  }
+}
+
 
 </style>
 </body>

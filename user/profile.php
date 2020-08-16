@@ -20,7 +20,7 @@ include 'conn.php';
 	$a = mysqli_query($conn, $sql1);
 	$row = mysqli_fetch_assoc($a);
 
-	$sql111 = "SELECT `id`, `name`, `email`, `password`, `phone`, `time`, `active`, `banned` FROM `userdata` WHERE id = '".$_SESSION['id']."'";
+	$sql111 = "SELECT `id`, `name`, `email`, `password`, `phone`, `time`, `active`, `banned`, `school`, `class`, `sec`  FROM `userdata` WHERE id = '".$_SESSION['id']."'";
 	$a11 = mysqli_query($conn, $sql111);
 	$row11 = mysqli_fetch_assoc($a11);
 
@@ -95,6 +95,13 @@ if ($row['user_id'] == $_SESSION['id']){
 
 <h6 style="margin-left:2%;margin-top:2%; margin-bottom:1%; " class="text-dark"><?php echo "Name: ".$row['name'];?></h6>
 
+<h6 style="margin-left:2%;margin-top:2%; margin-bottom:1%; " class="text-dark"><?php echo "Class: ".$row11['class'];?></h6>
+
+<h6 style="margin-left:2%;margin-top:2%; margin-bottom:1%; " class="text-dark"><?php echo "Section: ".$row11['sec'];?></h6>
+
+<h6 style="margin-left:2%;margin-top:2%; margin-bottom:1%; " class="text-dark"><?php echo "School: ".$row11['school'];?></h6>
+
+
 <h6 style="margin-left:2%;margin-top:2%; margin-bottom:1%; " class="text-dark"><?php echo "born on: ".$row['dob'];?></h6>
 
 <h6 style="margin-left:2%;margin-top:2%; margin-bottom:1%; " class="text-dark"><?php echo "gender: ".$row['gender'];?></h6>
@@ -102,6 +109,8 @@ if ($row['user_id'] == $_SESSION['id']){
 <h6 style="margin-left:2%;margin-top:2%; margin-bottom:1%; " class="text-dark"><?php echo "Address: ".$row['address'];?></h6>
 
 <h6 style="margin-left:2%;margin-top:2%; margin-bottom:1%; " class="text-dark"><?php echo "Phone No: ".$row11['phone'];?></h6>
+
+
 
 <!-- <h6 style="margin-left:2%;margin-top:2%; margin-bottom:1%; " class="text-dark"><?php echo "Status: ".$row['bio'];?></h6> -->
 

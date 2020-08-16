@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,7 +77,7 @@ if ($row1['color'] != ''){
         <h5 class="card-title" style=""><a href="post.php"><?php echo "@".$row1['name'];?></a></h5>
     <p class="card-text" ><h2><?php echo $row1['description'];?></h2></p>
 
-    <a href="http://soclpie.com/veiw.php?creator_id='<?=$row1['id']?>'" class="btn btn-outline-danger btn a1">Veiw Details</a>
+    <a href="http://soclpie.com/delete.php?creator_id='<?=$row1['id']?>'" class="btn btn-outline-danger btn a1">Delete</a>
   
 
   </div>
@@ -243,11 +244,12 @@ elseif ($row1['color'] == '' and $row1['media2'] == '' and $row1['url'] == ''){
 <div class="padd">
 <div class="card">
   <a href="http://soclpie.com/veiw.php?creator_id=<?php echo $row1['id']?>">
-  <img src="<?php echo $row1['media'];?>" class="card-img-top" alt = "" >
+  <img src="<?php echo '../'.$row1['media'];?>" class="card-img-top" alt = "" >
 </a>
   <div class="card-body" style="background-color: <?php echo $row1['background'];?>;">
     <div style="background-color: white;">
 
+    <a href="http://soclpie.com/delete.php?creator_id='<?=$row1['id']?>'" class="btn btn-outline-danger btn a1">Delete</a>
 
 <?php
 
@@ -450,16 +452,16 @@ elseif ($row1['media2'] != ''  and $row1['media3'] != ''  and $row1['media4'] !=
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="<?php echo $row1['media'];?>"style = "height: 17rem;object-fit: cover;background-color: <?php echo $row1['background'];?>;" alt = "">
+      <img class="d-block w-100" src="<?php echo '../'.$row1['media'];?>"style = "height: 17rem;object-fit: cover;background-color: <?php echo $row1['background'];?>;" alt = "">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="<?php echo $row1['media2'];?>"style = "height: 17rem;object-fit: cover;background-color: <?php echo $row1['background'];?>;" alt = "">
+      <img class="d-block w-100" src="<?php echo '../'.$row1['media2'];?>"style = "height: 17rem;object-fit: cover;background-color: <?php echo $row1['background'];?>;" alt = "">
     </div>
     <div class="carousel-item">
-      <img src="<?php echo $row1['media3'];?>"style = "height: 17rem;object-fit: cover;background-color: <?php echo $row1['background'];?>;" alt = ""class="d-block w-100">
+      <img src="<?php echo '../'.$row1['media3'];?>"style = "height: 17rem;object-fit: cover;background-color: <?php echo $row1['background'];?>;" alt = ""class="d-block w-100">
     </div>
     <div class="carousel-item">
-      <img src="<?php echo $row1['media4'];?>"style = "height: 17rem;object-fit: cover;background-color: <?php echo $row1['background'];?>;" alt = ""class="d-block w-100">
+      <img src="<?php echo '../'.$row1['media4'];?>"style = "height: 17rem;object-fit: cover;background-color: <?php echo $row1['background'];?>;" alt = ""class="d-block w-100">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -509,7 +511,7 @@ elseif ($row1['media2'] != ''  and $row1['media3'] != ''  and $row1['media4'] !=
   <div class="card-body" style="background-color: <?php echo $row1['background'];?>;">
     <h5 class="card-title"><a href="post.php"><?php echo "@".$row1['name'];?></a></h5>
     <p class="card-text"><?php echo $row1['description'];?></p>
-    <a href="http://soclpie.com/veiw.php?creator_id='<?=$row1['id']?>'" class="btn btn-outline-danger btn a1">Veiw Details</a>
+        <a href="http://soclpie.com/delete.php?creator_id='<?=$row1['id']?>'" class="btn btn-outline-danger btn a1">Delete</a>
   </div>
 </div></div>  
 
@@ -538,10 +540,10 @@ elseif ($row1['url'] != '') {
 
 <div class="padd">
 <div class="card">
-  <img src="<?php echo $row1['media'];?>" class="card-img-top" style = "height: auto;object-fit: cover;background-color: <?php echo $row1['background'];?>;" alt = "">
+  <img src="<?php echo '../'.$row1['media'];?>" class="card-img-top" style = "height: auto;object-fit: cover;background-color: <?php echo $row1['background'];?>;" alt = "">
   
 
-
+    <a href="http://soclpie.com/delete.php?creator_id='<?=$row1['id']?>'" class="btn btn-outline-danger btn a1">Delete</a>
     <div style="background-color: white; margin-top:5%;">
 
 

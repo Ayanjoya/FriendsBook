@@ -43,7 +43,7 @@ if($a){
 
 	else{
 
-		$sql = "INSERT INTO `userdata`(`name`, `email`, `password`, `phone`) VALUES ('".$_POST['name']."','".$_POST['email']."','".$_POST['password']."','".$_POST['phone']."')";
+		$sql = "INSERT INTO `userdata`(`name`, `email`, `password`, `phone`, `school`, `class`, `sec`)  VALUES ('".$_POST['name']."','".$_POST['email']."','".$_POST['password']."','".$_POST['phone']."' , '".$_POST['school']."' , '".$_POST['class']."' ,'".$_POST['section']."')";
 
 
 

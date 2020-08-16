@@ -16,7 +16,7 @@ $data2 = mysqli_fetch_assoc($run2);
 
 //for notify
 $not = "INSERT INTO `notify`(`user_id`, `creator_id`, `title`, `icon`, `text`) VALUES ('".$_SESSION['id']."' , '".$data2['user_id']."' , 'Started Following You' , '".$data2['img']."' , '".$_SESSION['name']."')";
-$run3 = mysqli_query($conn, $not);
+$run3 = mysqli_query($conn2, $not);
 $data3 = mysqli_fetch_assoc($run3);
 
 
