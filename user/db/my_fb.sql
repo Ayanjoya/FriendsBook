@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 24, 2020 at 09:18 AM
+-- Generation Time: Aug 28, 2020 at 04:54 AM
 -- Server version: 5.7.27
 -- PHP Version: 7.4.4
 
@@ -24,6 +24,44 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `blog`
+--
+
+CREATE TABLE `blog` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `img` varchar(255) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chat`
+--
+
+CREATE TABLE `chat` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `creator_id` int(11) NOT NULL,
+  `messege` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `chat`
+--
+
+INSERT INTO `chat` (`id`, `user_id`, `creator_id`, `messege`) VALUES
+(1, 2, 2, 'fsfsfsf'),
+(2, 2, 2, 'fsfsfsf');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `comments`
 --
 
@@ -32,7 +70,7 @@ CREATE TABLE `comments` (
   `user_id` int(11) NOT NULL,
   `post_id` int(11) NOT NULL,
   `creator_id` int(11) NOT NULL,
-  `comment` varchar(10000) NOT NULL,
+  `comment` text NOT NULL,
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -41,34 +79,112 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`id`, `user_id`, `post_id`, `creator_id`, `comment`, `time`) VALUES
-(1, 1, 4, 1, 'whata icon', '2020-06-09 10:17:29'),
-(2, 1, 4, 1, 'fff', '2020-06-09 14:53:24'),
-(3, 1, 6, 1, 'dafasfasdfsfsdfasdf', '2020-06-09 14:59:16'),
-(4, 1, 1, 1, 'lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lala', '2020-06-10 06:27:41'),
-(5, 1, 1, 1, 'lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lala. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lala. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lala. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lala. ', '2020-06-10 06:28:09'),
-(6, 1, 1, 1, 'wowwww', '2020-06-10 10:56:31'),
-(7, 1, 1, 1, 'lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lala. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lala. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lala. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lala.lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lala. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lala. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lala. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lalalalalalallalallalalaaaaaalll. lala.', '2020-06-13 06:03:23'),
-(8, 1, 1, 1, 'wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. ', '2020-06-13 16:39:56'),
-(9, 1, 1, 1, 'wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo.wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo.wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo.wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo.wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo.wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo.wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo.wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo.wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo.wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo.wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo.wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo.wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo. wowoowowowowo.', '2020-06-13 16:40:07'),
-(10, 1, 1, 1, 'wow i neeed this', '2020-06-14 07:13:51'),
-(11, 1, 1, 1, '╔┓┏╦━━╦┓╔┓╔━━╗ ║┗┛║┗━╣┃║┃║ 0 0 ║ ║┏┓║┏━╣┗╣┗╣╰╯║ ╚┛┗╩━━╩━╩━╩━━╝', '2020-06-14 08:20:11'),
-(12, 1, 1, 1, '╔┓┏╦━━╦┓╔┓╔━━╗ ║┗┛║┗━╣┃║┃║ 0 0 ║ ║┏┓║┏━╣┗╣┗╣╰╯║ ╚┛┗╩━━╩━╩━╩━━╝', '2020-06-14 08:20:18'),
-(13, 1, 1, 1, '╔┓┏╦━━╦┓╔┓╔━━╗\r\n║┗┛║┗━╣┃║┃║ 0 0 ║\r\n║┏┓║┏━╣┗╣┗╣╰╯║\r\n╚┛┗╩━━╩━╩━╩━━╝', '2020-06-14 08:21:34'),
-(14, 1, 1, 1, 'Hellow', '2020-06-14 08:21:52'),
-(15, 3, 1, 1, 'hi budddyyyyy', '2020-06-15 11:34:35'),
-(16, 3, 1, 1, 'sssssssssjfsjfsjflsfslfsf;', '2020-06-15 11:34:58'),
-(17, 3, 1, 1, 'sfsafsafssafsafasfsaf', '2020-06-15 11:35:04'),
-(18, 3, 1, 1, 'sssssss', '2020-06-15 11:35:52'),
-(19, 3, 13, 1, 'ddddddddddddddddd', '2020-06-16 08:06:22'),
-(20, 3, 13, 1, 'wwpowowowowowowo', '2020-06-16 11:26:00'),
-(21, 3, 8, 1, 'posting in socualfjshskfhskfjhskjf', '2020-06-16 11:33:43'),
-(22, 3, 14, 3, 'hi', '2020-06-17 07:38:51'),
-(23, 3, 14, 3, 'wow mac book air', '2020-06-17 08:19:57'),
-(24, 3, 1, 1, 'oyoyoyoyoyoyoyoyooyoyyoyoyyooyoyoyoyoyoyoyooyoyoyoyoyooy', '2020-06-17 11:41:09'),
-(25, 3, 17, 3, 'hi all lol', '2020-06-19 13:45:59'),
-(26, 3, 17, 3, 'hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. hahahhahahahhahahh. hahahahhahahahhahahahhahah. ', '2020-06-23 06:52:11'),
-(27, 3, 17, 3, 'nnn', '2020-06-23 14:24:12'),
-(28, 3, 17, 3, 'lllllll', '2020-06-23 14:29:55');
+(1, 3, 1, 3, 'comment by ayan khan', '2020-07-27 05:13:40'),
+(2, 2, 1, 3, 'ok a comment', '2020-07-27 05:14:46'),
+(3, 2, 1, 3, 'not a comment', '2020-07-27 05:17:18'),
+(4, 2, 1, 3, ' comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan', '2020-07-27 06:48:25'),
+(5, 2, 1, 3, ' comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan', '2020-07-27 13:28:48'),
+(6, 2, 1, 3, 'jhgj', '2020-07-27 13:28:51'),
+(7, 2, 1, 3, ' comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan', '2020-07-27 15:43:00'),
+(8, 2, 1, 3, 'JianHao Tan', '2020-07-27 16:20:51'),
+(9, 2, 1, 3, 'wow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a page', '2020-07-28 03:57:10'),
+(10, 2, 1, 3, 'not a comment', '2020-07-29 04:10:34'),
+(11, 2, 1, 3, 'a', '2020-07-29 04:10:55'),
+(12, 2, 1, 3, 'lol', '2020-07-29 05:54:38'),
+(13, 2, 2, 2, 'WOW', '2020-07-29 06:33:41'),
+(14, 2, 2, 2, 'ok', '2020-07-29 06:39:40'),
+(15, 2, 2, 2, 'ok', '2020-07-29 06:39:59'),
+(16, 2, 2, 2, 'lol', '2020-07-29 06:40:02'),
+(17, 2, 2, 2, 'lol', '2020-07-29 06:40:05'),
+(18, 2, 2, 2, 'lol', '2020-07-29 06:41:08'),
+(19, 2, 3, 2, 'lol', '2020-07-29 06:54:09'),
+(20, 2, 3, 2, 'lol', '2020-07-29 06:54:12'),
+(21, 2, 2, 2, ' wow', '2020-07-29 07:15:58'),
+(22, 2, 2, 2, 'wow', '2020-07-29 07:16:00'),
+(23, 2, 2, 2, 'wow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow ', '2020-07-29 07:16:02'),
+(24, 2, 2, 2, 'wow', '2020-07-29 07:21:26'),
+(25, 2, 3, 2, '... Ayan Khan  lol ... Ayan Khan  lol', '2020-07-29 08:56:13'),
+(27, 2, 2, 2, 'hkjsf', '2020-07-30 04:17:14'),
+(28, 2, 1, 3, 'lol', '2020-07-31 15:59:36'),
+(29, 2, 7, 2, 'a', '2020-07-31 16:11:29'),
+(30, 2, 6, 2, ' comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan', '2020-07-31 17:09:24'),
+(31, 2, 3, 2, '1', '2020-08-01 13:18:47'),
+(32, 2, 4, 2, 'hi', '2020-08-04 08:44:04'),
+(33, 2, 4, 2, 'ok', '2020-08-04 08:44:14'),
+(34, 3, 1, 3, 'comment by ayan khan', '2020-07-27 05:13:40'),
+(35, 2, 1, 3, 'ok a comment', '2020-07-27 05:14:46'),
+(36, 2, 1, 3, 'not a comment', '2020-07-27 05:17:18'),
+(37, 2, 1, 3, ' comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan', '2020-07-27 06:48:25'),
+(38, 2, 1, 3, ' comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan', '2020-07-27 13:28:48'),
+(39, 2, 1, 3, 'jhgj', '2020-07-27 13:28:51'),
+(40, 2, 1, 3, ' comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan', '2020-07-27 15:43:00'),
+(41, 2, 1, 3, 'JianHao Tan', '2020-07-27 16:20:51'),
+(42, 2, 1, 3, 'wow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a page', '2020-07-28 03:57:10'),
+(43, 2, 1, 3, 'not a comment', '2020-07-29 04:10:34'),
+(44, 2, 1, 3, 'a', '2020-07-29 04:10:55'),
+(45, 2, 1, 3, 'lol', '2020-07-29 05:54:38'),
+(46, 2, 2, 2, 'WOW', '2020-07-29 06:33:41'),
+(47, 2, 2, 2, 'ok', '2020-07-29 06:39:40'),
+(48, 2, 2, 2, 'ok', '2020-07-29 06:39:59'),
+(49, 2, 2, 2, 'lol', '2020-07-29 06:40:02'),
+(50, 2, 2, 2, 'lol', '2020-07-29 06:40:05'),
+(51, 2, 2, 2, 'lol', '2020-07-29 06:41:08'),
+(52, 2, 3, 2, 'lol', '2020-07-29 06:54:09'),
+(53, 2, 3, 2, 'lol', '2020-07-29 06:54:12'),
+(54, 2, 2, 2, ' wow', '2020-07-29 07:15:58'),
+(55, 2, 2, 2, 'wow', '2020-07-29 07:16:00'),
+(56, 2, 2, 2, 'wow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow what a pagewow ', '2020-07-29 07:16:02'),
+(57, 2, 2, 2, 'wow', '2020-07-29 07:21:26'),
+(58, 2, 3, 2, '... Ayan Khan  lol ... Ayan Khan  lol', '2020-07-29 08:56:13'),
+(59, 2, 2, 2, 'hkjsf', '2020-07-30 04:17:14'),
+(60, 2, 1, 3, 'lol', '2020-07-31 15:59:36'),
+(61, 2, 7, 2, 'a', '2020-07-31 16:11:29'),
+(62, 2, 6, 2, ' comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan comment by ayan khan', '2020-07-31 17:09:24'),
+(63, 2, 3, 2, '1', '2020-08-01 13:18:47'),
+(64, 2, 4, 2, 'hi', '2020-08-04 08:44:04'),
+(65, 2, 4, 2, 'ok', '2020-08-04 08:44:14'),
+(66, 1, 14, 1, 'ok', '2020-08-12 07:45:16'),
+(67, 1, 14, 1, 'csvxcvxvx', '2020-08-13 02:52:13');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `event`
+--
+
+CREATE TABLE `event` (
+  `id` int(11) NOT NULL,
+  `icon` text NOT NULL,
+  `title` text NOT NULL,
+  `text` text NOT NULL,
+  `more` text NOT NULL,
+  `rule` text NOT NULL,
+  `price` text NOT NULL,
+  `winning` text NOT NULL,
+  `till-text` text NOT NULL,
+  `till-time` text NOT NULL,
+  `delete_on` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `event`
+--
+
+INSERT INTO `event` (`id`, `icon`, `title`, `text`, `more`, `rule`, `price`, `winning`, `till-text`, `till-time`, `delete_on`) VALUES
+(28, '../single.png', 'selfie king', 'post a selfie with #selfie_king top 3 player will win', '1. click a selfie<br>2. in description write #selfie_king<br>3. we will choose the winner by the count of likes', '1. multipel selfies will disqualify you<br>2. we will deliver the price at your address', 'soclpie mug', 'most liked top 3 selfie will win', '1st Of September', '2020-09-01', '2020-09-02'),
+(29, '../single.png', 'sd', 'dsf', 'sd', 's', 'asfd', 'sdf', 'sfd', '1111-11-11', '0011-11-01');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `event_winner`
+--
+
+CREATE TABLE `event_winner` (
+  `id` int(11) NOT NULL,
+  `event_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -89,9 +205,7 @@ CREATE TABLE `follow` (
 --
 
 INSERT INTO `follow` (`id`, `user_id`, `creator_id`, `post_id`, `time`) VALUES
-(2, 1, 1, 1, '2020-06-13 16:40:34'),
-(5, 2, 3, 17, '2020-06-19 03:40:33'),
-(9, 3, 3, 17, '2020-06-23 14:28:30');
+(70, 2, 1, 14, '2020-08-12 15:00:53');
 
 -- --------------------------------------------------------
 
@@ -114,128 +228,193 @@ CREATE TABLE `notify` (
 --
 
 INSERT INTO `notify` (`id`, `user_id`, `creator_id`, `title`, `icon`, `text`, `time`) VALUES
-(1, 1, 1, 'Started Following You', '', '@', '2020-06-09 16:00:31'),
-(2, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 04:23:06'),
-(3, 1, 1, 'Liked Your Post', 'avatar.png', '@Ayan Khan', '2020-06-10 04:23:59'),
-(4, 1, 1, 'Started Following You', '', '@', '2020-06-10 04:24:07'),
-(5, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 04:25:47'),
-(6, 1, 1, 'Started Following You', '', '@', '2020-06-10 04:26:11'),
-(7, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 04:26:15'),
-(8, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 04:26:36'),
-(9, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 04:28:22'),
-(10, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 04:28:23'),
-(11, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 04:28:33'),
-(12, 1, 1, 'Started Following You', '', '@', '2020-06-10 04:31:08'),
-(13, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 04:31:39'),
-(14, 1, 1, 'Started Following You', '', '@', '2020-06-10 04:31:40'),
-(15, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 04:31:41'),
-(16, 1, 1, 'Started Following You', '', '@', '2020-06-10 04:31:41'),
-(17, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 04:50:46'),
-(18, 1, 1, 'Started Following You', '', '@', '2020-06-10 04:50:46'),
-(19, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 06:19:11'),
-(20, 1, 1, 'Started Following You', '', '@', '2020-06-10 06:20:36'),
-(21, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 06:22:11'),
-(22, 1, 1, 'Started Following You', '', '@', '2020-06-10 06:22:18'),
-(23, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 06:22:43'),
-(24, 1, 1, 'Liked Your Post', 'profileimages/1IMG20200512154353.jpg', '@Ayan Khan', '2020-06-10 06:27:20'),
-(25, 1, 1, 'Started Following You', '', '@', '2020-06-10 06:27:27'),
-(26, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 06:27:33'),
-(27, 1, 1, 'Commented On Your Post', '', '@', '2020-06-10 06:27:41'),
-(28, 1, 1, 'Commented On Your Post', '', '@', '2020-06-10 06:27:58'),
-(29, 1, 1, 'Commented On Your Post', '', '@', '2020-06-10 06:28:03'),
-(30, 1, 1, 'Commented On Your Post', '', '@', '2020-06-10 06:28:09'),
-(31, 1, 1, 'Started Following You', '', '@', '2020-06-10 10:39:08'),
-(32, 1, 1, 'Liked Your Post', 'profileimages/1IMG20200512154353.jpg', '@Ayan Khan', '2020-06-10 10:56:26'),
-(33, 1, 1, 'Commented On Your Post', '', '@', '2020-06-10 10:56:31'),
-(34, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 10:56:39'),
-(35, 1, 1, 'Started Following You', '', '@', '2020-06-10 10:56:39'),
-(36, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 10:56:40'),
-(37, 1, 1, 'Started Following You', '', '@', '2020-06-10 11:00:31'),
-(38, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 11:00:32'),
-(39, 1, 1, 'Started Following You', '', '@', '2020-06-10 11:19:44'),
-(40, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 11:19:45'),
-(41, 1, 1, 'Started Following You', '', '@', '2020-06-10 14:14:45'),
-(42, 1, 1, 'Unfollowing You', '', '@', '2020-06-10 14:14:46'),
-(43, 2, 1, 'Started Following You', '', '@', '2020-06-10 14:19:15'),
-(44, 2, 1, 'Unfollowing You', '', '@', '2020-06-10 14:19:22'),
-(45, 2, 1, 'Started Following You', '', '@', '2020-06-10 14:19:27'),
-(46, 2, 1, 'Unfollowing You', '', '@', '2020-06-10 14:19:40'),
-(47, 2, 1, 'Started Following You', '', '@', '2020-06-10 14:19:44'),
-(48, 2, 1, 'Unfollowing You', '', '@', '2020-06-10 14:24:03'),
-(49, 2, 1, 'Started Following You', '', '@', '2020-06-10 14:24:40'),
-(50, 2, 1, 'Unfollowing You', '', '@', '2020-06-10 14:24:45'),
-(51, 2, 1, 'Started Following You', '', '@', '2020-06-10 16:26:37'),
-(52, 2, 1, 'Unfollowing You', '', '@', '2020-06-11 07:36:21'),
-(53, 2, 1, 'Started Following You', '', '@', '2020-06-11 07:46:45'),
-(54, 2, 1, 'Started Following You', '', '@', '2020-06-11 07:47:51'),
-(55, 2, 1, 'Unfollowing You', '', '@', '2020-06-11 07:47:54'),
-(56, 2, 1, 'Started Following You', '', '@', '2020-06-11 07:47:58'),
-(57, 2, 1, 'Started Following You', '', '@', '2020-06-11 07:48:11'),
-(58, 2, 1, 'Unfollowing You', '', '@', '2020-06-11 07:48:58'),
-(59, 2, 1, 'Started Following You', '', '@', '2020-06-11 07:49:01'),
-(60, 2, 1, 'Unfollowing You', '', '@', '2020-06-11 07:49:20'),
-(61, 2, 1, 'Started Following You', '', '@', '2020-06-11 07:49:25'),
-(62, 2, 1, 'Unfollowing You', '', '@', '2020-06-11 07:49:55'),
-(63, 2, 1, 'Started Following You', '', '@', '2020-06-11 07:50:03'),
-(64, 2, 1, 'Unfollowing You', '', '@', '2020-06-11 07:50:07'),
-(65, 2, 1, 'Unfollowing You', '', '@', '2020-06-11 07:50:50'),
-(66, 1, 1, 'Commented On Your Post', '', '@', '2020-06-13 06:02:39'),
-(67, 1, 1, 'Commented On Your Post', '', '@', '2020-06-13 06:02:59'),
-(68, 1, 1, 'Commented On Your Post', '', '@', '2020-06-13 06:03:18'),
-(69, 1, 1, 'Commented On Your Post', '', '@', '2020-06-13 06:03:23'),
-(70, 1, 1, 'Commented On Your Post', '', '@', '2020-06-13 06:03:34'),
-(71, 1, 1, 'Commented On Your Post', '', '@', '2020-06-13 06:03:46'),
-(72, 1, 1, 'Started Following You', '', '@', '2020-06-13 06:03:54'),
-(73, 1, 1, 'Unfollowing You', '', '@', '2020-06-13 06:03:55'),
-(74, 1, 1, 'Commented On Your Post', '', '@', '2020-06-13 16:39:56'),
-(75, 1, 1, 'Commented On Your Post', '', '@', '2020-06-13 16:40:07'),
-(76, 1, 1, 'Commented On Your Post', '', '@', '2020-06-13 16:40:22'),
-(77, 1, 1, 'Started Following You', '', '@', '2020-06-13 16:40:34'),
-(78, 1, 1, 'Commented On Your Post', '', '@', '2020-06-14 07:13:51'),
-(79, 1, 1, 'Commented On Your Post', '', '@', '2020-06-14 08:20:11'),
-(80, 1, 1, 'Commented On Your Post', '', '@', '2020-06-14 08:20:18'),
-(81, 1, 1, 'Commented On Your Post', '', '@', '2020-06-14 08:21:34'),
-(82, 1, 1, 'Commented On Your Post', '', '@', '2020-06-14 08:21:52'),
-(83, 1, 1, 'Commented On Your Post', '', '@', '2020-06-15 10:13:48'),
-(84, 3, 1, 'Commented On Your Post', '', '@', '2020-06-15 11:34:35'),
-(85, 3, 1, 'Commented On Your Post', '', '@', '2020-06-15 11:34:58'),
-(86, 3, 1, 'Liked Your Post', 'avatar.png', '@SoclPie', '2020-06-15 11:35:00'),
-(87, 3, 1, 'Started Following You', '', '@', '2020-06-15 11:35:01'),
-(88, 3, 1, 'Commented On Your Post', '', '@', '2020-06-15 11:35:04'),
-(89, 3, 1, 'Commented On Your Post', '', '@', '2020-06-15 11:35:52'),
-(90, 3, 1, 'Commented On Your Post', '', '@', '2020-06-16 08:06:22'),
-(91, 3, 1, 'Commented On Your Post', '', '@', '2020-06-16 11:26:00'),
-(92, 3, 1, 'Liked Your Post', 'avatar.png', '@SoclPie', '2020-06-16 11:26:03'),
-(93, 3, 1, 'Commented On Your Post', '', '@', '2020-06-16 11:33:43'),
-(94, 3, 3, 'Commented On Your Post', '', '@', '2020-06-17 07:38:51'),
-(95, 3, 3, 'Liked Your Post', 'avatar.png', '@SoclPie', '2020-06-17 07:39:12'),
-(96, 3, 3, 'Liked Your Post', 'avatar.png', '@SoclPie', '2020-06-17 08:18:43'),
-(97, 3, 3, 'Liked Your Post', 'avatar.png', '@SoclPie', '2020-06-17 08:18:43'),
-(98, 3, 3, 'Commented On Your Post', '', '@', '2020-06-17 08:19:57'),
-(99, 3, 1, 'Unfollowing You', '', '@', '2020-06-17 11:24:09'),
-(100, 3, 3, 'Started Following You', '', '@', '2020-06-17 11:24:40'),
-(101, 3, 1, 'Commented On Your Post', '', '@', '2020-06-17 11:41:09'),
-(102, 3, 3, 'Liked Your Post', 'profileimages/311IMG20200512154353.jpg', '@SoclPie', '2020-06-18 18:19:28'),
-(103, 3, 1, 'Liked Your Post', 'profileimages/311IMG20200512154353.jpg', '@SoclPie', '2020-06-19 03:39:04'),
-(104, 2, 3, 'Liked Your Post', 'avatar.png', '@andmin2', '2020-06-19 03:40:33'),
-(105, 2, 3, 'Started Following You', '', '@', '2020-06-19 03:40:33'),
-(106, 2, 1, 'Liked Your Post', 'avatar.png', '@andmin2', '2020-06-19 03:40:53'),
-(107, 3, 1, 'Unfollowing You', '', '@', '2020-06-19 11:45:01'),
-(108, 3, 3, 'Commented On Your Post', '', '@', '2020-06-19 13:45:59'),
-(109, 3, 3, 'Started Following You', '', '@', '2020-06-22 13:35:11'),
-(110, 3, 3, 'Unfollowing You', '', '@', '2020-06-23 06:51:15'),
-(111, 3, 3, 'Commented On Your Post', '', '@', '2020-06-23 06:52:11'),
-(112, 3, 3, 'Started Following You', '', '@', '2020-06-23 06:53:22'),
-(113, 3, 3, 'Commented On Your Post', '', '@', '2020-06-23 14:24:12'),
-(114, 3, 1, 'Unfollowing You', '', '@', '2020-06-23 14:25:21'),
-(115, 3, 3, 'Started Following You', '', '@', '2020-06-23 14:25:29'),
-(116, 3, 3, 'Unfollowing You', '', '@', '2020-06-23 14:25:29'),
-(117, 3, 3, 'Liked Your Post', 'profileimages/311IMG20200512154353.jpg', '@SoclPie', '2020-06-23 14:25:31'),
-(118, 3, 3, 'Started Following You', '', '@', '2020-06-23 14:28:30'),
-(119, 3, 3, 'Commented On Your Post', '', '@', '2020-06-23 14:29:55'),
-(120, 3, 3, 'Liked Your Post', 'profileimages/311IMG20200512154353.jpg', '@SoclPie', '2020-06-23 14:30:09'),
-(121, 3, 3, 'Liked Your Post', 'profileimages/311IMG20200512154353.jpg', '@SoclPie', '2020-06-23 14:30:11'),
-(122, 3, 3, 'Liked Your Post', 'profileimages/311IMG20200512154353.jpg', '@SoclPie', '2020-06-23 14:30:12');
+(1, 2, 3, 'Liked Your Post', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-07-27 05:16:16'),
+(2, 2, 3, 'Started Following You', '', '@', '2020-07-27 05:16:18'),
+(3, 2, 3, 'Unfollowing You', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-07-28 03:57:39'),
+(4, 2, 3, 'Started Following You', '', '@', '2020-07-28 03:57:40'),
+(5, 2, 3, 'Unfollowing You', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-07-28 04:49:45'),
+(6, 2, 2, 'Started Following You', '', '@', '2020-07-29 07:43:04'),
+(7, 2, 2, 'Started Following You', '', '@', '2020-08-01 11:27:15'),
+(8, 2, 2, 'Started Following You', '', '@', '2020-08-01 11:27:20'),
+(9, 2, 2, 'Unfollowing You', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 11:33:32'),
+(10, 2, 2, 'Started Following You', '', '@', '2020-08-01 11:33:33'),
+(11, 2, 2, 'Unfollowing You', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 11:33:34'),
+(12, 2, 2, 'Started Following You', '', '@', '2020-08-01 11:33:34'),
+(13, 2, 2, 'Unfollowing You', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 11:33:35'),
+(14, 2, 2, 'Started Following You', '', '@', '2020-08-01 11:33:37'),
+(15, 2, 2, 'Unfollowing You', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 11:33:37'),
+(16, 2, 2, 'Started Following You', '', '@', '2020-08-01 11:33:38'),
+(17, 2, 2, 'Unfollowing You', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 11:41:12'),
+(18, 2, 2, 'Started Following You', '', '@', '2020-08-01 11:44:53'),
+(19, 2, 2, 'Unfollowing You', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 11:49:14'),
+(20, 2, 2, 'Started Following You', '', '@', '2020-08-01 11:49:17'),
+(21, 2, 2, 'Unfollowing You', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 11:49:19'),
+(22, 2, 2, 'Started Following You', '', '@', '2020-08-01 11:53:49'),
+(23, 2, 2, 'Started Following You', '', '@', '2020-08-01 11:54:37'),
+(24, 2, 2, 'Started Following You', '', '@', '2020-08-01 11:54:46'),
+(25, 2, 2, 'Unfollowing You', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 11:54:54'),
+(26, 2, 2, 'Started Following You', '', '@', '2020-08-01 11:54:56'),
+(27, 2, 2, 'Unfollowing You', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 11:55:00'),
+(28, 2, 2, 'Started Following You', '', '@', '2020-08-01 11:55:10'),
+(29, 2, 2, 'Started Following You', '', '@', '2020-08-01 11:55:53'),
+(30, 2, 2, 'Liked Your Post', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 12:11:47'),
+(31, 2, 2, 'Liked Your Post', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 12:12:04'),
+(32, 2, 2, 'Liked Your Post', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 12:12:06'),
+(33, 2, 2, 'Liked Your Post', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 12:12:24'),
+(34, 2, 2, 'Liked Your Post', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 12:12:27'),
+(35, 2, 2, 'Liked Your Post', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 12:13:05'),
+(36, 2, 2, 'Liked Your Post', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 12:13:11'),
+(37, 2, 2, 'Liked Your Post', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 12:13:12'),
+(38, 2, 2, 'Liked Your Post', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 13:26:55'),
+(39, 2, 2, 'Liked Your Post', 'profileimages/22tjTPQAU.jpg', '@Ayan Khan', '2020-08-01 13:26:57'),
+(40, 2, 2, 'Ayan Khan', 'profileimages/22tjTPQAU.jpg', 'Started Following You', '2020-08-01 18:22:08'),
+(41, 2, 2, 'Started Following You', 'profileimages/22tjTPQAU.jpg', 'Ayan Khan', '2020-08-01 18:23:22'),
+(42, 2, 2, 'Started Following You', 'profileimages/22tjTPQAU.jpg', 'Ayan Khan', '2020-08-01 18:23:30'),
+(43, 2, 2, 'Started Following You', 'profileimages/22tjTPQAU.jpg', 'Ayan Khan', '2020-08-01 18:25:38'),
+(44, 2, 2, 'Started Following You', 'profileimages/22tjTPQAU.jpg', 'Ayan Khan', '2020-08-01 18:25:55'),
+(45, 2, 2, 'Started Following You', 'profileimages/22tjTPQAU.jpg', 'Ayan Khan', '2020-08-01 18:26:05'),
+(46, 2, 2, 'Started Following You', 'profileimages/22tjTPQAU.jpg', 'Ayan Khan', '2020-08-02 03:52:22'),
+(47, 2, 2, 'Started Following You', 'profileimages/22tjTPQAU.jpg', 'Ayan Khan', '2020-08-02 03:53:49'),
+(48, 2, 2, 'Started Following You', 'profileimages/22tjTPQAU.jpg', 'Ayan Khan', '2020-08-02 03:54:21'),
+(49, 2, 2, 'Started UnFollowing You', 'profileimages/22tjTPQAU.jpg', 'Ayan Khan', '2020-08-02 03:56:25'),
+(50, 2, 3, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-02 03:56:36'),
+(51, 2, 3, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-02 03:56:40'),
+(52, 2, 2, 'Started Following You', 'profileimages/22tjTPQAU.jpg', 'Ayan Khan', '2020-08-02 04:00:57'),
+(53, 2, 2, 'Started UnFollowing You', 'profileimages/22tjTPQAU.jpg', 'Ayan Khan', '2020-08-02 04:02:52'),
+(54, 2, 2, 'Started Following You', 'profileimages/22tjTPQAU.jpg', 'Ayan Khan', '2020-08-02 04:25:34'),
+(55, 3, 2, 'Started Following You', 'profileimages/2ML.jpg', 'ayan', '2020-08-03 17:22:34'),
+(56, 3, 2, 'Started UnFollowing You', 'profileimages/2ML.jpg', 'ayan', '2020-08-03 17:22:35'),
+(57, 3, 2, 'Started Following You', 'profileimages/2ML.jpg', 'ayan', '2020-08-03 17:22:36'),
+(58, 3, 2, 'Liked Your Post', 'avatar.png', '@ayan', '2020-08-03 17:22:37'),
+(59, 2, 2, 'Liked Your Post', 'profileimages/2ML.jpg', '@Ayan Khan', '2020-08-06 06:09:19'),
+(60, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 09:52:57'),
+(61, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 09:52:59'),
+(62, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 09:53:00'),
+(63, 1, 1, 'Liked Your Post', 'avatar.png', '@Ayan Khan', '2020-08-06 09:54:36'),
+(64, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 09:54:41'),
+(65, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 09:54:41'),
+(66, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 09:54:41'),
+(67, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 09:54:41'),
+(68, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 09:54:41'),
+(69, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 09:54:42'),
+(70, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 09:54:42'),
+(71, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 09:54:42'),
+(72, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 09:54:42'),
+(73, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 09:54:42'),
+(74, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 09:54:42'),
+(75, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 09:54:44'),
+(76, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:44'),
+(77, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:45'),
+(78, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:45'),
+(79, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:45'),
+(80, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:46'),
+(81, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:46'),
+(82, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:46'),
+(83, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:46'),
+(84, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:46'),
+(85, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:46'),
+(86, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:47'),
+(87, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:47'),
+(88, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:47'),
+(89, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:47'),
+(90, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:47'),
+(91, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:48'),
+(92, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:48'),
+(93, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:48'),
+(94, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:48'),
+(95, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:49'),
+(96, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 10:22:52'),
+(97, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 11:09:30'),
+(98, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 11:09:32'),
+(99, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 11:09:32'),
+(100, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 11:09:33'),
+(101, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 11:09:33'),
+(102, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 11:09:33'),
+(103, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 11:09:33'),
+(104, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 11:09:33'),
+(105, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 11:09:33'),
+(106, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 11:09:34'),
+(107, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 11:09:34'),
+(108, 1, 1, 'Liked Your Post', 'avatar.png', '@Ayan Khan', '2020-08-06 11:09:36'),
+(109, 1, 1, 'Liked Your Post', 'avatar.png', '@Ayan Khan', '2020-08-06 11:09:38'),
+(110, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 13:40:29'),
+(111, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 13:40:30'),
+(112, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 13:40:31'),
+(113, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 13:40:31'),
+(114, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 13:40:32'),
+(115, 1, 1, 'Liked Your Post', 'avatar.png', '@Ayan Khan', '2020-08-06 13:56:01'),
+(116, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 14:30:08'),
+(117, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 14:30:09'),
+(118, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 14:30:09'),
+(119, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 14:30:09'),
+(120, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 14:30:09'),
+(121, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 14:30:10'),
+(122, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 14:30:10'),
+(123, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 14:30:10'),
+(124, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 14:30:10'),
+(125, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 14:30:12'),
+(126, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 14:30:21'),
+(127, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 14:30:27'),
+(128, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 14:30:29'),
+(129, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 14:30:30'),
+(130, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 14:30:31'),
+(131, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 14:30:31'),
+(132, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-06 14:30:32'),
+(133, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-06 14:30:37'),
+(134, 1, 1, 'Liked Your Post', 'avatar.png', '@Ayan Khan', '2020-08-07 10:31:04'),
+(135, 1, 1, 'Liked Your Post', 'avatar.png', '@Ayan Khan', '2020-08-07 10:31:07'),
+(136, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-07 10:31:58'),
+(137, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-07 10:32:02'),
+(138, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-07 10:32:03'),
+(139, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-07 10:32:06'),
+(140, 1, 1, 'Started Following You', 'avatar.png', 'Ayan Khan', '2020-08-07 10:32:07'),
+(141, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-07 17:26:41'),
+(142, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-07 17:26:55'),
+(143, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-07 17:27:00'),
+(144, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-07 17:27:01'),
+(145, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-07 17:27:02'),
+(146, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-07 17:27:02'),
+(147, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-07 17:27:03'),
+(148, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-07 17:27:03'),
+(149, 1, 1, 'Started UnFollowing You', 'avatar.png', 'Ayan Khan', '2020-08-07 17:27:03'),
+(150, 2, 1, 'Started UnFollowing You', 'avatar.png', 'soclpie', '2020-08-09 04:55:27'),
+(151, 2, 1, 'Started UnFollowing You', 'avatar.png', 'soclpie', '2020-08-09 04:55:29'),
+(152, 2, 1, 'Started UnFollowing You', 'avatar.png', 'soclpie', '2020-08-09 04:55:36'),
+(153, 2, 1, 'Started UnFollowing You', 'avatar.png', 'soclpie', '2020-08-09 04:55:37'),
+(154, 2, 1, 'Started UnFollowing You', 'avatar.png', 'soclpie', '2020-08-09 04:55:38'),
+(155, 2, 1, 'Started UnFollowing You', 'avatar.png', 'soclpie', '2020-08-09 04:55:39'),
+(156, 2, 1, 'Started UnFollowing You', 'avatar.png', 'soclpie', '2020-08-09 04:55:40'),
+(157, 2, 1, 'Started UnFollowing You', 'avatar.png', 'soclpie', '2020-08-09 04:55:41'),
+(158, 2, 1, 'Started UnFollowing You', 'avatar.png', 'soclpie', '2020-08-09 04:55:41'),
+(159, 2, 1, 'Started UnFollowing You', 'avatar.png', 'soclpie', '2020-08-09 04:55:43'),
+(160, 2, 1, 'Started UnFollowing You', 'avatar.png', 'soclpie', '2020-08-09 04:55:44'),
+(161, 2, 1, 'Started UnFollowing You', 'avatar.png', 'soclpie', '2020-08-09 04:55:46'),
+(162, 1, 1, 'Started UnFollowing You', 'profileimages/1Instagram-Blog-Post.jpg', 'Ayan Khan', '2020-08-09 07:54:19'),
+(163, 1, 1, 'Liked Your Post', 'profileimages/1Instagram-Blog-Post.jpg', '@Ayan Khan', '2020-08-09 07:54:20'),
+(164, 1, 1, 'Started UnFollowing You', 'profileimages/1Instagram-Blog-Post.jpg', 'Ayan Khan', '2020-08-09 07:55:23'),
+(165, 1, 1, 'Liked Your Post', 'profileimages/1Instagram-Blog-Post.jpg', '@Ayan Khan', '2020-08-10 06:35:18'),
+(166, 1, 1, 'Started UnFollowing You', 'profileimages/1Instagram-Blog-Post.jpg', 'Ayan Khan', '2020-08-12 07:49:16'),
+(167, 1, 1, 'Liked Your Post', 'profileimages/1ad_img.png', '@Ayan Khan', '2020-08-24 09:32:29'),
+(168, 1, 1, 'Started UnFollowing You', 'profileimages/1ad_img.png', 'Ayan Khan', '2020-08-24 09:32:30');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `participate`
+--
+
+CREATE TABLE `participate` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `event_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `participate`
+--
+
+INSERT INTO `participate` (`id`, `user_id`, `event_id`) VALUES
+(77, 1, 28);
 
 -- --------------------------------------------------------
 
@@ -261,9 +440,8 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`id`, `user_id`, `name`, `email`, `gender`, `bio`, `dob`, `address`, `img`, `back_cover`) VALUES
-(1, 1, 'Ayan Khan', 'admin@gmail.com', 'male', 'No Bio Yet', '2020-06-25', 'shanti nagar,near joshi marg', 'profileimages/191IMG20200512154353.jpg', 'backimages/1Code-It-–-Logical-HD-Wallpaper.jpg'),
-(2, 2, 'andmin2', 'admin2@gmail.com', 'male', 'No Bio Yet', '2020-06-28', 'shanti nagar,near joshi marg', 'avatar.png', 'backimages/cover111222333.png'),
-(3, 3, 'SoclPie', 'soclpie@gmail.com', 'male', 'A complete solution covering all aspects of your social media strategy. We are now in beta. Sign up and get a chance to win free early access', '2020-06-25', 'shanti nagar,near joshi marg', 'profileimages/311IMG20200512154353.jpg', 'backimages/3signin.jpg');
+(1, 1, 'Ayan Khan', 'ayan.khan.joya6228@gmail.com', 'male', 'fdsfds ', '3333-03-23', 'shanti nagar,near joshi marg', 'profileimages/1ad_img.png', 'backimages/1add4.png'),
+(2, 2, 'soclpie', 'soclpie@gmail.com', 'male', 'No Bio Yet', '1111-11-11', 'shanti nagar,near joshi marg', 'avatar.png', 'backimages/cover111222333.png');
 
 -- --------------------------------------------------------
 
@@ -279,18 +457,19 @@ CREATE TABLE `userdata` (
   `phone` varchar(300) NOT NULL,
   `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `active` varchar(10) NOT NULL DEFAULT 'no',
-  `banned` varchar(20) NOT NULL DEFAULT 'no'
+  `banned` varchar(20) NOT NULL DEFAULT 'no',
+  `school` text NOT NULL,
+  `class` text NOT NULL,
+  `sec` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `userdata`
 --
 
-INSERT INTO `userdata` (`id`, `name`, `email`, `password`, `phone`, `time`, `active`, `banned`) VALUES
-(1, 'Ayan Khan', 'admin@gmail.com', '12345', '9928136009', '2020-06-09 21:15:15', 'no', 'no'),
-(2, 'andmin2', 'admin2@gmail.com', '12345', '9928136009', '2020-06-10 19:48:05', 'no', 'no'),
-(3, 'SoclPie', 'soclpie@gmail.com', '12345', '9928136009', '2020-06-15 17:03:25', 'no', 'no'),
-(5, 'aarifa', 'ayan.khan.joya6228@gmail.com', 'password', '999999999', '2020-06-17 09:48:33', 'no', 'no');
+INSERT INTO `userdata` (`id`, `name`, `email`, `password`, `phone`, `time`, `active`, `banned`, `school`, `class`, `sec`) VALUES
+(1, 'Ayan Khan', 'ayan.khan.joya6228@gmail.com', '12345', '9928136009', '2020-08-06 15:14:31', 'yes', 'no', 'st teresa', '7', 'B'),
+(2, 'soclpie', 'soclpie@gmail.com', '12345', '9928136009', '2020-08-08 13:34:34', 'yes', 'no', 'st teresa', '7', 'B');
 
 -- --------------------------------------------------------
 
@@ -311,14 +490,8 @@ CREATE TABLE `user_likes` (
 --
 
 INSERT INTO `user_likes` (`id`, `user_id`, `creator_id`, `post_id`, `time`) VALUES
-(3, 1, 1, 1, '2020-06-10 10:56:26'),
-(4, 3, 1, 1, '2020-06-15 11:35:00'),
-(5, 3, 1, 13, '2020-06-16 11:26:03'),
-(8, 3, 3, 14, '2020-06-17 08:18:43'),
-(10, 3, 1, 8, '2020-06-19 03:39:04'),
-(11, 2, 3, 17, '2020-06-19 03:40:33'),
-(12, 2, 1, 13, '2020-06-19 03:40:53'),
-(16, 3, 3, 17, '2020-06-23 14:30:12');
+(12, 3, 2, 8, '2020-08-03 17:22:37'),
+(22, 1, 1, 14, '2020-08-24 09:32:29');
 
 -- --------------------------------------------------------
 
@@ -331,7 +504,7 @@ CREATE TABLE `user_post` (
   `user_id` int(11) NOT NULL,
   `name` varchar(200) NOT NULL,
   `email` varchar(700) NOT NULL,
-  `description` varchar(2000) NOT NULL,
+  `description` text NOT NULL,
   `media` varchar(2000) DEFAULT NULL,
   `media2` varchar(700) DEFAULT NULL,
   `media3` varchar(700) DEFAULT NULL,
@@ -348,31 +521,40 @@ CREATE TABLE `user_post` (
 --
 
 INSERT INTO `user_post` (`id`, `user_id`, `name`, `email`, `description`, `media`, `media2`, `media3`, `media4`, `url`, `color`, `background`, `time`, `friend`) VALUES
-(1, 1, 'Ayan Khan', 'admin@gmail.com', 'my first post', 'post/15917175871wallpaper.jpg', NULL, NULL, NULL, NULL, NULL, NULL, '2020-06-09 15:46:27', ''),
-(2, 1, 'Ayan Khan', 'admin@gmail.com', 'movie', 'post/15917176731thumb.jpg', NULL, NULL, NULL, 'https://www.youtube.com/watch?v=LvCrSFsxpsk', NULL, NULL, '2020-06-09 15:47:53', ''),
-(3, 1, 'Ayan Khan', 'admin@gmail.com', 'music', 'post/15917639201thumb.jpg', NULL, NULL, NULL, 'https://www.youtube.com/watch?v=vO15zpO5kc4', NULL, NULL, '2020-06-10 04:38:40', ''),
-(4, 1, 'Ayan Khan', 'admin@gmail.com', 'joke', 'post/15917643021thumb.jpg', NULL, NULL, NULL, 'https://www.youtube.com/watch?v=fBudaE5qgnU', NULL, NULL, '2020-06-10 04:45:02', ''),
-(6, 1, 'Ayan Khan', 'admin@gmail.com', 'music', 'post/15920539701thumb.jpg', NULL, NULL, NULL, 'https://www.youtube.com/watch?v=eIc4mqyN1Q8&feature=emb_rel_pause', NULL, NULL, '2020-06-13 13:12:50', ''),
-(7, 1, 'Ayan Khan', 'admin@gmail.com', '2 + 2 = 5 kaise galti se', NULL, NULL, NULL, NULL, NULL, '#ffffff', '#000000', '2020-06-14 07:12:22', ''),
-(8, 1, 'Ayan Khan', 'admin@gmail.com', 'my hotooooooo', 'post/15921248091bg4.jpg', NULL, NULL, NULL, NULL, NULL, NULL, '2020-06-14 08:53:29', ''),
-(9, 1, 'Ayan Khan', 'admin@gmail.com', 'music', 'post/15921286951bg4.jpg', NULL, NULL, NULL, 'https://www.youtube.com/watch?v=y50Y5IT3WBE', NULL, NULL, '2020-06-14 09:58:15', ''),
-(10, 1, 'Ayan Khan', 'admin@gmail.com', 'music', 'post/15921287371bg4.jpg', NULL, NULL, NULL, 'https://www.youtube.com/watch?v=SMs0GnYze34', NULL, NULL, '2020-06-14 09:58:57', ''),
-(11, 1, 'Ayan Khan', 'admin@gmail.com', 'lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala  lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala  lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala  lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala  lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala  lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala  lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala  ', NULL, NULL, NULL, NULL, NULL, '#ffffff', '#000000', '2020-06-14 11:05:46', ''),
-(13, 1, 'Ayan Khan', 'admin@gmail.com', 'logo', 'post/15922933801onlinelogomaker-061620-1256-6484.png', NULL, NULL, NULL, NULL, NULL, NULL, '2020-06-16 07:43:00', ''),
-(14, 3, 'SoclPie', 'soclpie@gmail.com', 'lol', 'post/1592379508315917175871wallpaper.jpg', NULL, NULL, NULL, NULL, NULL, NULL, '2020-06-17 07:38:28', ''),
-(16, 3, 'SoclPie', 'soclpie@gmail.com', 'lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala lalalalallalalla alalalalalalla allalalalallalal allalalalalallal ala', NULL, NULL, NULL, NULL, NULL, '#0088ff', '#ff7070', '2020-06-17 14:25:39', ''),
-(17, 3, 'SoclPie', 'soclpie@gmail.com', 'jjjj', 'post/15925043613Screen Shot 2020-05-25 at 5.06.26 PM.png', NULL, NULL, NULL, NULL, NULL, NULL, '2020-06-18 18:19:21', ''),
-(18, 3, 'SoclPie', 'soclpie@gmail.com', 'wathh', 'post/15925676323Screen Shot 2020-05-25 at 5.06.26 PM.png', NULL, NULL, NULL, 'https://www.youtube.com/watch?v=7-qGKqveZaM', NULL, NULL, '2020-06-19 11:53:52', ''),
-(19, 3, 'SoclPie', 'soclpie@gmail.com', 'jokevghgkj ', NULL, NULL, NULL, NULL, NULL, '#4d62a3', '#0033ff', '2020-06-23 14:23:58', '');
+(15, 1, 'Ayan Khan', 'ayan.khan.joya6228@gmail.com', 'dgdg', NULL, NULL, NULL, NULL, NULL, '#000000', '#000000', '2020-08-27 08:06:24', '');
 
 --
 -- Indexes for dumped tables
 --
 
 --
+-- Indexes for table `blog`
+--
+ALTER TABLE `blog`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `chat`
+--
+ALTER TABLE `chat`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `comments`
 --
 ALTER TABLE `comments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `event`
+--
+ALTER TABLE `event`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `event_winner`
+--
+ALTER TABLE `event_winner`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -385,6 +567,12 @@ ALTER TABLE `follow`
 -- Indexes for table `notify`
 --
 ALTER TABLE `notify`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `participate`
+--
+ALTER TABLE `participate`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -416,46 +604,76 @@ ALTER TABLE `user_post`
 --
 
 --
+-- AUTO_INCREMENT for table `blog`
+--
+ALTER TABLE `blog`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `chat`
+--
+ALTER TABLE `chat`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+
+--
+-- AUTO_INCREMENT for table `event`
+--
+ALTER TABLE `event`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
+--
+-- AUTO_INCREMENT for table `event_winner`
+--
+ALTER TABLE `event_winner`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `follow`
 --
 ALTER TABLE `follow`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT for table `notify`
 --
 ALTER TABLE `notify`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=169;
+
+--
+-- AUTO_INCREMENT for table `participate`
+--
+ALTER TABLE `participate`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
 
 --
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `userdata`
 --
 ALTER TABLE `userdata`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user_likes`
 --
 ALTER TABLE `user_likes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `user_post`
 --
 ALTER TABLE `user_post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

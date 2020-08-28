@@ -20,17 +20,15 @@ $sql11 = "INSERT INTO `event`(`icon`, `title`, `text`, `more`, `rule`, `price`, 
 $a1 = mysqli_query($conn, $sql11);
 
 
-echo $sql11;
-echo $conn;
 
 ?>  
 
-<!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
   <strong>Successfull!</strong> added succesfully.
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
-</div> -->
+</div>
 
 
 
