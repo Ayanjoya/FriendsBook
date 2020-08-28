@@ -204,8 +204,8 @@ input{
     </div>
   </div>
   <div class="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Address"name ="address">
+    <label for="inputAddress">Street Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Street Address"name ="address">
   </div>
   <div class="form-group">
     <label for="inputAddress">School</label>

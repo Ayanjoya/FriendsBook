@@ -1,10 +1,7 @@
 <!-- <?=$url;?> -->
 
-<?PHP
- include'config.php';
-?>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
 
@@ -72,9 +69,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </li>
 
 
-          <!--   <li class="nav-item">
-        <a class="nav-link" href="post.php"><img src="https://image.flaticon.com/icons/svg/42/42446.svg" style="width:25px;"></a>
-      </li> -->
+            <li class="nav-item">
+        <a class="nav-link" href="event.php"><img src="https://image.flaticon.com/icons/svg/42/42446.svg" style="width:25px;"></a>
+      </li>
 
 
       <li class="nav-item">
@@ -119,7 +116,9 @@ li{
 }
 
 body,html{
-  height: 100%
+  height: 100%;
+  padding: 0%;
+  margin:0%;
 }
 
 
@@ -136,3 +135,7 @@ body,html{
 
 
 </Style>
+
+
+
+

@@ -15,8 +15,44 @@
 
 
 <div class="bg-dark p-5 h-100">
+
+
 	<h2 class="text-white pb-5" style="text-align: center;">Welcome To Soclpie Admin Pannel</h2>
 
+
+
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+  if($_REQUEST['email'] == "soclpie@gmail.com" and $_REQUEST['password'] == "-SnxSV++rHz$4G4TU-Y"){
+
+    $_SESSION['type'] = "active";
+
+    header('Location: home.php');
+  }
+
+
+
+else{
+
+echo '
+
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> no such admin password found.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+
+
+';
+
+}
+
+}
+?>
 
 <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
   <div class="form-group">
@@ -43,40 +79,7 @@
 
 
 
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-	if($_REQUEST['email'] == "soclpie@gmail.com" and $_REQUEST['password'] == "-SnxSV++rHz$4G4TU-Y"){
-
-		$_SESSION['type'] = "active";
-
-		header('Location: home.php');
-	}
-
-}
-
-else{
-
-echo '
-
-
-
-
-';
-
-}
-
-?>
-
-
-
-
-<script type="text/javascript">
-	
-alert('No Such email or password found try again or go to soclpie.com')
-
-
-</script>
 
 
 

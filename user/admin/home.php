@@ -71,7 +71,7 @@ if ($row1['color'] != ''){
 
 <div class="padd">
 
-<div class="card text2" style="height: 28rem;overflow: auto;background-color: <?php echo $row1['background'];?>;color: <?php echo $row1['color'];?>;border: solid 0.1px lightgray;" >
+<div class="card text2" style="height: 28rem;overflow: auto;color: <?php echo $row1['color'];?>;border: solid 0.1px lightgray;" >
 
   <div class="card-body">
         <h5 class="card-title" style=""><a href="post.php"><?php echo "@".$row1['name'];?></a></h5>
