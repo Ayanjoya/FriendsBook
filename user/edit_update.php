@@ -25,9 +25,9 @@ $a = mysqli_query($conn, $sql1);
 $row = mysqli_fetch_assoc($a);
 
 
-// header('Location:profile.php');
+header('Location:profile.php');
 
-echo "imagepath = ".$imagepath."<br>";
-echo "imagepath2 = ".$imagepath1."<br>";
+// echo "imagepath = ".$imagepath."<br>";
+// echo "imagepath2 = ".$imagepath1."<br>";
 
 ?>
