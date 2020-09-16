@@ -1,6 +1,7 @@
 <!-- <?=$url;?> -->
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="logo.png" />
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -22,8 +23,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom  border-dark sticky-top shadow-bottom" style="opacity: 70%;">
-  <a class="navbar-brand" href="home.php">SoclPie</a>
+<nav class="navbar navbar-expand-lg navbar-light border-bottom  border-dark sticky-top shadow-bottom" style="background:#FCFCFC;">
+  <a class="navbar-brand" href="home.php"><img src="logo.png" style="width:130px;opacity:90%;"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -62,7 +63,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <a class="nav-link" href="explore.php "><img src="https://image.flaticon.com/icons/svg/60/60826.svg" style="width:25px;"></a>
       </li>
 
-
+<!--       <li class="nav-item">
+        <a class="nav-link" href="chat.php "><img src="https://image.flaticon.com/icons/svg/561/561119.svg" style="width:25px;"></a>
+      </li> -->
       
             <li class="nav-item">
         <a class="nav-link" href="post.php"><svg aria-label="Direct" class="_8-yf5 " fill="#262626" height="22" viewBox="0 0 48 48" width="22"><path d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z"></path></svg></a>
@@ -108,7 +111,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 
 ul{
-  margin-right:2%;
+  margin-right:3%;
 }
 
 li{

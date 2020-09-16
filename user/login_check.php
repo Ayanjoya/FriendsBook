@@ -61,7 +61,7 @@ if($row['id'] and $row['banned'] == "no"){
 
 
 	$a = mysqli_query($conn, $sql);
-	header('Location: http://soclpie.com/profile_data.php');
+	header('Location: profile_data.php');
 
 
 

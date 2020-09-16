@@ -1,164 +1,3 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
-<body>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<style type="text/css">
-  body{
-  background-image: url('signin.gif');
-  background-size: cover;
-  font-family: roboto;
-  color:#303030;
-  overflow: hidden;
-}
-
-div{
-
-  background-color: #DEDEDE;
-  width: 70rem;
-  height:45rem;
-  position: relative;
-  top:2.5rem;
-  left:10rem;
-}
-input{
-  width:69.6rem;
-  font-size: 200%;
-  position: relative;
-  bottom: 1rem
-}
-
-@keyframes ex{
-
-0%{transform: rotateY(1000deg);}
-
-50%{position: relative;top: 100px;}
-
-100%{position: relative;bottom: -100px;}
-
-}
-
-</style>
-
-<div>
-  <h1 style=" text-align: center; padding-bottom: 10%;
-">Welcome to Friends Book</h1>
-  <form action = "login_check.php" method = "post">
-  <h1 style="padding-left: 1%">Email</h1>
-  <input type="text" name="email">
-  <br>
-  <br>
-  <br>
-  <br>
-
-  <h1 style="padding-left: 1%">Password</h1>
-  <input type="password" name="password">
-  <button style="font-size: 5rem;font-family: roboto;background-color: #0087FF;color: white;
-    box-shadow:0 9px 5px black;position: relative;left:36%;top:3rem;animation-name: ex;animation-duration: 5s;">Submit</button>
-</form>
-</div>
-
-
-</body>
-</html> -->
-
-
-
-<!-- 
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
-</head>
-<body>
-
-<form action="login_check.php" method="post">
-
-  <div class="cont">
-    <div class="form sign-in">
-      <h2>Sign In</h2>
-      <label>
-
-        <span>Email Address</span>
-        <input type="email" name="email">
-      </label>
-      <label>
-        <span>Password</span>
-        <input type="password" name="password">
-      </label>
-      <button class="submit">Sign In</button>
-
-      <p class="forgot-pass">Forgot Password ?</p>
-
-
-    </div>
-</form>
-
-
-
-
-
-
-    <div class="sub-cont">
-      <div class="img">
-        <div class="img-text m-up">
-          <h2>New here?</h2>
-          <p>Sign up and discover great amount of new opportunities!</p>
-        </div>
-        <div class="img-text m-in">
-          <h2>One of us?</h2>
-          <p>If you already has an account, just sign in. We've missed you!</p>
-        </div>
-        <div class="img-btn">
-          <span class="m-up">Sign Up</span>
-          <span class="m-in">Sign In</span>
-        </div>
-      </div>
-      <form action="signin_check.php" method="post">
-
-      <div class="form sign-up">
-        <h2>Sign Up</h2>
-        <label>
-          <span>Name</span>
-          <input type="text" name="name">
-        </label>
-        <label>
-          <span>Phone</span>
-          <input type="number" name="phone">
-        </label>
-        <label>
-          <span>Email</span>
-          <input type="email" name="email">
-        </label>
-        <label>
-          <span>Password</span>
-          <input type="password" name="password">
-        </label>
-        <button class="submit">Sign Up Now</button>
-      </div>
-    </div>
-  </div>
-  </form>
-<script type="text/javascript" src="script.js"></script>
-</body>
-</html>
-
- -->
-
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -182,47 +21,87 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GMFFWW"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-  <div class="row">
-<div class="m-auto">
+  
 
 
-<img src="single.png">
-
-</div>
-
+<div class="p-4 main" style="box-shadow: 0px 10px 20px;">
+  
 
 
-</div>
-
-<h3 style="text-align: center;">Welcome To The Social Network</h3>
 
 
-<form action="login_check.php" method = "post">
-   <div class="form-row ">
 
- <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" name ="email">
-    </div>
-     <div class="form-group col-md-6">
-      <label for="inputEmail4">Password</label>
-      <input type="password" class="form-control" id="inputEmail4" name ="password">
-    </div>
- 
 
+<img src="logo.png" class="logo" >  
+
+
+
+<h5 style="margin-top:30px; text-align: center;">Log in to soclpie</h5>
+
+<form style="margin-top:30px;" method="post" action="login_check.php">
+  <div class="form-group">
+
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address" name="email">
 
   </div>
+  <div class="form-group mt-4">
 
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+  </div>
 
-  <button type="submit" class="btn btn-primary">Sign in</button>
-
+  <button type="submit" class="btn btn-primary text-white mt-3  m-auto">LogIn</button>
 </form>
+
+</div>
+
   
 <style type="text/css">
   
+
+
 html,body{
+  background-color: #F19B5B;
   height: 100%;
   padding:2%;
+}
+
+
+.main{
+  background-color: white; width: 700px;height: 400px;top:50%;left:50%;position: absolute; transform: translate(-50% , -50%);border-radius: 10px;
+}
+
+.logo{
+  width:300px;background-color: white;top:00%;left:50%;position: absolute; transform: translate(-50% , -50%);border: none;padding:10px;border-radius: 10px;
+}
+
+
+@media only screen and (max-width: 786px) {
+  .main{
+    background-color: white; width: 300px;height: 300px;top:50%;left:50%;position: absolute; transform: translate(-50% , -50%);border-radius: 10px;
+  }
+
+  .logo{
+    width:170px;
+  }
+
+  #emailHelp{
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 299px) {
+  .main{
+    background-color: white; width: 100%;height: 50%;top:50%;left:50%;position: absolute; transform: translate(-50% , -50%);border-radius: 10px;
+  }
+
+  .logo{
+    width:120px;
+  }
+
+  #emailHelp{
+    display: none;
+  }
 }
 
 </style>

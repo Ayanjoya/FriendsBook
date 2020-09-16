@@ -10,6 +10,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-5GMFFWW');</script>
 <!-- End Google Tag Manager -->
+
+
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "50c24858-9078-4176-804f-7c75c78140b5",
+    });
+  });
+</script>
+
+
 	<h6 style="visibility: hidden;display: none;">
 		<?php
 
@@ -40,6 +53,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
@@ -51,53 +65,197 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 
-<?php include'intro_menu.php';?>
-<img src="images/image1.jpeg" style = "width:100%; height:75%; background-position: center; filter: blur(3px);">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img src="logo.png"class="logo-af">
+
+<img src="logo.png" style="width: 320px;"class="title">
+<h2 class="mt-1 title" style="font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 32px;
+    width: 500px;">Soclpie helps you connect and share <br> with the people in your life.</h2>
+
+
+<div class="main">
 	
-<div class="bg-text">
-	
-  <h2>Welcome</h2>
-  <h1 style="font-size:50px">To Soclpie</h1>
-  <p>The Social Network</p>
+
+<form action="login_check.php" method="post">
+  <div class="form-group">
+
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address" name = "email"style="padding:20px;font-size: 110%;">
+
+  </div>
+  <div class="form-group">
+
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" style="padding:20px;font-size: 110%;" name="password">
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-block">Login</button>
+</form>
+
+<a href="" style="text-align: center; display:block;margin-top:13px;"><h6>Forgotten Account?</h6></a>
+<hr>
+  <a type="submit"href="signin.php" class="btn btn-success btn-lg" style="background-color: #5FB82D; border: #5FB82D; margin:auto; display: block;margin-top:50px;">Create New Account</a>
+
+
 </div>
 
 
-
-
-</div>
-
-
-<style>
-.bg-text {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 500px;
-  padding: 20px;
-   text-align: center;
-
-
-}
+<style type="text/css">
 html,body{
-	  font-family: Arial, Helvetica, sans-serif;
-
-	height:100%;
+	height: 100%;
+	width: 100%;
+	background-color: #F0F2F5;
+	padding: 100px;
 }
 
-@media only screen and (max-width: 600px) {
-  .bg-text {
-      width: 280px;
-
-  }
+.logo-af{
+	display: none;
+	width: 320px;
 }
 
+.main{
+	position: absolute;
+	top:40%;
+	left:65%;
+	transform: translate(-50% , -50%);
+	background-color: white;padding:20px;width:27%;border-radius: 10px;box-shadow: 0px 10px 20px;
+}
+
+@media only screen and (max-width: 1289px) {
+
+.main{
+	position: absolute;
+	top:40%;
+	left:70%;
+	transform: translate(-50% , -50%);
+}
+
+}
+
+
+@media only screen and (max-width: 1183px) {
+
+.main{
+	position: absolute;
+	top:40%;
+	left:80%;
+	transform: translate(-50% , -50%);
+}
+
+}
+
+@media only screen and (max-width: 1014px) {
+
+.main{
+	position: absolute;
+	top:40%;
+	left:80%;
+	transform: translate(-50% , -50%);
+}
+
+
+}
+
+
+@media only screen and (max-width: 1038px) {
+
+.logo-af{
+	display: block;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	bottom:70%;
+	left:50%;
+}
+
+.title{
+	display: none;
+}
+
+.main{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50% , -50%);
+	width:50%;
+}
+
+}
+
+
+@media only screen and (max-width: 599px) {
+
+.title{
+	display: none;
+}
+
+.main{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50% , -50%);
+	width:70%;
+}
+
+}
+
+
+@media only screen and (max-width: 374px) {
+
+.title{
+	display: none;
+}
+
+.main{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50% , -50%);
+	width:90%;
+}
+
+}
+
+@media only screen and (max-width: 311px) {
+
+.title{
+	display: none;
+}
+
+.main{
+	position: absolute;
+	top:50%;
+	left:52.5%;
+	transform: translate(-50% , -50%);
+	width:100%;
+	margin:auto;
+	display: block;
+}
+
+.logo-af{
+	width: 230px;
+	display: block;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	bottom:75%;
+	left:50%;
+
+}
+
+}
 
 </style>
 </body>

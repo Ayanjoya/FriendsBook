@@ -29,7 +29,7 @@ include 'conn.php';
   $a = mysqli_query($conn, $sql1);
   $row = mysqli_fetch_assoc($a);
 
-  $sql111 = "SELECT `id`, `name`, `email`, `password`, `phone`, `time`, `active`, `banned`, `school`, `class`, `sec`  FROM `userdata` WHERE id = '".$_SESSION['id']."'";
+  $sql111 = "SELECT `id`, `name`, `email`, `password`, `phone`, `time`, `active`, `banned`, `school`, `class`, `sec`  FROM `userdata` WHERE id = '".$_GET['id']."'";
   $a11 = mysqli_query($conn, $sql111);
   $row11 = mysqli_fetch_assoc($a11);
 

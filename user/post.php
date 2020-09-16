@@ -81,11 +81,10 @@ function clickit() {
       <input type="file" id="inputEmail4" name ="media" style="display: none;">
 
       <input type="button" id="inputEmail4" name ="media" style="background-image: url('https://static.thenounproject.com/png/212328-200.png'); height: 100px; width: 100px;background-size: cover;" onclick="clickit()">
-      <br>
 
 
 <a href="post_slide.php">
-      <img src="https://image.flaticon.com/icons/svg/32/32339.svg" style="width:50px; margin-left:25px;">
+      <img src="https://image.flaticon.com/icons/svg/32/32339.svg" style="width:50px; margin-left:25px; margin-bottom:90px;">
 </a>
 
 
